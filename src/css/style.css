@@ -168,7 +168,14 @@ textarea.input {
   -ms-user-select: none;
   user-select: none;
 }
-
+.add-to-cart{
+  width: 80%;
+  padding: 1rem;
+  
+  margin: 2rem;
+  margin-top: 3rem;
+  background:rgba(163, 248, 145, 0.25) !important;
+}
 .input-number .qty-up {
   right: 0;
   top: 0;
@@ -260,7 +267,9 @@ textarea.input {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-
+.slick-track{
+  height: 68vh;
+}
 .input-radio input[type="radio"]:checked+label span, .input-checkbox input[type="checkbox"]:checked+label span {
   background-color: #12a72b;
   border-color: #12a72b;

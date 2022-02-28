@@ -6,7 +6,7 @@ import {
     NavbarBrand, NavLink, NavItem, UncontrolledDropdown,
     DropdownToggle, DropdownMenu, DropdownItem
 } from 'reactstrap';
-
+import { Outlet, Link } from "react-router-dom";
 
 export default function Navigation() {
     return (
@@ -15,10 +15,11 @@ export default function Navigation() {
             <Navbar bg="dark" variant="light">
                 <Container>
                     <Nav>
+                        
                         <ul className="section-tab-nav tab-nav">
                             <li><NavLink href="/">Címlap</NavLink></li>
-                            <li><NavLink href="/">Rólunk</NavLink></li>
-                            <li><NavLink href="/">Regisztráció</NavLink></li>
+                            <li><NavLink href="/rolunk">Rólunk</NavLink></li>
+                            <li><NavLink href="/asd">Regisztráció</NavLink></li>
                             <li><NavLink href="/">Szolgáltatásaink</NavLink></li>
                             <li><NavLink href="/">PC/Laptop</NavLink></li>
                             <li><NavLink href="/">WiFi Router</NavLink></li>
@@ -29,7 +30,7 @@ export default function Navigation() {
                     </Nav>
                 </Container>
             </Navbar>
-
+            <Outlet />
         </>
     )
 }
