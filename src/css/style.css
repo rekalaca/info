@@ -60,7 +60,9 @@ body {
   font-weight: 400;
   color: #333;
 }
-
+.product{
+  padding: 1rem;
+}
 h1, h2, h3, h4, h5, h6 {
   color: #2B2D42;
   font-weight: 700;
@@ -89,7 +91,10 @@ ul, ol {
 /*----------------------------*\
 	Buttons
 \*----------------------------*/
+.product{
 
+  margin: 0 1rem;
+}
 .primary-btn {
   display: inline-block;
   padding: 12px 30px;
@@ -837,7 +842,7 @@ textarea.input {
 
 .product .product-body {
   position: relative;
-  padding: 15px;
+  padding: px;
   background-color: #FFF;
   text-align: center;
   z-index: 20;
@@ -902,7 +907,7 @@ textarea.input {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   height: 1px;
-  background-color: #E4E7ED;
+  background-color: #ede4e7;
 }
 
 .product .product-body .product-btns>button {
@@ -965,6 +970,7 @@ textarea.input {
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
   z-index: 2;
+  margin-top: 50px;
 }
 
 .product:hover .add-to-cart {
@@ -1941,6 +1947,7 @@ textarea.input {
 #footer {
   background: #094714;
   color: #B9BABC;
+  margin-top: 40px;
 }
 
 #bottom-footer {
@@ -2049,14 +2056,15 @@ textarea.input {
 
 .slick-dots li, .slick-dots li button, .slick-dots li button:before {
   width: 10px;
-  height: 10px;
+  height: 10px;  
+  
 }
 
 .slick-dots li button:before {
   content: "";
   opacity: 1;
   background: #E4E7ED;
-  border-radius: 50%;
+  border-radius: 50%;  
 }
 
 .slick-dots li.slick-active button:before {
@@ -2066,6 +2074,7 @@ textarea.input {
 .custom-dots .slick-dots {
   position: static;
   margin: 15px 0px;
+  
 }
 
 /*=========================================================
@@ -2131,3 +2140,7 @@ textarea.input {
   text-align: justify;
   margin: 0 auto 0 auto;
 }
+.navli{
+  color: #12a72b;
+}
+
