@@ -1,37 +1,44 @@
 import React from 'react';
-
 import Slider from "react-slick";
 import Sliderjs from './Slider';
 import 'bootstrap/dist/css/bootstrap.css';
 import {
- NavLink
+    Container, Row, Col, Form, Input, Button, Navbar, Nav,
+    NavbarBrand, NavLink, NavItem, UncontrolledDropdown,
+    DropdownToggle, DropdownMenu, DropdownItem
 } from 'reactstrap';
 
 export default function Section2() {
 
     return (
-        <div className="section">
-            <div className="container">
-
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="section-title">
-                            <h3 className="title">ÚJ termékek!</h3>
-                            <div className="section-nav">
-                                <ul className="section-tab-nav tab-nav">
-                                    <li><NavLink href="/">PC & Laptop</NavLink></li>
-                                    <li><NavLink href="/">WiFi router</NavLink></li>
-                                    <li><NavLink href="/">PC Periféria</NavLink></li>
-                                    <li><NavLink href="/">Kábel</NavLink></li>
-                                </ul>
-                            </div>
+        <div className="container">
+            <div className="row">
+                <Nav className="navbar navbar-expand-lg navbar-light bg-light">
+                        <p className="news">Új termékek!</p>                        
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul className="navbar-nav me-auto mb-2 mb-lg-0 section-tab-nav tab-nav">
+                                <li className="nav-item">
+                                    <a className="nav-link active" aria-current="page" href="/">PC/Laptop</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link active" aria-current="page" href="/">WiFi Router</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link active" aria-current="page" href="/">Periféria</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link active" aria-current="page" href="/">Kábel</a>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <Sliderjs />
-                </div>
-                    
+                   
+                </Nav>
+            </div>
+            <div className="row">
+                <Sliderjs />
             </div>
 
         </div>

@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+.regist{
+  width: 600px;
+  margin: 0 auto 0 auto;
+
+}::placeholder {
+  font-size: 0.8em;
+  color: rgb(211, 152, 152) !important;
+}
+#aszf{
+  width: 700px;
+  margin: 0 auto 0 auto;
+  text-align: justify;
+  margin-top: 50px;
+  
+}
+
+

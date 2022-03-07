@@ -12,7 +12,7 @@ export default function Footer() {
 								<h3 className="footer-title">Kapcsolat</h3>
 								<p>Bármilyen további kérdés esetén szívesen állunk rendelkezésére az alábbi elérhetőségeken:</p>
 								<ul className="footer-links">
-									<li><a href="#"><i className="fa fa-map-marker"></i>4400 Nyíregyháza Info utca 1.</a></li>
+									<li><a href="https://goo.gl/maps/mKw8JtNMFGFzbWFV7" target="_blank"><i className="fa fa-map-marker"></i>4400 Nyíregyháza Info utca 1.</a></li>
 									<li><a href="tel:+36304442569"><i className="fa fa-phone"></i>+36-30-123-45-67</a></li>
 									<li><a href="mailto: rekalaca@rekalaca.com"><i className="fas fa-at"></i>info@infotech.com</a></li>
 								</ul>
@@ -40,7 +40,7 @@ export default function Footer() {
 									<li><a href="#">Kiszállítás</a></li>
 									<li><a href="#">Garancia</a></li>
 									<li><a href="#">Adatvédelmi irányelvek</a></li>
-									<li><a href="#">Felhasználási feltételek</a></li>
+									<li><a href="/aszf">Általános Szerződési Feltételek (ÁSZF)</a></li>
 								</ul>
 							</div>
 						</div>
@@ -52,8 +52,8 @@ export default function Footer() {
 									<li><a href="#">Fórum</a></li>
 									<li><a href="#">Gyakran ismételt kérdések</a></li>
 									<li><a href="#">Chat</a></li>
-									<li><a href="#">E-m@il</a></li>
-									<li><a href="#">Telefon</a></li>
+									<li><a href="mailto: rekalaca@rekalaca.com">E-m@il</a></li>
+									<li><a href="tel:+36304442569">Telefon</a></li>
 								</ul>
 							</div>
 						</div>
