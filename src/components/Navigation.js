@@ -31,7 +31,7 @@ export default function Navigation() {
                                 <a className="nav-link active" aria-current="page" href="/">Szolgáltatásaink</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">PC/Laptop</a>
+                                <a className="nav-link active" aria-current="page" href="/pc">PC/Laptop</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/">WiFi Router</a>

@@ -12,7 +12,7 @@ export default function Sliderjs() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         responsive: [
             {
@@ -47,9 +47,6 @@ export default function Sliderjs() {
 
                 <div className="row">
 
-
-                    
-
                     <div className="col-md-12">
                         <div className="row">
                             <div className="products-tabs">
@@ -65,11 +62,11 @@ export default function Sliderjs() {
                                         </div>
                                         <div className="product-body">
                                             <p className="product-category">Laptop</p>
-                                            <h3 className="product-name"><a href="#">LENOVO V15-IIL (82C5000QHV)</a></h3>
+                                            <h3 className="product-name"><a href="#">LENOVO V15-IIL (82C5000QHV) Laptop</a></h3>
                                             <h4 className="product-price">279.000 Ft <del className="product-old-price">299.000 Ft</del></h4>
                                         </div>
                                         <div className="add-to-cart">
-                                            <button className="add-to-cart-btn"><i className="fa fa-shopping-cart"></i> kosárba rakom</button>
+                                            <button className="add-to-cart-btn"><i className="fa fa-shopping-cart"></i>  kosárba rakom</button>
                                         </div>
                                     </div>
 
@@ -84,7 +81,7 @@ export default function Sliderjs() {
                                         </div>
                                         <div className="product-body">
                                             <p className="product-category">WiFi router</p>
-                                            <h3 className="product-name"><a href="#">TP-Link AX1500 Next-Gen</a></h3>
+                                            <h3 className="product-name"><a href="#">TP-Link AX1500 Next-Gen WiFi router</a></h3>
                                             <h4 className="product-price">8.990 Ft <del className="product-old-price">9.990 Ft</del></h4>
                                         </div>
                                         <div className="add-to-cart">
@@ -102,7 +99,7 @@ export default function Sliderjs() {
                                         </div>
                                         <div className="product-body">
                                             <p className="product-category">Laptop</p>
-                                            <h3 className="product-name"><a href="#">LENOVO IDEAPAD 3 15IIL05</a></h3>
+                                            <h3 className="product-name"><a href="#">LENOVO IDEAPAD 3 15IIL05 Laptop + Windows 10</a></h3>
                                             <h4 className="product-price">179.000 Ft <del className="product-old-price">199.000 Ft</del></h4>
                                         </div>
                                         <div className="add-to-cart">
@@ -119,7 +116,7 @@ export default function Sliderjs() {
                                         </div>
                                         <div className="product-body">
                                             <p className="product-category">Periféria</p>
-                                            <h3 className="product-name"><a href="#">HP DESKJET 2320 ALL-IN-ONE</a></h3>
+                                            <h3 className="product-name"><a href="#">HP DESKJET 2320 ALL-IN-ONE nyomtató</a></h3>
                                             <h4 className="product-price">14.990 Ft <del className="product-old-price">17.990 Ft</del></h4>
                                         </div>
                                         <div className="add-to-cart">
@@ -134,7 +131,7 @@ export default function Sliderjs() {
                                         </div>
                                         <div className="product-body">
                                             <p className="product-category">Kábel</p>
-                                            <h3 className="product-name"><a href="#">ROLINE UTP CAT6 PATCH KÁBEL 1M</a></h3>
+                                            <h3 className="product-name"><a href="#">ROLINE UTP CAT6 PATCH KÁBEL 1 méteres</a></h3>
                                             <h4 className="product-price">790 Ft <del className="product-old-price">990 Ft</del></h4>
                                         </div>
                                         <div className="add-to-cart">

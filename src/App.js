@@ -6,6 +6,7 @@ import Cimlap from './components/Cimlap';
 import Regist from './components/Regist';
 import Footer from './components/Footer';
 import Aszf from './components/Aszf';
+import Pc from './components/Pc';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
 import Rolunk from './components/Rolunk';
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="rolunk" element={<Rolunk/>} />
           <Route path="regist" element={<Regist/>} />
           <Route path="aszf" element={<Aszf/>} />
+          <Route path="pc" element={<Pc/>} />
         </Route>
       </Routes>
     </BrowserRouter>

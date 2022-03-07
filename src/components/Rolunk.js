@@ -10,8 +10,12 @@ const Rolunk= () =>{
 				hogy szétszerelje és behozza hozzánk személyesen. Emellett, ha nem meghibásodásról van szó, csak fejlesztené, bővítené saját belső hálózatát, abban is 
 				partnerek vagyunk! Nálunk megvásárolhatja új nyomtatóját, routerét, laptopját, vagy asztali számítógépét, mi pedig nem csak kiszállítjuk, de kérésére 
 				be is üzemeljük Önnek! Sikergaranciával dolgozunk, ami annyit tesz, hogy csak abban az esetben számítjuk fel a munkadíjat, ha valóban sikeresen 
-				megoldottuk az Ön problémáját! Várjuk hívását!...</p>
-				<img className='kerek' src={bl} alt=""/>
+				megoldottuk az Ön problémáját! </p>
+				<img className='kerek' src={bl} alt=""/><br></br><br></br>
+				<p>
+				Egyenlőre a szolgáltatásaink csak Szabolcs Szatmár Bereg megye területén érhető el, így az eszközrendelésnél ezt vegye figyelembe! Hamarosan bővítjük 
+				kapacitásainkat és elindul a futárszolgálat általi kiszállítások lehetősége, illetve a helyszíni szerelések  megrendelése elérhetővé válik Hajdú Bihar és Borsod menyékben is! Várjuk hívását!...
+				</p>
 		</div>
     )
 }
