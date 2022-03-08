@@ -5,8 +5,11 @@ import Navigation from './components/Navigation';
 import Cimlap from './components/Cimlap';
 import Regist from './components/Regist';
 import Footer from './components/Footer';
-import Aszf from './components/Aszf';
+import Aszf from './components/subpage/Aszf';
 import Pc from './components/Pc';
+import Routers from './components/Routers';
+import Perifer from './components/Perifer';
+import Szolgaltatas from './components/Szolgaltatas';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
 import Rolunk from './components/Rolunk';
@@ -23,6 +26,9 @@ const App = () => (
           <Route path="regist" element={<Regist/>} />
           <Route path="aszf" element={<Aszf/>} />
           <Route path="pc" element={<Pc/>} />
+          <Route path="routers" element={<Routers/>} />
+          <Route path="perifer" element={<Perifer/>} />
+          <Route path="szolgaltatas" element={<Szolgaltatas/>} />
         </Route>
       </Routes>
     </BrowserRouter>

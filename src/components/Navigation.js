@@ -8,7 +8,7 @@ import {
 
 export default function Navigation() {
     return (
-
+     
         <div className='container'>
             <Nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid">
@@ -17,7 +17,7 @@ export default function Navigation() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0 section-tab-nav tab-nav">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0 section-tab-nav tab-nav menusk">
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/">Főoldal</a>
                             </li>
@@ -28,16 +28,16 @@ export default function Navigation() {
                                 <a className="nav-link active" aria-current="page" href="/regist">Regisztráció</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Szolgáltatásaink</a>
+                                <a className="nav-link active" aria-current="page" href="/szolgaltatas">Szolgáltatásaink</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/pc">PC/Laptop</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">WiFi Router</a>
+                                <a className="nav-link active" aria-current="page" href="/routers">WiFi Router</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Periféria</a>
+                                <a className="nav-link active" aria-current="page" href="/perifer">Periféria</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/">Kábel</a>
@@ -52,5 +52,6 @@ export default function Navigation() {
             </Nav>
             <Outlet />
         </div>
+       
     )
 }

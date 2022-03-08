@@ -1,5 +1,5 @@
 import React from 'react';
-import p1 from '../img/product01.png'; import logo from '../img/logo.png';
+import logo from '../img/logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import {
