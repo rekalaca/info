@@ -22,7 +22,7 @@ export default function Routers() {
                                     Szabvány: IEEE 802.11ax/a/n/b/g/ac
                                     Titkosítás: WEP, WPA/WPA2, WPA/WPA2-PSK
                                 </Card.Text>
-                                <Button variant="primary">Részletek</Button>
+                                <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -37,7 +37,7 @@ export default function Routers() {
                                     Szabvány: 802.11 a/b/g/n/ac/ax
                                     Titkosítás: WPA, WPA2 , WPA3, WPS
                                 </Card.Text>
-                                <Button variant="primary">Részletek</Button>
+                                <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -52,7 +52,7 @@ export default function Routers() {
                                     Titkosítás: WEP, WPA/WPA2, WPA/WPA2-PSK
                                     Vezetékes hálózati sebesség 10/100 Mbps
                                 </Card.Text>
-                                <Button variant="primary">Részletek</Button>
+                                <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -66,7 +66,7 @@ export default function Routers() {
                                     Szabványok: IEEE 802.11ac/a/n 5GHz, IEEE 802.11b/g/n 2.4GHz
                                     Titkosítás: WPA-PSK/WPA2-PSK, WPA/WPA2
                                 </Card.Text>
-                                <Button variant="primary">Részletek</Button>
+                                <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
                         </Card>
                     </div>

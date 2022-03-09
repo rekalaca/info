@@ -1,9 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
-import {
-    Container, Row, Col, Form, Input, Button, Navbar, Nav,
-    NavbarBrand, NavLink, NavItem, UncontrolledDropdown,
-    DropdownToggle, DropdownMenu, DropdownItem
-} from 'reactstrap';
+import { Nav } from 'reactstrap';
 
 
 export default function Navigation() {
@@ -43,7 +39,7 @@ export default function Navigation() {
                                 <a className="nav-link active" aria-current="page" href="/">Kábel</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Fórum</a>
+                                <a className="nav-link active" aria-current="page" href="/forum">Fórum</a>
                             </li>
                         </ul>
 

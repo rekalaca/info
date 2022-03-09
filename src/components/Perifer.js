@@ -20,7 +20,7 @@ export default function Perifer() {
                                 <Card.Text>
                                     Többfunkciós nyomtató - Tintasugaras - Színes - Otthon / Otthoni iroda - Nyomtatás - Szkennelés - Másolás - Fehér színben
                                 </Card.Text>
-                                <Button variant="primary">Részletek</Button>
+                                <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -32,7 +32,7 @@ export default function Perifer() {
                                 <Card.Text>
                                 Fényképnyomtató - Többfunkciós nyomtató - Tintasugaras - Monokróm, Színes - Otthon / Otthoni iroda - Nyomtatás - Szkennelés
                                 </Card.Text>
-                                <Button variant="primary">Részletek</Button>
+                                <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -44,7 +44,7 @@ export default function Perifer() {
                                 <Card.Text>
                                 Többfunkciós nyomtató - Tintasugaras - Színes - Otthon / Otthoni iroda - Nyomtatás - Szkennelés - Másolás - Fax - USB/WiFi
                                 </Card.Text>
-                                <Button variant="primary">Részletek</Button>
+                                <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -56,7 +56,7 @@ export default function Perifer() {
                                 <Card.Text>
                                 Többfunkciós nyomtató - Tintasugaras - Színes - Otthon / Otthoni iroda - Nyomtatás - Szkennelés - Másolás - Fekete színben
                                 </Card.Text>
-                                <Button variant="primary">Részletek</Button>
+                                <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
                         </Card>
                     </div>

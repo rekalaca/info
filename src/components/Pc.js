@@ -19,7 +19,7 @@ export default function Pc() {
                                 <Card.Text>
                                     Intel® Core™ i3-10100 Processor (6M Cache, up to 4.30 GHz) - Microsoft Windows 10 Professional - 4GB DDR4 2666MHz RAM - 256GB M.2 PCIe SSD- Intel® UHD Graphics 630...
                                 </Card.Text>
-                                <Button variant="primary">Részletek</Button>
+                                <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -31,7 +31,7 @@ export default function Pc() {
                                 <Card.Text>
                                     Intel®Core™i7 - Windows 10 Pro - 15,6" FHD (1920 x 1080) - 16 GB DDR4 - NVIDIA®GeForce®MX110 2 GB VRAM -802.11 2x2 AC + Bluetooth® 5.0...
                                 </Card.Text>
-                                <Button variant="primary">Részletek</Button>
+                                <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -43,7 +43,7 @@ export default function Pc() {
                                 <Card.Text>
                                     Intel® Core™ i3-1005G1 processzor - 1,2 GHz-Videókártya - 8 GB Merevlemez méret - 15,6 inch Kijelző felbontása 1920x1080 - WIN 10...
                                 </Card.Text>
-                                <Button variant="primary">Részletek</Button>
+                                <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
                         </Card>
                     </div>
@@ -55,7 +55,7 @@ export default function Pc() {
                                 <Card.Text>
                                     AMD Ryzen 7 3700X (3,60-4,40 GHz/32 MB) - 16 GB DDR4 3000 MHz - 1TB HDD+256 GB SSD - nVidia GeForce GTX 1660 Ti (6 GB VRAM)
                                 </Card.Text>
-                                <Button variant="primary">Részletek</Button>
+                                <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
                         </Card>
                     </div>
