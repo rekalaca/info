@@ -25,7 +25,7 @@ export default function Sliderjs() {
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
@@ -66,7 +66,7 @@ export default function Sliderjs() {
                                             <h4 className="product-price">279.000 Ft <del className="product-old-price">299.000 Ft</del></h4>
                                         </div>
                                         <div className="add-to-cart">
-                                            <button className="add-to-cart-btn"><i className="fa fa-shopping-cart"></i>  kosárba rakom</button>
+                                            <button className="add-to-cart-btn">kosárba rakom</button>
                                         </div>
                                     </div>
 
@@ -85,7 +85,7 @@ export default function Sliderjs() {
                                             <h4 className="product-price">8.990 Ft <del className="product-old-price">9.990 Ft</del></h4>
                                         </div>
                                         <div className="add-to-cart">
-                                            <button className="add-to-cart-btn"><i className="fa fa-shopping-cart"></i> kosárba rakom</button>
+                                            <button className="add-to-cart-btn">kosárba rakom</button>
                                         </div>
                                     </div>
 
@@ -103,7 +103,7 @@ export default function Sliderjs() {
                                             <h4 className="product-price">179.000 Ft <del className="product-old-price">199.000 Ft</del></h4>
                                         </div>
                                         <div className="add-to-cart">
-                                            <button className="add-to-cart-btn"><i className="fa fa-shopping-cart"></i> kosárba rakom</button>
+                                            <button className="add-to-cart-btn">kosárba rakom</button>
                                         </div>
                                     </div>
 
@@ -120,7 +120,7 @@ export default function Sliderjs() {
                                             <h4 className="product-price">14.990 Ft <del className="product-old-price">17.990 Ft</del></h4>
                                         </div>
                                         <div className="add-to-cart">
-                                            <button className="add-to-cart-btn"><i className="fa fa-shopping-cart"></i> kosárba rakom</button>
+                                            <button className="add-to-cart-btn">kosárba rakom</button>
                                         </div>
                                     </div>
 
@@ -135,7 +135,7 @@ export default function Sliderjs() {
                                             <h4 className="product-price">790 Ft <del className="product-old-price">990 Ft</del></h4>
                                         </div>
                                         <div className="add-to-cart">
-                                            <button className="add-to-cart-btn"><i className="fa fa-shopping-cart"></i> kosárba rakom</button>
+                                            <button className="add-to-cart-btn">kosárba rakom</button>
                                         </div>
                                     </div>
                                 </Slider>

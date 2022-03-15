@@ -9,6 +9,7 @@ import Aszf from './components/subpage/Aszf';
 import Pc from './components/Pc';
 import Routers from './components/Routers';
 import Perifer from './components/Perifer';
+import Cable from './components/Cable';
 import Forum from './components/Forum';
 import Szolgaltatas from './components/Szolgaltatas';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="pc" element={<Pc/>} />
           <Route path="routers" element={<Routers/>} />
           <Route path="perifer" element={<Perifer/>} />
+          <Route path="cable" element={<Cable/>} />
           <Route path="forum" element={<Forum/>} />
           <Route path="szolgaltatas" element={<Szolgaltatas/>} />
         </Route>

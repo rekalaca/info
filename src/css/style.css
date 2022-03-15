@@ -118,10 +118,10 @@ textarea.input {
   user-select: none;
 }
 .add-to-cart{
-  width: 90%;
-  padding: 1rem;
+  width: 87%;
+  padding: 0.5rem;
   
-  margin: 1.2rem;
+  margin: 1.5rem;
   margin-top: 3rem;
   background:rgba(163, 248, 145, 0.25) !important;
 }
@@ -951,29 +951,19 @@ textarea.input {
 
 .product .add-to-cart .add-to-cart-btn {
   position: relative;
-  border: 2px solid transparent;
-  height: 40px;
-  padding: 0 30px;
+  border: 1px solid transparent;
+  height: 45px;
+  padding: 0 20px;
   background-color: #12a72b;
   color: #FFF;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 550;
   border-radius: 40px;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
 
-.product .add-to-cart .add-to-cart-btn>i {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 30px;
-  height: 40px;
-  line-height: 38px;
-  color: #12a72b;
-  opacity: 0;
-  visibility: hidden;
-}
+
 
 .product .add-to-cart .add-to-cart-btn:hover {
   background-color: #FFF;
@@ -981,10 +971,6 @@ textarea.input {
   border-color: #12a72b;
 }
 
-.product .add-to-cart .add-to-cart-btn:hover>i {
-  opacity: 1;
-  visibility: visible;
-}
 
 /*----------------------------*\
 	Widget product
@@ -1889,8 +1875,33 @@ textarea.input {
 ===========================================================*/
 
 .slick-track{
-  height: 62vh;
+  height: 52vh;
 }
+@media only screen and (max-width:1024px) {
+  .slick-track {
+    height: 51vh;
+  }
+  
+}
+@media only screen and (max-width:768px) {
+  .slick-track {
+    height: 50vh;
+  }
+  
+}
+@media only screen and (max-width:480px) {
+  .slick-track {
+    height: 50vh;
+  }
+  
+}
+@media only screen and (max-width:375px) {
+  .slick-track {
+    height: 50vh;
+  }
+  
+}
+
 
 /*----------------------------*\
 	Arrows
@@ -2001,7 +2012,7 @@ textarea.input {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .section-title .section-nav {
     float: none;
     margin-top: 10px;
@@ -2026,9 +2037,10 @@ textarea.input {
 }
 
 #bemutatkozas{
-  width: 90%;
+  width: 80%;
   text-align: justify;
   margin: 0 auto 0 auto;
+  margin-top: 30px;
 }
 
 .kerek{
@@ -2062,6 +2074,7 @@ textarea.input {
 .gomb{
   background-color: #12a72b;
 }
+
 
 
 

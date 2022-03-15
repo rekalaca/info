@@ -1,13 +1,14 @@
 import React from 'react';
 
 
-
 export default function Forum() {
 
+    
     return (
 
-       <>
-       <h1>Fórum...</h1>
-       </>
+        <div>
+            <h1>Fórum, vagy üzenőfal...</h1>
+        
+      </div>
     )
 }
