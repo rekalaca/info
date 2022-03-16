@@ -21,16 +21,16 @@ export default function Section2() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 section-tab-nav tab-nav">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">PC/Laptop</a>
+                                <a className="nav-link active" aria-current="page" href="/pc">PC/Laptop</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">WiFi Router</a>
+                                <a className="nav-link active" aria-current="page" href="/routers">WiFi Router</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Periféria</a>
+                                <a className="nav-link active" aria-current="page" href="/perifer">Periféria</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Kábel</a>
+                                <a className="nav-link active" aria-current="page" href="/cable">Kábel</a>
                             </li>
                         </ul>
                     </div>

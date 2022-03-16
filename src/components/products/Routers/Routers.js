@@ -1,28 +1,26 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-import ep1 from '../img/product05.png';
-import c2 from '../img/Cable/utp10m1.jpg';
-import c3 from '../img/Cable/hdmi1.jpg';
-import c4 from '../img/Cable/usb1.jpg';
+import tpax10 from './img/Archer/product02.png';
+import as55 from './img/AsusRT55/asusrt01.jpg';
+import tpmr01 from './img/TpMR100/tl-mr100.jpg';
+import ten01 from './img/Tenda/tenda01.jpg';
 
-export default function Cable() {
+
+export default function Routers() {
 
     return (
-
         <div className='section'>
             <div className='container'>
                 <div className="row">
                     <div className='col-md-3 col-xs-6'>
                         <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src={ep1} />
+                            <Card.Img variant="top" src={tpax10} />
                             <Card.Body>
-                                <Card.Title>ROLINE UTP CAT6 PATCH KÁBEL 1 méteres</Card.Title>
+                                <Card.Title>TP-Link Archer AX10 AX1500</Card.Title>
                                 <Card.Text>
-                                    Típus: UTP Patch kábel
-                                    Hossz: 1 méter
-                                    Szabvány: Cat6
-                                    Csatlakozók: RJ45
-                                    Szín: szürke
+                                    Adatátviteli sebesség: 1201 + 300 Mbps
+                                    Szabvány: IEEE 802.11ax/a/n/b/g/ac
+                                    Titkosítás: WEP, WPA/WPA2, WPA/WPA2-PSK
                                 </Card.Text>
                                 <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
@@ -30,15 +28,14 @@ export default function Cable() {
                     </div>
                     <div className='col-md-3 col-xs-6'>
                         <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src={c2} />
+                            <Card.Img variant="top" src={as55} />
                             <Card.Body>
-                                <Card.Title>UTP Cat6 patch kábel 10 m DK-1617</Card.Title>
+                                <Card.Title>Asus RT-AX55 AX1800 Mbps Dual-band</Card.Title>
                                 <Card.Text>
-                                    Típus: UTP Patch kábel
-                                    Hossz: 10 méter
-                                    Szabvány: Cat6
-                                    Csatlakozók: RJ45
-                                    Szín: szürke
+                                    Kétsávos WiFi 6 (802.11ax)
+                                    Adatátviteli sebesség: 1201+574 Mbps
+                                    Szabvány: 802.11 a/b/g/n/ac/ax
+                                    Titkosítás: WPA, WPA2 , WPA3, WPS
                                 </Card.Text>
                                 <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
@@ -46,13 +43,14 @@ export default function Cable() {
                     </div>
                     <div className='col-md-3 col-xs-6'>
                         <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src={c3} />
+                            <Card.Img variant="top" src={tpmr01} />
                             <Card.Body>
-                                <Card.Title>HDMI kábel 3m AK-330114-030-S</Card.Title>
+                                <Card.Title>TP-Link TL-MR100 4G Modem + Wireless Router</Card.Title>
                                 <Card.Text>
-                                    HDMI kábel 
-                                    TV-hez, Monitorhoz, Számítógéphez használható
-                                    1080P 60Hz  , Full HD, 3D
+                                    Adatátviteli sebesség: 300 Mbps
+                                    Szabvány: IEEE 802.11b/g/n
+                                    Titkosítás: WEP, WPA/WPA2, WPA/WPA2-PSK
+                                    Vezetékes hálózati sebesség 10/100 Mbps
                                 </Card.Text>
                                 <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
@@ -60,11 +58,13 @@ export default function Cable() {
                     </div>
                     <div className='col-md-3 col-xs-6'>
                         <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src={c4} />
+                            <Card.Img variant="top" src={ten01} />
                             <Card.Body>
-                                <Card.Title>Goobay 93999 USB 3.0 hosszabbító kábel 3m</Card.Title>
+                                <Card.Title>Tenda AC6 1200Mbps kétsávos wifi router</Card.Title>
                                 <Card.Text>
-                                Alap szín:Fekete, Csatlakozó 1:USB 3.0 apa, Csatlakozó 2:USB 3.0 anya
+                                    Adatátvitel: akár 1167Mbps
+                                    Szabványok: IEEE 802.11ac/a/n 5GHz, IEEE 802.11b/g/n 2.4GHz
+                                    Titkosítás: WPA-PSK/WPA2-PSK, WPA/WPA2
                                 </Card.Text>
                                 <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>

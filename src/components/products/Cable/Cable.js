@@ -1,23 +1,28 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-import d1 from '../img/DellPc/dell.jpg';
-import lv151 from '../img/LenovoV15/product01.png';
-import lvide from '../img/LenovoIdea/lenovide4.jpg';
-import seri from '../img/Serioux/serioux.png';
+import ep1 from './img/utpszurke.png';
+import c2 from './img/utp10m1.jpg';
+import c3 from './img/hdmi1.jpg';
+import c4 from './img/usb1.jpg';
 
-export default function Pc() {
+export default function Cable() {
 
     return (
+
         <div className='section'>
             <div className='container'>
                 <div className="row">
                     <div className='col-md-3 col-xs-6'>
                         <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src={d1} />
+                            <Card.Img variant="top" src={ep1} />
                             <Card.Body>
-                                <Card.Title>DELL VOSTRO 3681</Card.Title>
+                                <Card.Title>ROLINE UTP CAT6 PATCH KÁBEL 1 méteres</Card.Title>
                                 <Card.Text>
-                                    Intel® Core™ i3-10100 Processor (6M Cache, up to 4.30 GHz) - Microsoft Windows 10 Professional - 4GB DDR4 2666MHz RAM - 256GB M.2 PCIe SSD- Intel® UHD Graphics 630...
+                                    Típus: UTP Patch kábel
+                                    Hossz: 1 méter
+                                    Szabvány: Cat6
+                                    Csatlakozók: RJ45
+                                    Szín: szürke
                                 </Card.Text>
                                 <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
@@ -25,11 +30,15 @@ export default function Pc() {
                     </div>
                     <div className='col-md-3 col-xs-6'>
                         <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src={lv151} />
+                            <Card.Img variant="top" src={c2} />
                             <Card.Body>
-                                <Card.Title>LENOVO V15-IIL 82C5000QHV</Card.Title>
+                                <Card.Title>UTP Cat6 patch kábel 10 m DK-1617</Card.Title>
                                 <Card.Text>
-                                    Intel®Core™i7 - Windows 10 Pro - 15,6" FHD (1920 x 1080) - 16 GB DDR4 - NVIDIA®GeForce®MX110 2 GB VRAM -802.11 2x2 AC + Bluetooth® 5.0...
+                                    Típus: UTP Patch kábel
+                                    Hossz: 10 méter
+                                    Szabvány: Cat6
+                                    Csatlakozók: RJ45
+                                    Szín: szürke
                                 </Card.Text>
                                 <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
@@ -37,11 +46,13 @@ export default function Pc() {
                     </div>
                     <div className='col-md-3 col-xs-6'>
                         <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src={lvide} />
+                            <Card.Img variant="top" src={c3} />
                             <Card.Body>
-                                <Card.Title>LENOVO IDEAPAD 3 15IIL05</Card.Title>
+                                <Card.Title>HDMI kábel 3m AK-330114-030-S</Card.Title>
                                 <Card.Text>
-                                    Intel® Core™ i3-1005G1 processzor - 1,2 GHz-Videókártya - 8 GB Merevlemez méret - 15,6 inch Kijelző felbontása 1920x1080 - WIN 10...
+                                    HDMI kábel 
+                                    TV-hez, Monitorhoz, Számítógéphez használható
+                                    1080P 60Hz  , Full HD, 3D
                                 </Card.Text>
                                 <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
@@ -49,11 +60,11 @@ export default function Pc() {
                     </div>
                     <div className='col-md-3 col-xs-6'>
                         <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src={seri} />
+                            <Card.Img variant="top" src={c4} />
                             <Card.Body>
-                                <Card.Title>ASUS SRX-59490885 Gaming</Card.Title>
+                                <Card.Title>Goobay 93999 USB 3.0 hosszabbító kábel 3m</Card.Title>
                                 <Card.Text>
-                                    AMD Ryzen 7 3700X (3,60-4,40 GHz/32 MB) - 16 GB DDR4 3000 MHz - 1TB HDD+256 GB SSD - nVidia GeForce GTX 1660 Ti (6 GB VRAM)
+                                Alap szín:Fekete, Csatlakozó 1:USB 3.0 apa, Csatlakozó 2:USB 3.0 anya
                                 </Card.Text>
                                 <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>

@@ -1,12 +1,11 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-import tpax10 from '../img/product02.png';
-import as55 from '../img/AsusRT55/asusrt01.jpg';
-import tpmr01 from '../img/TpMR100/tl-mr100.jpg';
-import ten01 from '../img/Tenda/tenda01.jpg';
+import d1 from './img/DellPc/dell.jpg';
+import lv151 from './img/LenovoV15/product01.png';
+import lvide from './img/LenovoIdea/lenovide4.jpg';
+import seri from './img/Serioux/serioux.png';
 
-
-export default function Routers() {
+export default function Pc() {
 
     return (
         <div className='section'>
@@ -14,13 +13,11 @@ export default function Routers() {
                 <div className="row">
                     <div className='col-md-3 col-xs-6'>
                         <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src={tpax10} />
+                            <Card.Img variant="top" src={d1} />
                             <Card.Body>
-                                <Card.Title>TP-Link Archer AX10 AX1500</Card.Title>
+                                <Card.Title>DELL VOSTRO 3681</Card.Title>
                                 <Card.Text>
-                                    Adatátviteli sebesség: 1201 + 300 Mbps
-                                    Szabvány: IEEE 802.11ax/a/n/b/g/ac
-                                    Titkosítás: WEP, WPA/WPA2, WPA/WPA2-PSK
+                                    Intel® Core™ i3-10100 Processor (6M Cache, up to 4.30 GHz) - Microsoft Windows 10 Professional - 4GB DDR4 2666MHz RAM - 256GB M.2 PCIe SSD- Intel® UHD Graphics 630...
                                 </Card.Text>
                                 <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
@@ -28,14 +25,11 @@ export default function Routers() {
                     </div>
                     <div className='col-md-3 col-xs-6'>
                         <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src={as55} />
+                            <Card.Img variant="top" src={lv151} />
                             <Card.Body>
-                                <Card.Title>Asus RT-AX55 AX1800 Mbps Dual-band</Card.Title>
+                                <Card.Title>LENOVO V15-IIL 82C5000QHV</Card.Title>
                                 <Card.Text>
-                                    Kétsávos WiFi 6 (802.11ax)
-                                    Adatátviteli sebesség: 1201+574 Mbps
-                                    Szabvány: 802.11 a/b/g/n/ac/ax
-                                    Titkosítás: WPA, WPA2 , WPA3, WPS
+                                    Intel®Core™i7 - Windows 10 Pro - 15,6" FHD (1920 x 1080) - 16 GB DDR4 - NVIDIA®GeForce®MX110 2 GB VRAM -802.11 2x2 AC + Bluetooth® 5.0...
                                 </Card.Text>
                                 <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
@@ -43,14 +37,11 @@ export default function Routers() {
                     </div>
                     <div className='col-md-3 col-xs-6'>
                         <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src={tpmr01} />
+                            <Card.Img variant="top" src={lvide} />
                             <Card.Body>
-                                <Card.Title>TP-Link TL-MR100 4G Modem + Wireless Router</Card.Title>
+                                <Card.Title>LENOVO IDEAPAD 3 15IIL05</Card.Title>
                                 <Card.Text>
-                                    Adatátviteli sebesség: 300 Mbps
-                                    Szabvány: IEEE 802.11b/g/n
-                                    Titkosítás: WEP, WPA/WPA2, WPA/WPA2-PSK
-                                    Vezetékes hálózati sebesség 10/100 Mbps
+                                    Intel® Core™ i3-1005G1 processzor - 1,2 GHz-Videókártya - 8 GB Merevlemez méret - 15,6 inch Kijelző felbontása 1920x1080 - WIN 10...
                                 </Card.Text>
                                 <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>
@@ -58,13 +49,11 @@ export default function Routers() {
                     </div>
                     <div className='col-md-3 col-xs-6'>
                         <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src={ten01} />
+                            <Card.Img variant="top" src={seri} />
                             <Card.Body>
-                                <Card.Title>Tenda AC6 1200Mbps kétsávos wifi router</Card.Title>
+                                <Card.Title>ASUS SRX-59490885 Gaming</Card.Title>
                                 <Card.Text>
-                                    Adatátvitel: akár 1167Mbps
-                                    Szabványok: IEEE 802.11ac/a/n 5GHz, IEEE 802.11b/g/n 2.4GHz
-                                    Titkosítás: WPA-PSK/WPA2-PSK, WPA/WPA2
+                                    AMD Ryzen 7 3700X (3,60-4,40 GHz/32 MB) - 16 GB DDR4 3000 MHz - 1TB HDD+256 GB SSD - nVidia GeForce GTX 1660 Ti (6 GB VRAM)
                                 </Card.Text>
                                 <Button className='gomb' variant="primary">Részletek</Button>
                             </Card.Body>

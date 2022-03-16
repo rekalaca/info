@@ -1,6 +1,6 @@
 import React from 'react';
-import Section from './Section';
-import Section2b from './Section2b';
+import Section from './subpage/Section';
+import Section2b from './subpage/Section2b';
 export default function Cimlap() {
     return (
         <div>

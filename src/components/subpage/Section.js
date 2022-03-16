@@ -1,7 +1,7 @@
 import React from 'react';
-import sh1 from '../img/shop01.png'
-import sh2 from '../img/shop02.png'
-import sh3 from '../img/shop03.png'
+import sh1 from './img/shop01.png'
+import sh2 from './img/shop02.png'
+import sh3 from './img/shop03.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import {
@@ -25,7 +25,7 @@ export default function Section(){
                         </div>
                         <div class="shop-body">
                             <h3>PC és <br></br>Laptop</h3>
-                            <a href="pclapt.html" class="cta-btn">Vedd meg most! <i class="fa fa-arrow-circle-right"></i></a>
+                            <a href="/pc" class="cta-btn">Vedd meg most! <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ export default function Section(){
                         </div>
                         <div class="shop-body">
                             <h3>WiFi<br></br>Router</h3>
-                            <a href="#" class="cta-btn">Vedd meg most! <i class="fa fa-arrow-circle-right"></i></a>
+                            <a href="/routers" class="cta-btn">Vedd meg most! <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@ export default function Section(){
                         </div>
                         <div class="shop-body">
                             <h3>Periféria és<br></br>Kábel</h3>
-                            <a href="#" class="cta-btn">Vedd meg most! <i class="fa fa-arrow-circle-right"></i></a>
+                            <a href="/perifer" class="cta-btn">Vedd meg most! <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                 </div>

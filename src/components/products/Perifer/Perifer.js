@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-import hpdesk1 from '../img/HPD2320/hpdesk01.jpg';
-import pixma1 from '../img/Canon/pixma01.png';
-import hpnk1 from '../img/HPnk/hpnk01.jpg';
-import ep1 from '../img/Epson/ep01.jpg';
+import hpdesk1 from './img/HPD2320/hpdesk01.jpg';
+import pixma1 from './img/Canon/pixma01.png';
+import hpnk1 from './img/HPnk/hpnk01.jpg';
+import ep1 from './img/Epson/ep01.jpg';
 
 export default function Perifer() {
 
