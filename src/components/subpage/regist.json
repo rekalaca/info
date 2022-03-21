@@ -1,0 +1,14 @@
+[
+    {
+        "name" : "Rékási László",
+        "login" : "rekalaca",
+        "password" : "asdcg1234",
+        "birth" : "1975-01-10"
+    },
+    {
+        "name" : "Simon Andi",
+        "login" : "simiandi",
+        "password" : "asdcg1234",
+        "birth" : "1982-05-17"
+    }
+]

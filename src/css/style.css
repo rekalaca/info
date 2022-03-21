@@ -1875,7 +1875,7 @@ textarea.input {
 ===========================================================*/
 
 .slick-track{
-  height: 52vh;
+  height: 62vh;
 }
 @media only screen and (max-width:1024px) {
   .slick-track {
@@ -2075,7 +2075,9 @@ textarea.input {
 .gomb{
   background-color: #12a72b;
 }
-
+.hibauzi{
+  color: red;
+}
 
 
 
