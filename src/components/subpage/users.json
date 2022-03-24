@@ -1,0 +1,112 @@
+[
+    {
+        "login": "vargai01",
+        "password": "jdhT65zt",
+        "name": "Varga Ivett",
+        "phone": "304564136",
+        "birth": "1975. 01. 23.",
+        "email": "varga.ivett@gelka.hu",
+        "billing_address": "4320 Nagyk�ll�, M�rt�rok �tja 6.",
+        "shipping_address": "4320 Nagyk�l� M�rt�rok �tja 6.",
+        "tax_reg": "null"
+    },
+    {
+        "login": "kisska76",
+        "password": "sd56Zh21",
+        "name": "KissK�roly",
+        "phone": "307684325",
+        "birth": "1976. 11. 02.",
+        "email": "kisskarcsi@gelka.hu",
+        "billing_address": "4400 Ny�regyh�za, Egyh�z k�z 3. 4/10",
+        "shipping_address": "4400 Ny�regyh�za Egyh�z k�z 3. 4/10",
+        "tax_reg": "null"
+    },
+    {
+        "login": "tamsando",
+        "password": "sg67Ohsf",
+        "name": "Tam�s S�ndor",
+        "phone": "202107754",
+        "birth": "1961. 03. 11.",
+        "email": "tamassanya@merk.com",
+        "billing_address": "4400 Ny�regyh�za, Vir�g utca 65.",
+        "shipping_address": "4400 Ny�regyh�za, Vir�g utca 65. null",
+        "tax_reg": "null"
+    },
+    {
+        "login": "kov1raj09",
+        "password": "lK873Eds",
+        "name": "Kov�cs Rajmond",
+        "phone": "304443267",
+        "birth": "1990. 04. 01.",
+        "email": "kovirajmi@gcar.net",
+        "billing_address": "4400 Ny�regyh�za, J�g utca 131.",
+        "shipping_address": "4400 Ny�regyh�za, J�g utca 131.",
+        "tax_reg": "null"
+    },
+    {
+        "login": "luki1and",
+        "password": "55pol71Re",
+        "name": "Luk�cs Andrea",
+        "phone": "702338182",
+        "birth": "1985. 12. 06.",
+        "email": "lukacsandi@merk.com",
+        "billing_address": "4244 �jfeh�rt�, F�zde �t 23.",
+        "shipping_address": "4244 �jfeh�rt�, F�zde �t 23. null",
+        "tax_reg": "null"
+    },
+    {
+        "login": "bekeskat",
+        "password": "78Ujd4Rt",
+        "name": "B�k�si Katalin",
+        "phone": "202568822",
+        "birth": "2001. 07. 08.",
+        "email": "bekesikata@gelka.hu",
+        "billing_address": "4300 Ny�rb�tor, Kossuth Lajos utca 177.",
+        "shipping_address": "4300 Ny�rb�tor, Alab�rdos utca 4.",
+        "tax_reg": "null"
+    },
+    {
+        "login": "zalaci77",
+        "password": "1Z6RerTa",
+        "name": "Zal�n L�szl�",
+        "phone": "305537921",
+        "birth": "1977. 06. 22.",
+        "email": "zalanlasz@gcar.net",
+        "billing_address": "4326 M�riap�cs, B�tori �t 6.",
+        "shipping_address": "4326 M�riap�cs, B�tori �t 6. null",
+        "tax_reg": "null"
+    },
+    {
+        "login": "corporet1",
+        "password": "Hje39I32",
+        "name": "Corporet Bt.",
+        "phone": "304444321",
+        "birth": "null",
+        "email": "info@corporet.hu",
+        "billing_address": "4400 Ny�regyh�za, Kiss Ern� utca 101.",
+        "shipping_address": "4400 Ny�regyh�za, Kiss Ern� utca 101.",
+        "tax_reg": "12462313215"
+    },
+    {
+        "login": "minip001",
+        "password": "Lo98TTse",
+        "name": "Minip�k KFT",
+        "phone": "202432431",
+        "birth": "null",
+        "email": "help@minipek.hu",
+        "billing_address": "4400 Ny�regyh�za, Orosi �t 44.",
+        "shipping_address": "4400 Ny�regyh�za, Orosi �t 44.",
+        "tax_reg": "10608450215"
+    },
+    {
+        "login": "nagytom1",
+        "password": "82RjPgs1",
+        "name": "Nagy Tam�s",
+        "phone": "705523491",
+        "birth": "1999. 09. 15.",
+        "email": "nagytom@gelka.hu",
+        "billing_address": "4501 Kemecse Ny�regyh�zi �t 12.",
+        "shipping_address": "4501 Kemecse Ny�regyh�zi �t 12.",
+        "tax_reg": "null"
+    }
+]
