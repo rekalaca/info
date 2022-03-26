@@ -66,6 +66,26 @@ export default function App() {
         var addressformat2 = /^([0-9]{4}[ ]{1}[A-ZÍÁÉŰÚŐÓ][a-zíéáűúőó]*[,]{1}[ ]{1}[A-ZÍÁÉŰÚŐÓ][a-zíéáűúőó]*[ ]{1}[\w][a-zíéáűúőó]*[ ]{1}[\w][a-z íéáűúőó\./\-0-9]*)$/;
         if (shipping_address.length == 0 || shipping_address.match(addressformat2)) setgoodShipping_address(true)
         else setgoodShipping_address(false);
+
+        if (goodlogin && goodpassword && goodname && goodbirth && goodemail && goodphone && goodtax_reg
+            && goodbilling_address && goodshipping_address) {
+            userExists();
+        } else {
+            alert("Hiba")
+        }
+
+        function userExists(){
+            let counter = 0;
+            for(let i=0;i<Adat.length;i++){
+                if(Adat[i].login == login || Adat[i].email == email){
+                    counter++;
+                }
+            }
+            if(counter!=0){
+                alert("Van már ilyen felhasználó/email")
+            }
+            else send();
+        }
            
             
              
