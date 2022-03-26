@@ -31,17 +31,31 @@ export default function App() {
         console.log(Adat);
     }
 
+    function userExists() {
+        let counter = 0;
+        for (let i = 0; i < Adat.length; i++) {
+            if (Adat[i].login == login || Adat[i].email == email) {
+                counter++;
+            }
+        }
+        if (counter != 0) {
+            alert("Van már ilyen felhasználó/email")
+        }
+
+        else send();
+    }
+
 
     function vizsgal() {
 
         if (login.length > 5 && login.length < 21 && !login.match(" ") && login == login.toLowerCase()) setgoodLogin(true)
         else setgoodLogin(false);
 
-        var passformat =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,16}$/;
+        var passformat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,16}$/;
         if (password.length > 7 && password.length < 17 && password == password2 && password.match(passformat)) setgoodPassword(true)
         else setgoodPassword(false);
 
-        var nameformat =/^[A-ZÍÁÉŰÚŐÓ][a-zíéáűúőó]*[ ]{1}[A-ZÍÁÉŰÚŐÓ][a-zíéáűúőó\D]*$/;
+        var nameformat = /^[A-ZÍÁÉŰÚŐÓ][a-zíéáűúőó]*[ ]{1}[A-ZÍÁÉŰÚŐÓ][a-zíéáűúőó\D]*$/;
         if (name.length > 0 && name.match(nameformat)) setgoodName(true)
         else setgoodName(false);
 
@@ -67,40 +81,23 @@ export default function App() {
         if (shipping_address.length == 0 || shipping_address.match(addressformat2)) setgoodShipping_address(true)
         else setgoodShipping_address(false);
 
-        if (goodlogin && goodpassword && goodname && goodbirth && goodemail && goodphone && goodtax_reg
+
+        if (login.length > 0 && goodlogin && goodpassword && goodname && goodbirth && goodemail && goodphone && goodtax_reg
             && goodbilling_address && goodshipping_address) {
             userExists();
         } else {
             alert("Hiba")
         }
-
-        function userExists(){
-            let counter = 0;
-            for(let i=0;i<Adat.length;i++){
-                if(Adat[i].login == login || Adat[i].email == email){
-                    counter++;
-                }
-            }
-            if(counter!=0){
-                alert("Van már ilyen felhasználó/email")
-            }
-            else send();
-        }
-           
-            
-             
-
     }
 
     return (
         <>
             <div id='regcim'><h3>Regisztráció</h3></div>
 
-            
             <div className="col-md-8 menusk">
                 <label for="formGroupExampleInput" class="form-label">Felhasználónév</label>
                 <input type="text" className="form-control" id="login" placeholder="csupa kisbetű ékezet nélkül szóköz nélkül (min 6 - max 20 karakter)" onChange={(e) => setLogin(e.target.value)} /><label className='hibauzi'>{goodlogin ? '' : 'Hibás felhasználónév formátum! (csak kisbetű, minimum 6, maximum 20 karakter, szóköz nélkül)'}</label>
-            </div>            
+            </div>
             <div className="col-md-8 menusk">
                 <label for="inputPassword" className="form-label">Jelszó</label>
                 <input type="password" className="form-control" id="password" placeholder="minimum 8, maximum 16 karakter(kis/nagybetű/szám+speciális karakter)" onChange={(e) => setPassword(e.target.value)} /><label className='hibauzi'>{goodpassword ? '' : 'Hibás jelszó formátum, vagy nem egyezik a két jelszó!'}</label>
@@ -137,7 +134,7 @@ export default function App() {
                 <div className="input-checkbox">
                     <input type="checkbox" id="shiping-address" />
                     <label for="shiping-address">
-                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                         A szállítást más címre kérem!
                     </label>
                     <div className="caption">
