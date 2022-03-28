@@ -23,11 +23,11 @@ export default function Footer() {
 							<div className="footer">
 								<h3 className="footer-title">Kategóriák</h3>
 								<ul className="footer-links">
-									<li><a href="#">PC / Laptop</a></li>
-									<li><a href="#">Wi-Fi Routerek</a></li>
-									<li><a href="#">Perifériák</a></li>
-									<li><a href="#">Kábelek</a></li>
-									<li><a href="#">Szolgáltatások</a></li>
+									<li><a href="/pc">PC / Laptop</a></li>
+									<li><a href="/routers">Wi-Fi Routerek</a></li>
+									<li><a href="/perifer">Perifériák</a></li>
+									<li><a href="/cable">Kábelek</a></li>
+									<li><a href="/szolgaltatas">Szolgáltatások</a></li>
 								</ul>
 							</div>
 						</div>
@@ -36,7 +36,7 @@ export default function Footer() {
 							<div className="footer">
 								<h3 className="footer-title">Információk</h3>
 								<ul className="footer-links">
-									<li><a href="#">Szolgáltatási díjak</a></li>
+									<li><a href="/szolgaltatas">Szolgáltatási díjak</a></li>
 									<li><a href="#">Kiszállítás</a></li>
 									<li><a href="#">Garancia</a></li>
 									<li><a href="#">Adatvédelmi irányelvek</a></li>

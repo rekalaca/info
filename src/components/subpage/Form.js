@@ -28,6 +28,7 @@ export default function App() {
 
     const send = () => {
         setAdat(Adat.push({ login: login, password: password, name: name, phone: phone, birth: birth, email: email, billing_address: billing_address, shipping_address: shipping_address, tax_reg: tax_reg }));
+        window.location.href = "/GoodRegist";
         console.log(Adat);
     }
 

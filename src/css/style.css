@@ -2153,8 +2153,19 @@ h3{
   text-align: justify;
   margin-bottom: 30px;  
 }
+.back{
+  background-color: #71f5a8;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
 .kozep{
   text-align: center;
+}
+
+.infogreen{
+  color: #12a72b;
+
 }
 
 .news {
@@ -2187,4 +2198,16 @@ h3{
 .hibauzi {
   color: red;
   font-size: 11px;
+}
+.err{
+  text-align: center;
+  background-color: red;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 15px;
+  color: white;
+}
+.h1error{
+  color: white;
+  font-weight: bold;
 }
