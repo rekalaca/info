@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import bl from '../img/biglogo.png';
-
+import axios from 'axios';
 const Rolunk= () =>{
 
+	const fetchdata = async () => {
+		const result = await axios.get("http://localhost:5555/admin")
+		setData(result.data)
+	}
+
+	const [data, setData] = useState([]);
+	//const [filledData,setFilledData] = useState(false);
+
+/* 	function check(){
+		if(data.length>0){
+			setFilledData = true;
+		}
+	} */
+	useEffect(() => {
+		fetchdata();
+		
+	},[]);
+
+	console.log(data);
     return(
         <div id="bemutatkozas">
 			<p>Cégünk 2020 szeptemberében alakult olyan szándékkal, hogy létrehozzunk egy informatikai vállalkozást, ami ötvözi a hagyományos számítógép szerviz 
@@ -16,6 +35,12 @@ const Rolunk= () =>{
 				Egyenlőre a szolgáltatásaink csak Szabolcs Szatmár Bereg megye területén érhető el, így az eszközrendelésnél ezt vegye figyelembe! Hamarosan bővítjük 
 				kapacitásainkat és elindul a futárszolgálat általi kiszállítások lehetősége, illetve a helyszíni szerelések  megrendelése elérhetővé válik Hajdú Bihar és Borsod menyékben is! Várjuk hívását!...
 				</p>
+			<h2>Az oldalért felelősek:</h2>
+			<ul>
+ 				{data.map((elem,key)=>(
+					<li key={key}>{elem.name}</li>
+	))} 
+			</ul>
 		</div>
     )
 }

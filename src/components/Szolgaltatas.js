@@ -1,31 +1,35 @@
-import React from 'react';
-
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 export default function Szolgaltatas() {
+
+    const [data, setData] = useState([]);
+    const fetchdata = async () => {
+        const result = await axios.get("http://localhost:5555/services")
+        setData(result.data)
+    }
+
+    useEffect(() => {
+        fetchdata();
+
+    }, []);
+    console.log(data)
 
     return (
 
         <div id='szolgi'>
             <h3>A helyszíni szolgáltatási díjak</h3>
             <table className='table table-striped'>
-                <tbody>
+                <thead>
                     <tr>
                         <th>Helyszíni hibaelhárítási szolgáltatások</th><th>Nettó ár:</th><th>Bruttó ár(27% áfával):</th>
                     </tr>
-                    <tr>
-                        <td>30 perc helyszíni munkavégzés kiszállással együtt (Szabolcs megye egész területén)</td>
-                        <td>6457 Forint</td>
-                        <td>8200 Forint</td>
-                    </tr>
-                    <tr>
-                        <td>30 perc helyszíni munkavégzés sürgősségi kiszállással (3 órán belül) együtt (Szabolcs megye egész területén)</td>
-                        <td>9441 Forint</td>
-                        <td>11900 Forint</td>
-                    </tr>
-                    <tr>
-                        <td>Minden további megkezdett 30 perc munkaidő</td>
-                        <td>2598 Forint</td>
-                        <td>3300 Forint</td>
-                    </tr>
+                </thead>
+                <tbody>
+                    {data.map(elem=>(
+                        <tr key={elem.serviceID}>
+                            <th>{elem.description}</th><th>{elem.net_value} Ft</th><th>{elem.net_value} Ft</th>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
             <br></br>
