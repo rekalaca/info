@@ -25,7 +25,7 @@ export default function Pc() {
                 {data.map((elem,index)=>(
                     <div key={index} className='col-md-3 col-xs-6'>
                     <Card style={{ width: '100%' }}>
-                        <Card.Img variant="top" src={elem.picture} />
+                        <Card.Img variant="top" src={`http://localhost:5555/${elem.picture}`} />
                         <Card.Body>
                             <Card.Title>{elem.name}</Card.Title>
                             <Card.Text>

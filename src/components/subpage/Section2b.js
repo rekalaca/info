@@ -2,17 +2,13 @@ import React from 'react';
 import Slider from "react-slick";
 import Sliderjs from './Slider';
 import 'bootstrap/dist/css/bootstrap.css';
-import {
-    Container, Row, Col, Form, Input, Button, Navbar, Nav,
-    NavbarBrand, NavLink, NavItem, UncontrolledDropdown,
-    DropdownToggle, DropdownMenu, DropdownItem
-} from 'reactstrap';
+import {Nav} from 'reactstrap';
 
 export default function Section2() {
 
     return (
         <div className="container">
-            <div className="row">
+            <div className="row"  >
                 <Nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <p className="news">Új termékek!</p>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

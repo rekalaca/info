@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import axios from 'axios';
-import p1 from './img/product01.png';
-import p2 from './img/product02.png';
-import p3 from './img/product03.png';
-import p4 from './img/product04.png';
-import p5 from './img/product05.png';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -55,9 +50,14 @@ export default function Sliderjs() {
 		fetchdata();
 		
 	},[]);
-    console.log(data)
 
-
+    function truncateString(str) {
+        if (str.length > 30) {
+          return str.slice(0, 30) + "...";
+        } else {
+          return str;
+        }
+      }
     return (
         <div className="section">
             <div className="container">
@@ -71,16 +71,16 @@ export default function Sliderjs() {
                                     {data.map((elem,index)=>(
                                         <div className="product" key={index}>
                                         <div className="product-img">
-                                            <img src={p1} alt="" />
+                                            <img src={`http://localhost:5555/${elem.picture}`}  alt="" />
                                             <div className="product-label">
                                                 <span className="sale">%</span>
                                                 <span className="new">ÚJ!</span>
                                             </div>
                                         </div>
                                         <div className="product-body">
-                                            <p className="product-category">Laptop</p>
+                                            <p className="product-category" alt={elem.description}>{truncateString(elem.description)}</p>
                                             <h3 className="product-name"><a href="#">{elem.name}</a></h3>
-                                            <h4 className="product-price">279.000 Ft <del className="product-old-price">{elem.net_value} Ft</del></h4>
+                                            <h4 className="product-price">{Math.round(elem.net_value)} Ft <del className="product-old-price">{Math.round(elem.net_value+(elem.net_value/100*5))} Ft</del></h4>
                                         </div>
                                         <div className="add-to-cart">
                                             <button className="add-to-cart-btn">kosárba rakom</button>

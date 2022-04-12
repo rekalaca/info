@@ -1,4 +1,6 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import logo from './img/logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -11,6 +13,13 @@ import {
 
 
 export default function Header() {
+
+    const [searchTerm,setSearchTerm] = useState('');
+
+
+    useEffect(() => {
+        
+    })
     return (
         <div id='top-header'>
             <Container>
@@ -24,9 +33,9 @@ export default function Header() {
                     </Col>
                     <Col sm={4}>
 
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
+                        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div className="modal-dialog">
+                                <div className="modal-content">
                                     <div className="wrapper">
                                         <div className="logo"> <img src={bl} alt="" /> </div>
                                         <div className="text-center mt-4 name"> Info - Tech </div>
@@ -44,8 +53,8 @@ export default function Header() {
 
                         <button type="button" className="btn btn-primary btn-sm gomb" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Kosár</button>
 
-                        <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                            <div clasNames="offcanvas-header">
+                        <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                            <div className="offcanvas-header">
                                 <h5 className='kh'>A kosár tartalma:</h5>
                                 <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
@@ -58,9 +67,9 @@ export default function Header() {
                                         </div>
                                         <div className="product-body">
                                             <h3 className="product-name"><a href="#">LENOVO V15-IIL (82C5000QHV)</a></h3>
-                                            <h4 className="product-price"><span class="qty">1x</span>279.000 Ft</h4>
+                                            <h4 className="product-price"><span className="qty">1x</span>279.000 Ft</h4>
                                         </div>
-                                        <button className="delete"><i class="fa fa-close"></i></button>
+                                        <button className="delete"><i className="fa fa-close"></i></button>
                                     </div>
 
                                     <div className="product-widget">
@@ -69,9 +78,9 @@ export default function Header() {
                                         </div>
                                         <div className="product-body">
                                             <h3 className="product-name"><a href="#">TP-Link AX1500 Next-Gen</a></h3>
-                                            <h4 className="product-price"><span class="qty">1x</span>8.990 Ft</h4>
+                                            <h4 className="product-price"><span className="qty">1x</span>8.990 Ft</h4>
                                         </div>
-                                        <button className="delete"><i class="fa fa-close"></i></button>
+                                        <button className="delete"><i className="fa fa-close"></i></button>
                                     </div>
                                 </div>
                                 <div className="cart-summary">
@@ -79,7 +88,7 @@ export default function Header() {
                                     <h5>Összesen: 287.990 Ft</h5>
                                 </div>
                                 <div className="cart-btns">
-                                    <a href="#"><button type="button" class="btn btn-success gomb">Megrendelem!</button></a>
+                                    <a href="#"><button type="button" className="btn btn-success gomb">Megrendelem!</button></a>
                                 </div>
 
                             </div>
@@ -99,7 +108,7 @@ export default function Header() {
                         <div className="search">
                             <div className="row height d-flex justify-content-center align-items-center">
                                 <div className="col-lg-9 col-md-9 col-xs-3">
-                                    <div className="search"> <i className="fa fa-search"></i> <input type="text" className="form-control" placeholder="Mit szeretnél megkeresni?" /> <button className="btn btn-primary">Keresés</button> </div>
+                                    <div className="search"> <i className="fa fa-search"></i> <input type="search" className="form-control" placeholder="Mit szeretnél megkeresni?" /><button>Keresés</button> </div>
                                 </div>
                             </div>
                         </div>

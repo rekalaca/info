@@ -12,6 +12,7 @@ import Perifer from './components/products/Perifer/Perifer';
 import Cable from './components/products/Cable/Cable';
 import Forum from './components/Forum';
 import Szolgaltatas from './components/Szolgaltatas';
+import SearchResult from './components/subpage/SearchResult'
 import Error from './components/Error';
 import GoodRegist from './components/subpage/GoodRegist';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="pc" element={<Pc/>} />
           <Route path="routers" element={<Routers/>} />
           <Route path="perifer" element={<Perifer/>} />
+          <Route path="search" element={<SearchResult/>} />
           <Route path="cable" element={<Cable/>} />
           <Route path="forum" element={<Forum/>} />
           <Route path="szolgaltatas" element={<Szolgaltatas/>} />

@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import axios from 'axios';
 
-export default function Cable() {
+export default function SearchResult(props) {
 
     const [data, setData] = useState([]);
     const fetchdata = async () => {
-		const result = await axios.get("http://localhost:5555/productsCables")
+		const result = await axios.get(`http://localhost:5555/search/${props.term}`);
 		setData(result.data)
 	}
-
+    
     useEffect(() => {
 		fetchdata();
 		

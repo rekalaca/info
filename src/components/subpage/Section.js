@@ -1,7 +1,7 @@
 import React from 'react';
-import sh1 from './img/shop01.png'
-import sh2 from './img/shop02.png'
-import sh3 from './img/shop03.png'
+import pc from './img/pc.jpg'
+import peri from './img/peripherals.jpg'
+import router from './img/router.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import {
@@ -12,44 +12,44 @@ import {
 
 export default function Section(){
     return(
-        <div class="section">
+        <div className="section">
 
         <Container>
 
-            <div class="row">
+            <div className="row">
 
-                <div class="col-md-4 col-xs-6">
-                    <div class="shop">
-                        <div class="shop-img">
-                            <img src={sh1} alt=""/>
+                <div className="col-md-4 col-xs-6">
+                    <div className="shop">
+                        <div className="shop-img">
+                            <img src={pc} alt=""/>
                         </div>
-                        <div class="shop-body">
+                        <div className="shop-body">
                             <h3>PC és <br></br>Laptop</h3>
-                            <a href="/pc" class="cta-btn">Vedd meg most! <i class="fa fa-arrow-circle-right"></i></a>
+                            <a href="/pc" className="cta-btn">Vedd meg most! <i className="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-4 col-xs-6">
-                    <div class="shop">
-                        <div class="shop-img">
-                            <img src={sh2} alt=""/>
+                <div className="col-md-4 col-xs-6">
+                    <div className="shop">
+                        <div className="shop-img">
+                            <img src={router} alt=""/>
                         </div>
-                        <div class="shop-body">
+                        <div className="shop-body">
                             <h3>WiFi<br></br>Router</h3>
-                            <a href="/routers" class="cta-btn">Vedd meg most! <i class="fa fa-arrow-circle-right"></i></a>
+                            <a href="/routers" className="cta-btn">Vedd meg most! <i className="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 col-xs-6">
-                    <div class="shop">
-                        <div class="shop-img">
-                            <img src={sh3} alt=""/>
+                <div className="col-md-4 col-xs-6">
+                    <div className="shop">
+                        <div className="shop-img">
+                            <img src={peri} alt=""/>
                         </div>
-                        <div class="shop-body">
+                        <div className="shop-body">
                             <h3>Periféria és<br></br>Kábel</h3>
-                            <a href="/perifer" class="cta-btn">Vedd meg most! <i class="fa fa-arrow-circle-right"></i></a>
+                            <a href="/perifer" className="cta-btn">Vedd meg most! <i className="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                 </div>
