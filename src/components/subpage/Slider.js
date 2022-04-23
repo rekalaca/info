@@ -42,36 +42,33 @@ export default function Sliderjs() {
 
     const [data, setData] = useState([]);
     const fetchdata = async () => {
-		const result = await axios.get("http://localhost:5555/products")
-		setData(result.data)
-	}
+        const result = await axios.get("http://localhost:5555/products")
+        setData(result.data)
+    }
 
     useEffect(() => {
-		fetchdata();
-		
-	},[]);
+        fetchdata();
+
+    }, []);
 
     function truncateString(str) {
         if (str.length > 30) {
-          return str.slice(0, 30) + "...";
+            return str.slice(0, 30) + "...";
         } else {
-          return str;
+            return str;
         }
-      }
+    }
     return (
         <div className="section">
             <div className="container">
-
                 <div className="row">
-
                     <div className="col-md-12">
-
-                            <div className="products-tabs">
-                                <Slider {...settings} >
-                                    {data.map((elem,index)=>(
-                                        <div className="product" key={index}>
+                        <div className="products-tabs">
+                            <Slider {...settings} >
+                                {data.map((elem, index) => (
+                                    <div className="product" key={index}>
                                         <div className="product-img">
-                                            <img src={`http://localhost:5555/${elem.picture}`}  alt="" />
+                                            <img src={`${elem.picture}`} alt="" />
                                             <div className="product-label">
                                                 <span className="sale">%</span>
                                                 <span className="new">ÚJ!</span>
@@ -80,15 +77,15 @@ export default function Sliderjs() {
                                         <div className="product-body">
                                             <p className="product-category" alt={elem.description}>{truncateString(elem.description)}</p>
                                             <h3 className="product-name"><a href="#">{elem.name}</a></h3>
-                                            <h4 className="product-price">{Math.round(elem.net_value)} Ft <del className="product-old-price">{Math.round(elem.net_value+(elem.net_value/100*5))} Ft</del></h4>
+                                            <h4 className="product-price">{Math.round(elem.net_value)} Ft <del className="product-old-price">{Math.round(elem.net_value + (elem.net_value / 100 * 5))} Ft</del></h4>
                                         </div>
                                         <div className="add-to-cart">
                                             <button className="add-to-cart-btn">kosárba rakom</button>
                                         </div>
                                     </div>
-                                    ))}
-                                </Slider>
-                            </div>
+                                ))}
+                            </Slider>
+                        </div>
                     </div>
 
                 </div>

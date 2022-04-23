@@ -24,6 +24,7 @@ const Rolunk= () =>{
 	console.log(data);
     return(
         <div id="bemutatkozas">
+			<h1>Rövid információ rólunk...</h1>
 			<p>Cégünk 2020 szeptemberében alakult olyan szándékkal, hogy létrehozzunk egy informatikai vállalkozást, ami ötvözi a hagyományos számítógép szerviz 
 				és a rendszergazdai szolgáltatásokat. Vállaljuk, hogy meghibásodott számítástechnikai eszközét a helyszínen javítjuk, így Önnek nem kell azzal fáradni, 
 				hogy szétszerelje és behozza hozzánk személyesen. Emellett, ha nem meghibásodásról van szó, csak fejlesztené, bővítené saját belső hálózatát, abban is 
@@ -35,8 +36,9 @@ const Rolunk= () =>{
 				Egyenlőre a szolgáltatásaink csak Szabolcs Szatmár Bereg megye területén érhető el, így az eszközrendelésnél ezt vegye figyelembe! Hamarosan bővítjük 
 				kapacitásainkat és elindul a futárszolgálat általi kiszállítások lehetősége, illetve a helyszíni szerelések  megrendelése elérhetővé válik Hajdú Bihar és Borsod menyékben is! Várjuk hívását!...
 				</p>
-			<h2>Az oldalért felelősek:</h2>
-			<ul>
+				<hr></hr>
+			
+			<ul className='kozep'><h6>Az oldalért felelősek:</h6>
  				{data.map((elem,key)=>(
 					<li key={key}>{elem.name}</li>
 	))} 

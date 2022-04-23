@@ -22,7 +22,7 @@ export default function Aszf() {
             </p>
             <h3>2. Szolgáltatások</h3>
             <p>                
-                A Szolgáltató, Szuperszerviz néven kínált infokommunikációs hibaelhárító és tanácsadó szolgáltatása, az informatika es a telekommunikáció következő főbb területeit öleli fel:<br></br>
+                A Szolgáltató, Info-Tech néven kínált infokommunikációs hibaelhárító és tanácsadó szolgáltatása, az informatika es a telekommunikáció következő főbb területeit öleli fel:<br></br>
 
                 - Operációs rendszerekkel (Microsoft Microsoft Vista, Microsoft Windows 7, Microsoft Windows 8 és Microsoft Windows 10 bármely verziója, valamint egyes LINUX és MAC disztribúciók) összefüggő telepítési, beállítási frissítési, es hibaelhárítási feladatok.<br></br>
 

@@ -67,7 +67,7 @@ export default function Footer() {
 						<div className="col-md-12 text-center">
 							
 							<span className="copyright">
-								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">InfoTeam & Colorlib</a>
+								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">InfoTeam & Colorlib(a végére már csak nyomokban...)</a>
 							
 							</span>
 						</div>

@@ -49,7 +49,6 @@ ol {
 	Buttons
 \*----------------------------*/
 .product {
-
   margin: 0 1rem;
 }
 
@@ -1935,7 +1934,7 @@ textarea.input {
 ===========================================================*/
 
 .slick-track {
-  height: 62vh;
+  height: 50vh;
 }
 
 @media only screen and (max-width:1024px) {
@@ -2423,3 +2422,5 @@ body {
 arak{
   font-size: larger;
 }
+
+
