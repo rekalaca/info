@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Router, Switch} from "react-router-dom";
 import Header from './components/subpage/Header';
 import Navigation from './components/subpage/Navigation';
 import Cimlap from './components/Cimlap';
@@ -14,6 +14,7 @@ import Forum from './components/Forum';
 import Szolgaltatas from './components/Szolgaltatas';
 import SearchResult from './components/subpage/SearchResult'
 import Error from './components/Error';
+import Admin from './components/Admin';
 import GoodRegist from './components/subpage/GoodRegist';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
@@ -23,11 +24,13 @@ const App = () => (
 <div>
   
 <BrowserRouter>
-<Header/>
+
+<Header />
       <Routes>
-        <Route path="/" element={<Navigation/>}>
+        <Route path="/" element={<Navigation/>}>        
           <Route index element={<Cimlap />} />
-          <Route path="rolunk" element={<Rolunk/>} />
+          <Route path="admin" element={<Admin/>} />  
+          <Route path="rolunk" element={<Rolunk/>} />          
           <Route path="regist" element={<Regist/>} />
           <Route path="aszf" element={<Aszf/>} />
           <Route path="pc" element={<Pc/>} />

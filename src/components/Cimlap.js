@@ -3,6 +3,7 @@ import Section from './subpage/Section';
 import Section2b from './subpage/Section2b';
 export default function Cimlap() {
     return (
+        
         <div>
             <Section />
             <div id="bemutatkozas">

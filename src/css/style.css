@@ -82,7 +82,7 @@ ol {
 .input {
   height: 40px;
   padding: 0px 15px;
-  border: 1px solid #E4E7ED;
+  border: 1px solid #FFF;
   background-color: #FFF;
   width: 100%;
 }
@@ -108,7 +108,7 @@ textarea.input {
   -moz-appearance: textfield;
   height: 40px;
   width: 100%;
-  border: 1px solid #E4E7ED;
+  border: 1px solid #FFF;
   background-color: #FFF;
   padding: 0px 35px 0px 15px;
 }
@@ -119,7 +119,7 @@ textarea.input {
   display: block;
   width: 20px;
   height: 20px;
-  border: 1px solid #E4E7ED;
+  border: 1px solid #FFF;
   background-color: #FFF;
   text-align: center;
   font-weight: 700;
@@ -152,7 +152,7 @@ textarea.input {
 
 .input-number .qty-up:hover,
 .input-number .qty-down:hover {
-  background-color: #E4E7ED;
+  background-color: #FFF;
   color: #12a72b;
 }
 
@@ -161,7 +161,7 @@ textarea.input {
 .input-select {
   padding: 0px 15px;
   background: #FFF;
-  border: 1px solid #E4E7ED;
+  border: 1px solid #FFF;
   height: 40px;
 }
 
@@ -198,7 +198,7 @@ textarea.input {
   top: 4px;
   width: 14px;
   height: 14px;
-  border: 2px solid #E4E7ED;
+  border: 2px solid #FFF;
   background: #FFF;
 }
 
@@ -348,8 +348,8 @@ textarea.input {
 
 #breadcrumb {
   padding: 30px 0px;
-  background: #FBFBFC;
-  border-bottom: 1px solid #E4E7ED;
+  background: #FFF;
+  border-bottom: 1px solid #FFF;
   margin-bottom: 30px;
 }
 
@@ -547,8 +547,8 @@ textarea.input {
   width: 300px;
   background: #FFF;
   padding: 15px;
-  -webkit-box-shadow: 0px 0px 0px 2px #E4E7ED;
-  box-shadow: 0px 0px 0px 2px #E4E7ED;
+  -webkit-box-shadow: 0px 0px 0px 2px #FFF;
+  box-shadow: 0px 0px 0px 2px #FFF;
   z-index: 99;
   right: 0;
   opacity: 0;
@@ -611,7 +611,7 @@ textarea.input {
 }
 
 .cart-dropdown .cart-summary {
-  border-top: 1px solid #E4E7ED;
+  border-top: 1px solid #FFF;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -622,7 +622,7 @@ textarea.input {
 
 #navigation {
   background: #FFF;
-  border-bottom: 2px solid #E4E7ED;
+  border-bottom: 2px solid #FFF;
   border-top: 3px solid #12a72b;
 }
 
@@ -759,7 +759,7 @@ textarea.input {
 
 .shop .shop-img {
   position: relative;
-  background-color: #E4E7ED;
+  background-color: #FFF;
   z-index: -1;
 }
 
@@ -813,7 +813,7 @@ textarea.input {
 }
 
 .product:hover {
-  -webkit-box-shadow: 0px 0px 6px 0px #E4E7ED, 0px 0px 0px 2px #12a72b;
+  -webkit-box-shadow: 0px 0px 6px 0px #FFF, 0px 0px 0px 2px #12a72b;
   box-shadow: 0px 0px 6px 0px #12a72b, 0px 0px 0px 2px #12a72b;
 }
 
@@ -901,7 +901,7 @@ textarea.input {
   width: 14px;
   margin-right: -4px;
   background: #FFF;
-  color: #E4E7ED;
+  color: #FFF;
   z-index: 10;
 }
 
@@ -1191,7 +1191,7 @@ textarea.input {
   background-color: #FFF;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: 1px solid #E4E7ED;
+  border: 1px solid #FFF;
   border-radius: 0px;
 }
 
@@ -1259,7 +1259,7 @@ textarea.input {
   height: 40px;
   line-height: 40px;
   background-color: #FFF;
-  border: 1px solid #E4E7ED;
+  border: 1px solid #FFF;
   text-align: center;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
@@ -1270,7 +1270,7 @@ textarea.input {
 }
 
 .store-grid li:hover {
-  background-color: #E4E7ED;
+  background-color: #FFF;
   color: #12a72b;
 }
 
@@ -1298,7 +1298,7 @@ textarea.input {
   line-height: 40px;
   text-align: center;
   background-color: #FFF;
-  border: 1px solid #E4E7ED;
+  border: 1px solid #FFF;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
@@ -1308,7 +1308,7 @@ textarea.input {
 }
 
 .store-pagination li:hover {
-  background-color: #E4E7ED;
+  background-color: #FFF;
   color: #12a72b;
 }
 
@@ -1376,7 +1376,7 @@ textarea.input {
 
 #product-imgs .product-preview {
   margin: 0px 5px;
-  border: 1px solid #E4E7ED;
+  border: 1px solid #FFF;
 }
 
 #product-imgs .product-preview.slick-current {
@@ -1426,7 +1426,7 @@ textarea.input {
 }
 
 .product-details .product-rating>i {
-  color: #E4E7ED;
+  color: #FFF;
 }
 
 .product-details .product-rating>i.fa-star {
@@ -1578,7 +1578,7 @@ textarea.input {
   right: 0;
   top: 50%;
   height: 1px;
-  background-color: #E4E7ED;
+  background-color: #FFF;
   z-index: -1;
 }
 
@@ -1637,7 +1637,7 @@ textarea.input {
 
 .rating-avg .rating-stars>i,
 .rating .rating-stars>i {
-  color: #E4E7ED;
+  color: #FFF;
 }
 
 .rating-avg .rating-stars>i.fa-star,
@@ -1653,7 +1653,7 @@ textarea.input {
   position: relative;
   display: inline-block;
   height: 9px;
-  background-color: #E4E7ED;
+  background-color: #FFF;
   width: 120px;
   margin: 0px 10px;
   border-radius: 5px;
@@ -1710,7 +1710,7 @@ textarea.input {
 }
 
 .reviews .review-heading .review-rating>i {
-  color: #E4E7ED;
+  color: #FFF;
 }
 
 .reviews .review-heading .review-rating>i.fa-star {
@@ -1728,13 +1728,13 @@ textarea.input {
   line-height: 35px;
   text-align: center;
   background-color: #FFF;
-  border: 1px solid #E4E7ED;
+  border: 1px solid #FFF;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
 
 .reviews-pagination li:hover {
-  background-color: #E4E7ED;
+  background-color: #FFF;
   color: #12a72b;
 }
 
@@ -1778,7 +1778,7 @@ textarea.input {
 .review-form .input-rating .stars>label:before {
   content: "\f006";
   font-family: FontAwesome;
-  color: #E4E7ED;
+  color: #FFF;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
@@ -1809,9 +1809,9 @@ textarea.input {
 .order-details {
   position: relative;
   padding: 0px 30px 30px;
-  border-right: 1px solid #E4E7ED;
-  border-left: 1px solid #E4E7ED;
-  border-bottom: 1px solid #E4E7ED;
+  border-right: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
 }
 
 .order-details:before {
@@ -1821,9 +1821,9 @@ textarea.input {
   right: -1px;
   top: -15px;
   height: 30px;
-  border-top: 1px solid #E4E7ED;
-  border-left: 1px solid #E4E7ED;
-  border-right: 1px solid #E4E7ED;
+  border-top: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+  border-right: 1px solid #FFF;
 }
 
 .order-summary {
@@ -2035,7 +2035,7 @@ textarea.input {
 .slick-dots li button:before {
   content: "";
   opacity: 1;
-  background: #E4E7ED;
+  background: #FFF;
   border-radius: 50%;
 }
 
@@ -2244,13 +2244,13 @@ h3 {
 }
 
 body {
-  background: #ecf0f3
+  background: #FFF
 }
 
 .wrapper {
   max-width: 350px;
   min-height: 400px;
-  background-color: #ecf0f3;
+  background-color: #FFF;
   border-radius: 15px;
 }
 
@@ -2264,7 +2264,7 @@ body {
   height: 80px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0px 0px 3px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaa7, -8px -8px 15px #fff
+  box-shadow: 0px 0px 3px #5f5f5f, 0px 0px 0px 5px #FFF, 8px 8px 15px #a7aaa7, -8px -8px 15px #fff
 }
 
 .wrapper .name {
@@ -2374,4 +2374,52 @@ body {
   padding-bottom: 10px;
   padding-left: 10px;
   margin: 2px 2px 2px 2px;
+}
+
+.adminbutton{
+  margin-top: 20px;
+}
+.adminhead{
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+.adminbackg{
+  background-color: #094714;
+  border-radius: 20px;
+  color: white;
+}
+.upload{
+  font-size: 14px;
+  text-align: left;
+  margin-top: 40px;
+  padding: 15px;
+  margin: 0px;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+.szunet{
+  margin-left: 5px;
+  margin-top: 20px;
+}
+.bev{
+  margin-top: 10px;
+}
+.adminh5{
+  color: white;
+  text-align: center;
+}
+#adatotkiir{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.alsohezag{
+ padding-bottom: 30px;
+}
+.kartya{
+  width: 100%;
+  height: 100%;
+  font-size: small;
+}
+arak{
+  font-size: larger;
 }
