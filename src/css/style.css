@@ -2419,8 +2419,28 @@ body {
   height: 100%;
   font-size: small;
 }
-arak{
+.arak{
   font-size: larger;
+}
+
+.caropc{
+  color: #FF4136;
+  text-align: left;
+}
+.print{
+  color: white;
+}
+.cabl{
+  color: #0074D9;
+  text-align: right;
+}
+
+.slidpage{
+  width: 90%;
+  margin: 0 auto 0 auto;
+}
+.carousel{
+  border: #0074D9;
 }
 
 

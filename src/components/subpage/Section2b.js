@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from "react-slick";
 import Sliderjs from './Slider';
+import ControlledCarousel from './Carousel';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Nav} from 'reactstrap';
 
@@ -32,8 +33,8 @@ export default function Section2() {
                     </div>
                 </Nav>
             </div>
-            <div className="row">
-                <Sliderjs />
+            <div className="row slidpage">
+                <ControlledCarousel />
             </div>
 
         </div>
