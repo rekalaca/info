@@ -11,7 +11,7 @@ export default function Section2() {
         <div className="container">
             <div className="row"  >
                 <Nav className="navbar navbar-expand-lg navbar-light bg-light">
-                    <p className="news">Új termékek!</p>
+                <span class="badge rounded-pill bg-success">ÚJ eszközök érkeztek!</span>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>

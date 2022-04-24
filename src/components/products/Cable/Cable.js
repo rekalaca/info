@@ -34,6 +34,8 @@ export default function Cable() {
                                     backgroundColor: "#01FF70",
                                     borderStyle: "none",
                                     textAlign: "center",
+                                    fontSize: 18,
+                                    fontWeight: "bold",
                                 }}>
                                     {elem.net_value} Ft + 27% ÁFA
                                 </Card.Text>

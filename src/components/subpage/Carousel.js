@@ -21,7 +21,7 @@ export default function ControlledCarousel() {
                 <a href="/pc"><img
                     className="d-block w-100"
                     src={pcs1}
-                    alt="PC"
+                    alt="PC/Laptop"
                 /></a>
                 <Carousel.Caption>
                     <h3 className='caropc'>Asztali<br></br> számítógépek <br></br> Laptopok</h3>
@@ -32,7 +32,7 @@ export default function ControlledCarousel() {
             <a href="/routers"><img
                     className="d-block w-100"
                     src={routers}
-                    alt="Second slide"
+                    alt="Routers"
                 /></a>
                 <Carousel.Caption>
                     <h3 className='caropc'>WiFi routerek</h3>
@@ -43,7 +43,7 @@ export default function ControlledCarousel() {
             <a href="/perifer"><img
                     className="d-block w-100"
                     src={printers}
-                    alt="Third slide"
+                    alt="Perifériák"
                 /></a>
                 <Carousel.Caption>
                     <h3 className='print'>Nyomtatók</h3>
@@ -56,7 +56,7 @@ export default function ControlledCarousel() {
             <a href="/cable"><img
                     className="d-block w-100"
                     src={cables}
-                    alt="Third slide"
+                    alt="Kábelek"
                 /></a>
                 <Carousel.Caption>
                     <h3 className='cabl'>Kábelek</h3>
