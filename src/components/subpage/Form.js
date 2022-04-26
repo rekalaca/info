@@ -32,7 +32,7 @@ export default function App() {
     const fetchdata = async () => {
 		const result = await axios.get("http://localhost:5555/users")
 		setAdat(result.data)
-
+        
 	}
 
  
@@ -41,8 +41,8 @@ export default function App() {
 	},[]);
 
     const send = async () => {
-        const result = axios.put("http://localhost:5555/addUser", {login:`${login}`,name:`${name}`,password:`${password}`,phone:`${phone}`, birth:`${birth}`, email:`${email}`,billing_address: `${billing_address}`, shipping_address:`${shipping_address}`,tax_reg:`${tax_reg}`})
-        console.log(result.data);
+        const result = await axios.put("http://localhost:5555/users", {login:`${login}`,name:`${name}`,password:`${password}`,phone:`${phone}`, birth:`${birth}`, email:`${email}`,billing_address: `${billing_address}`, shipping_address:`${shipping_address}`,tax_reg:`${tax_reg}`})
+        console.log(result);
         if(result.data.status == "ok"){
             window.location.href="/GoodRegist"
         }

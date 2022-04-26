@@ -5,10 +5,10 @@ import axios from 'axios';
 export default function Perifer() {
 
 
-
+    const path = 'http://localhost:5555';
     const [data, setData] = useState([]);
     const fetchdata = async () => {
-        const result = await axios.get("http://localhost:5555/productsPeri")
+        const result = await axios.get(`${path}/products/peripherals`)
         setData(result.data)
     }
 
@@ -24,7 +24,7 @@ export default function Perifer() {
                     {data.map((elem, index) => (
                         <div key={index} className='col-md-3 col-xs-6'>
                             <Card className='kartya'>
-                                <Card.Img variant="top" src={`${elem.picture}`} />
+                                <Card.Img variant="top" src={`${path}/${elem.picture}`} />
                                 <Card.Body>
                                     <Card.Title>{elem.name}</Card.Title>
                                     <Card.Text>

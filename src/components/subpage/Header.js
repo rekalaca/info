@@ -14,12 +14,25 @@ import {
 
 export default function Header() {
 
+    const path = 'http://localhost:5555';
+    const loginRequest = async () => {
+        const result = await axios.post(`${path}/login`,{login: login, password: password})
+        console.log(result.data)
+        if(result.data.status==="ok"){
+            setStatus(true);
+        }
+        else{
+            setStatus(false);
+        }
+    }
+
     const [searchTerm,setSearchTerm] = useState('');
-
-
+    const [login,setLogin] = useState('');
+    const [password,setPassword] = useState('');
+    const [status,setStatus] = useState(false);
     useEffect(() => {
-        
-    })
+        console.log(status ? 'logged' : 'not logged')
+    },[status])
     return (
         <div id='top-header'>
             <Container>
@@ -40,15 +53,17 @@ export default function Header() {
                                         <div className="logo"> <img src={bl} alt="" /> </div>
                                         <div className="text-center mt-4 name"> Info - Tech </div>
                                         <form className="p-3 mt-3">
-                                            <div className="form-field d-flex align-items-center"> <span className="far fa-user"></span> <input type="text" name="userName" id="userName" placeholder="felhasználónév" /> </div>
-                                            <div className="form-field d-flex align-items-center"> <span className="fas fa-key"></span> <input type="password" name="password" id="pwd" placeholder="jelszó" /> </div>
-                                            <button className="btn mt-3">Bejelentkezés</button>
+                                            <div className="form-field d-flex align-items-center"> <span className="far fa-user"></span> <input type="text" name="userName" id="userName" placeholder="felhasználónév" onChange={e=>setLogin(e.target.value)} /> </div>
+                                            <div className="form-field d-flex align-items-center"> <span className="fas fa-key"></span> <input type="password" name="password" id="pwd" placeholder="jelszó" onChange={e=>setPassword(e.target.value)} /> </div>
+                                            <button className="btn mt-3" onClick={loginRequest}>Bejelentkezés</button>
                                         </form>
                                         <div className="text-center fs-6"> <a href="#">Elfelejtette a jelszavát?</a> / <a href="/regist">Regisztráljon!</a> </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
+                        
                         <button type="button" className="btn btn-primary btn-sm gomb" data-bs-toggle="modal" data-bs-target="#exampleModal">Fiókom / Bejelentkezés</button>
 
                         <button type="button" className="btn btn-primary btn-sm gomb" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Kosár</button>

@@ -7,15 +7,7 @@ const Rolunk= () =>{
 		const result = await axios.get("http://localhost:5555/admin")
 		setData(result.data)
 	}
-
 	const [data, setData] = useState([]);
-	//const [filledData,setFilledData] = useState(false);
-
-/* 	function check(){
-		if(data.length>0){
-			setFilledData = true;
-		}
-	} */
 	useEffect(() => {
 		fetchdata();
 		

@@ -9,7 +9,7 @@ function GoodRegist() {
 
     return (
         <div className="kozep back">
-            <p className='display-6 kozep infogreen'>SIKERES REGSZTRÁCIÓ !</p>
+            <p className='display-6 kozep infogreen'>SIKERES REGISZTRÁCIÓ !</p>
             <img className='' src={reg} alt="" />
             <p className='h4 infogreen'>Jelentkezz be!</p>
             <div className="col-md-4 menusk">

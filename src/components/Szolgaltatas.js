@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 export default function Szolgaltatas() {
-
+    const path = 'http://localhost:5555';
     const [data, setData] = useState([]);
     const fetchdata = async () => {
-        const result = await axios.get("http://localhost:5555/services")
+        const result = await axios.get(`${path}/services`);
         setData(result.data)
     }
 

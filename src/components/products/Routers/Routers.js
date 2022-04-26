@@ -6,10 +6,10 @@ import axios from 'axios';
 export default function Routers() {
 
 
-
+    const path = 'http://localhost:5555';
     const [data, setData] = useState([]);
     const fetchdata = async () => {
-        const result = await axios.get("http://localhost:5555/productsNET")
+        const result = await axios.get(`${path}/products/routers`)
         setData(result.data)
     }
 
@@ -25,7 +25,7 @@ export default function Routers() {
                     {data.map((elem, index) => (
                         <div key={index} className='col-md-3 col-xs-6'>
                             <Card className='kartya'>
-                                <Card.Img variant="top" src={`${elem.picture}`} />
+                                <Card.Img variant="top" src={`${path}/${elem.picture}`} />
                                 <Card.Body>
                                     <Card.Title>{elem.name}</Card.Title>
                                     <Card.Text>

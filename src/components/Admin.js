@@ -31,12 +31,6 @@ function Admin() {
                             <label for="exampleFormControlTextarea1" class="form-label"></label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="A termék leírás:" rows="3"></textarea>
                         </div>
-                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                            <option selected>ÁFA kulcs:</option>
-                            <option value="1">27%</option>
-                            <option value="2">Esetleges további</option>
-                            <option value="3">Esetleges további</option>
-                        </select>
                         <input class="form-control form-control-sm bev" type="number" placeholder="A termék nettó ára:" aria-label=".form-control-sm example"></input>
                         <button type="button" class="btn btn-success adminbutton">Feltöltöm !</button>
                     </div>
