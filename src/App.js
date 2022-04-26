@@ -16,9 +16,10 @@ import SearchResult from './components/subpage/SearchResult'
 import Error from './components/Error';
 import Admin from './components/Admin';
 import GoodRegist from './components/subpage/GoodRegist';
+import Rolunk from './components/Rolunk';
+import Kiszall from './components/subpage/Kiszall';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
-import Rolunk from './components/Rolunk';
 
 const App = () => (
 <div>
@@ -30,7 +31,8 @@ const App = () => (
         <Route path="/" element={<Navigation/>}>        
           <Route index element={<Cimlap />} />
           <Route path="admin" element={<Admin/>} />  
-          <Route path="rolunk" element={<Rolunk/>} />          
+          <Route path="rolunk" element={<Rolunk/>} />   
+          <Route path="kiszall" element={<Kiszall/>} />       
           <Route path="regist" element={<Regist/>} />
           <Route path="aszf" element={<Aszf/>} />
           <Route path="pc" element={<Pc/>} />
