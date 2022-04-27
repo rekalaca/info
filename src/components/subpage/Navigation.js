@@ -38,9 +38,7 @@ export default function Navigation() {
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/cable">Kábel</a>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/forum">Fórum</a>
-                            </li>
+                            {}
                         </ul>
 
                     </div>

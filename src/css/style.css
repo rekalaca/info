@@ -2449,4 +2449,7 @@ body {
   text-align: center;
 }
 
+.selectedRow{
+  background-color: #a7aaa7;
+}
 

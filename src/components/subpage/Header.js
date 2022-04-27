@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import {useNavigate} from 'react-router-dom'
 import axios from 'axios';
 import logo from './img/logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,26 +14,42 @@ import {
 
 
 export default function Header() {
-
-    const path = 'http://localhost:5555';
-    const loginRequest = async () => {
-        const result = await axios.post(`${path}/login`,{login: login, password: password})
-        console.log(result.data)
-        if(result.data.status==="ok"){
-            setStatus(true);
-        }
-        else{
-            setStatus(false);
-        }
-    }
-
+    const navi = useNavigate();
     const [searchTerm,setSearchTerm] = useState('');
     const [login,setLogin] = useState('');
     const [password,setPassword] = useState('');
     const [status,setStatus] = useState(false);
+    const path = 'http://localhost:5555';
+    const loginRequest = async (e) => {
+        e.preventDefault();
+
+
+        await axios.post(`${path}/login`,{login: login, password: password}).then(res=>{
+            if(res.data.id){
+                console.log(res.data.id)
+                localStorage.setItem('id', res.data.id)
+                setStatus(true);
+                navi('/')
+            }
+            else{
+                setStatus(false);
+            }
+        })
+        
+    }
+    const userID = localStorage.getItem('id')
+    function removeLocals(){
+        localStorage.removeItem('id')
+        setStatus(false)
+    }
     useEffect(() => {
-        console.log(status ? 'logged' : 'not logged')
-    },[status])
+        if(userID){
+            setStatus(true)
+        }else{
+            setStatus(false)
+        }
+        
+    },[userID])
     return (
         <div id='top-header'>
             <Container>
@@ -46,16 +63,16 @@ export default function Header() {
                     </Col>
                     <Col sm={4}>
 
-                        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
                             <div className="modal-dialog">
                                 <div className="modal-content">
                                     <div className="wrapper">
                                         <div className="logo"> <img src={bl} alt="" /> </div>
                                         <div className="text-center mt-4 name"> Info - Tech </div>
-                                        <form className="p-3 mt-3">
+                                        <form className="p-3 mt-3" onSubmit={loginRequest}>
                                             <div className="form-field d-flex align-items-center"> <span className="far fa-user"></span> <input type="text" name="userName" id="userName" placeholder="felhasználónév" onChange={e=>setLogin(e.target.value)} /> </div>
                                             <div className="form-field d-flex align-items-center"> <span className="fas fa-key"></span> <input type="password" name="password" id="pwd" placeholder="jelszó" onChange={e=>setPassword(e.target.value)} /> </div>
-                                            <button className="btn mt-3" onClick={loginRequest}>Bejelentkezés</button>
+                                            <button className="btn mt-3" data-dismiss="modal" type="submit" >Bejelentkezés</button>
                                         </form>
                                         <div className="text-center fs-6"> <a href="#">Elfelejtette a jelszavát?</a> / <a href="/regist">Regisztráljon!</a> </div>
                                     </div>
@@ -63,8 +80,8 @@ export default function Header() {
                             </div>
                         </div>
                         
+                        {status ? <button type="button" className="btn btn-primary btn-sm gomb"  onClick={removeLocals}>Kijelentkezés</button> : <button type="button" className="btn btn-primary btn-sm gomb" data-bs-toggle="modal" data-bs-target="#exampleModal">Fiókom / Bejelentkezés</button>  }
                         
-                        <button type="button" className="btn btn-primary btn-sm gomb" data-bs-toggle="modal" data-bs-target="#exampleModal">Fiókom / Bejelentkezés</button>
 
                         <button type="button" className="btn btn-primary btn-sm gomb" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Kosár</button>
 

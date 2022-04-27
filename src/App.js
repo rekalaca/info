@@ -15,6 +15,7 @@ import Szolgaltatas from './components/Szolgaltatas';
 import SearchResult from './components/subpage/SearchResult'
 import Error from './components/Error';
 import Admin from './components/Admin';
+import AdminProducts from './components/subpage/AdminProducts.js';
 import AdminUsers from './components/subpage/AdminUsers';
 import NewUsers from './components/subpage/NewUsers';
 import Garancia from './components/subpage/Garancia';
@@ -25,7 +26,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './css/style.css';
 
 const App = () => (
-<div>
+<>
   
 <BrowserRouter>
 
@@ -33,6 +34,7 @@ const App = () => (
       <Routes>
         <Route path="/" element={<Navigation/>}>        
           <Route index element={<Cimlap />} />
+          <Route path="adminproducts" element={<AdminProducts/>} />  
           <Route path="admin" element={<Admin/>} />  
           <Route path="adminusers" element={<AdminUsers/>} /> 
           <Route path="newusers" element={<NewUsers/>} /> 
@@ -52,9 +54,10 @@ const App = () => (
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
-<Footer />
-</div>
+
+</>
 );
 
 export default App;
