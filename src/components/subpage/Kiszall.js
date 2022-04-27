@@ -19,6 +19,7 @@ export default function Kiszall() {
                 Hívószám: +36-30-123-45-67<br></br>
                 Internetes honlap címe: www.info-tech.hu<br></br>
             </p>
+            <br></br>
             <h3>1. Díjmentes kiszállítás</h3>
             <p className='kozepes'>
                 A kiszállítást az Info–Tech kft saját dolgozója végzi, ami minimum 10.000 Forint értékű vásárlás esetén díjmentes Szabolcs Szatmár Bereg megye területén. Hamarosan bővül szolgáltatásunk, így a szomszédos megyékben is elérhetővé válik, illetve a kisállítást rövid időn belül átveszi egy futár cég, így az egész országban elérhetővé válik a rendelés lehetősége.
@@ -50,7 +51,7 @@ export default function Kiszall() {
             <p>
                 Kérjük Önöket, hogy a hatékony ügyintézés érdekében internetes rendeléssel, <br></br>kiszállítással kapcsolatos kérdéseikkel keressék Vevőszolgálatunkat:
             </p>
-            <Card style={{ width: '28rem', margin:'0 auto 0 auto' }}>
+            <Card style={{ width: '30rem', margin:'0 auto 0 auto' }}>
                 <Card.Img variant="top" src={cc} />
                 <Card.Body>
                     <Card.Title>Simon Andrea</Card.Title>

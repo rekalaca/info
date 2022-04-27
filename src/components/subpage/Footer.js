@@ -38,7 +38,7 @@ export default function Footer() {
 								<ul className="footer-links">
 									<li><a href="/szolgaltatas">Szolgáltatási díjak</a></li>
 									<li><a href="/kiszall">Kiszállítás</a></li>
-									<li><a href="#">Garancia</a></li>
+									<li><a href="/garancia">Garancia</a></li>
 									<li><a href="#">Adatvédelmi irányelvek</a></li>
 									<li><a href="/aszf">Általános Szerződési Feltételek (ÁSZF)</a></li>
 								</ul>

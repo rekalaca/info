@@ -17,6 +17,7 @@ import Error from './components/Error';
 import Admin from './components/Admin';
 import AdminUsers from './components/subpage/AdminUsers';
 import NewUsers from './components/subpage/NewUsers';
+import Garancia from './components/subpage/Garancia';
 import GoodRegist from './components/subpage/GoodRegist';
 import Rolunk from './components/Rolunk';
 import Kiszall from './components/subpage/Kiszall';
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="perifer" element={<Perifer/>} />
           <Route path="search" element={<SearchResult/>} />
           <Route path="cable" element={<Cable/>} />
+          <Route path="garancia" element={<Garancia/>} />
           <Route path="forum" element={<Forum/>} />
           <Route path="szolgaltatas" element={<Szolgaltatas/>} />
           <Route path="goodregist" element={<GoodRegist/>} />
