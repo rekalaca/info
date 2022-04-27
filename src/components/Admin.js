@@ -36,26 +36,13 @@ function Admin() {
                     </div>
                     <div className="col-2"></div>
                     <div className="col-5 upload">
-                        <h5 className="adminh5">Felhasználói adatok:</h5>
-                        <input class="form-control form-control-sm" type="number" placeholder="User ID" aria-label=".form-control-sm example" />
-                        <input class="form-control form-control-sm bev" type="text" placeholder="Felhasználónév" aria-label=".form-control-sm example" />
-                        <input class="form-control form-control-sm bev" type="password" placeholder="Jelszó" aria-label=".form-control-sm example" />
-                        <input class="form-control form-control-sm bev" type="password" placeholder="Jelszó mégegyszer" aria-label=".form-control-sm example" />
-                        <input class="form-control form-control-sm bev" type="text" placeholder="Név" aria-label=".form-control-sm example" />
-                        <input class="form-control form-control-sm bev" type="number" placeholder="Telefonszám" aria-label=".form-control-sm example" />
-                        <input class="form-control form-control-sm bev" type="date" placeholder="Születési dátum" aria-label=".form-control-sm example" />
-                        <input class="form-control form-control-sm bev" type="text" placeholder="Email cím" aria-label=".form-control-sm example" />
-                        <input class="form-control form-control-sm bev" type="text" placeholder="Számlázási cím" aria-label=".form-control-sm example" />
-                        <input class="form-control form-control-sm bev" type="text" placeholder="Szállítási cím" aria-label=".form-control-sm example" />
-                        <input class="form-control form-control-sm bev" type="text" placeholder="Adószám" aria-label=".form-control-sm example" />
-                        <button type="button" class="btn btn-success szunet">Regisztrálom</button>
-                        <button type="button" class="btn btn-danger szunet">Törlöm</button>
-                        <button type="button" class="btn btn-warning szunet">Módosítom</button>
-                        <button type="button" class="btn btn-info szunet">Lekérdezés</button>
+                        
+                        <a href="/adminusers"><button type="button" class="btn btn-warning szunet">Felhasználók lekérdezése</button></a><br></br>
+                        <a href="/newusers"><button type="button" class="btn btn-warning szunet">Új felhasználó regisztrálása</button></a>
                     </div>
 
                 </div>
-                <div id="adatotkiir">Ide jönnek a megjelenítendő adatok...</div>
+                <div id="adatotkiir"></div>
                 <div className="row menusk alsohezag">
                     <div className="col-5 upload">
                         <h5 className="adminh5">Számlázási adatok:</h5>

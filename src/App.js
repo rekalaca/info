@@ -15,6 +15,8 @@ import Szolgaltatas from './components/Szolgaltatas';
 import SearchResult from './components/subpage/SearchResult'
 import Error from './components/Error';
 import Admin from './components/Admin';
+import AdminUsers from './components/subpage/AdminUsers';
+import NewUsers from './components/subpage/NewUsers';
 import GoodRegist from './components/subpage/GoodRegist';
 import Rolunk from './components/Rolunk';
 import Kiszall from './components/subpage/Kiszall';
@@ -31,6 +33,8 @@ const App = () => (
         <Route path="/" element={<Navigation/>}>        
           <Route index element={<Cimlap />} />
           <Route path="admin" element={<Admin/>} />  
+          <Route path="adminusers" element={<AdminUsers/>} /> 
+          <Route path="newusers" element={<NewUsers/>} /> 
           <Route path="rolunk" element={<Rolunk/>} />   
           <Route path="kiszall" element={<Kiszall/>} />       
           <Route path="regist" element={<Regist/>} />

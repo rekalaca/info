@@ -3,7 +3,7 @@
 \*----------------------------*/
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Encode Sans', sans-serif;
   font-weight: 400;
   color: #333;
   overflow-x: hidden;
@@ -1776,7 +1776,7 @@ textarea.input {
 
 .review-form .input-rating .stars>label:before {
   content: "\f006";
-  font-family: FontAwesome;
+  font-family: Encode Sans;
   color: #FFF;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
@@ -1992,7 +1992,7 @@ textarea.input {
 
 .slick-prev:before,
 .slick-next:before {
-  font-family: FontAwesome;
+  font-family: Encode Sans;
   color: #2B2D42;
 }
 
@@ -2244,7 +2244,7 @@ h3 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif
+  font-family: 'Encode Sans', sans-serif
 }
 
 body {
@@ -2350,11 +2350,11 @@ body {
   text-align: center;
   background-color: #12a72b;
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Encode Sans', sans-serif;
 }
 
 .offcanvas-body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Encode Sans', sans-serif;
   border: 1px solid #12a72b;
 }
 
@@ -2443,6 +2443,10 @@ body {
 }
 .carousel{
   border: #0074D9;
+}
+
+.h1users{
+  text-align: center;
 }
 
 
