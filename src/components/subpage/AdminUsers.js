@@ -7,11 +7,14 @@ export default function AdminUsers() {
     const [data, setData] = useState([]);
     const [delStatus,setDelStatus] = useState(false);
     const [changeStatus,setChangeStatus] = useState(false);
-    const [loginName, setLoginName] =  useState('');
     
     const deleteUser = async (login) => {
-        const result = await axios.delete(`${path}/user`,{login : `${login}`})
-        console.log(result.data.status)
+        console.log(login)
+        const result = await axios.delete(`${path}/user`,{data: {login}},{headers: {
+                "Content-Type": "application/json"}
+            })
+
+         console.log(result.data.status)
         if(result.data.status === "ok"){
             setDelStatus(true)
         }
@@ -20,12 +23,12 @@ export default function AdminUsers() {
     const fetchdata = async () => {
         const result = await axios.get(`${path}/users`)
         setData(result.data)
-    
+        setDelStatus(false)
     }    
-
+    console.log(data)
     useEffect(() => {
         fetchdata();
-
+        
     }, [delStatus,changeStatus]);
   
     
@@ -63,8 +66,8 @@ export default function AdminUsers() {
                             <td>{elem.billing_address}</td>
                             <td>{elem.shipping_address}</td>
                             <td>{elem.tax_reg}</td>
-                            <td><a href=""><button type="button" className="btn btn-danger btn-sm" >Törlés</button></a></td>
-                            <td><a href=""><button type="button" className="btn btn-warning btn-sm" >Módosítás</button></a></td>
+                            <td><button type="button" className="btn btn-danger btn-sm" onClick={()=>deleteUser(elem.login)}>Törlés</button></td>
+                            <td><button type="button" className="btn btn-warning btn-sm" >Módosítás</button></td>
                         </tr>
                     ))}
                 </tbody>
