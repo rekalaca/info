@@ -15,43 +15,70 @@ import {
 
 export default function Header() {
     const navi = useNavigate();
-    const [searchTerm,setSearchTerm] = useState('');
+    const [term,setTerm] = useState('');
     const [login,setLogin] = useState('');
     const [password,setPassword] = useState('');
     const [status,setStatus] = useState(false);
+    const [kosar,setKosar] = useState([])
+    const [delStatus,setDelStatus] = useState(false)
+    const [cartCounter,setCartCounter] = useState(0);
+    const [osszeg,setOsszeg] = useState(0);
     const path = 'http://localhost:5555';
     const loginRequest = async (e) => {
         e.preventDefault();
-
-
         await axios.post(`${path}/login`,{login: login, password: password}).then(res=>{
             if(res.data.id){
-                console.log(res.data.id)
+                console.log(res.data)
                 localStorage.setItem('id', res.data.id)
                 localStorage.setItem('login',login);
+                localStorage.setItem('isAdmin',res.data.isAdmin)
                 setStatus(true);
-                navi('/')
+                window.location.reload();
+                //navi('/')
             }
             else{
                 setStatus(false);
             }
         })
-        
+    }
+
+    const cartRequest = async () =>{
+        await axios.post(`${path}/cart`,{id: localStorage.getItem('id')}).then(res=>{
+            if(res.data){
+                setKosar(res.data)
+                setCartCounter(kosar.length)
+                console.log()
+            }
+        })
+    }
+
+    const handleDelete = async (productID) => {
+        const result = await axios.delete(`${path}/cart`,{data: {userID,productID}},{headers: {
+            "Content-Type": "application/json"}
+        })
+
+    if(result.data.status === "ok"){
+        setDelStatus(true)
+    }
     }
     const userID = localStorage.getItem('id')
     const loginName = localStorage.getItem('login')
     function removeLocals(){
         localStorage.removeItem('id')
+        localStorage.removeItem('login')
+        localStorage.removeItem('isAdmin')
         setStatus(false)
     }
     useEffect(() => {
+
         if(userID){
             setStatus(true)
         }else{
             setStatus(false)
         }
-        
-    },[userID])
+        cartRequest();
+    },[userID,delStatus])
+
     return (
         <div id='top-header'>
             <Container>
@@ -76,7 +103,7 @@ export default function Header() {
                                             <div className="form-field d-flex align-items-center"> <span className="fas fa-key"></span> <input type="password" name="password" id="pwd" placeholder="jelszó" onChange={e=>setPassword(e.target.value)} /> </div>
                                             <button className="btn mt-3" data-dismiss="modal" type="submit" >Bejelentkezés</button>
                                         </form>
-                                        <div className="text-center fs-6"> <a href="#">Elfelejtette a jelszavát?</a> / <a href="/regist">Regisztráljon!</a> </div>
+                                        <div className="text-center fs-6"><a href="/regist">Regisztráljon!</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -95,30 +122,21 @@ export default function Header() {
                             <div className="offcanvas-body">
 
                                 <div className="cart-list">
-                                    <div className="product-widget">
+                                {kosar.map((elem,index)=>(
+                                    <div className="product-widget" key={index}>
                                         <div className="product-img">
-                                            <img src={bl} alt="" />
+                                            <img src={`${path}/${elem.picture}`} alt="" />
                                         </div>
                                         <div className="product-body">
-                                            <h3 className="product-name"><a href="#">LENOVO V15-IIL (82C5000QHV)</a></h3>
-                                            <h4 className="product-price"><span className="qty">1x</span>279.000 Ft</h4>
+                                            <h3 className="product-name"><a href="#">{elem.name}</a></h3>
+                                            <h4 className="product-price"><span className="qty">1x</span>{elem.net_value}</h4>
                                         </div>
-                                        <button className="delete"><i className="fa fa-close"></i></button>
+                                        <button className="delete" onClick={()=>handleDelete(elem.productID)}><i className="fa fa-close"></i></button>
                                     </div>
-
-                                    <div className="product-widget">
-                                        <div className="product-img">
-                                            <img src={bl} alt="" />
-                                        </div>
-                                        <div className="product-body">
-                                            <h3 className="product-name"><a href="#">TP-Link AX1500 Next-Gen</a></h3>
-                                            <h4 className="product-price"><span className="qty">1x</span>8.990 Ft</h4>
-                                        </div>
-                                        <button className="delete"><i className="fa fa-close"></i></button>
-                                    </div>
+                                ))}
                                 </div>
                                 <div className="cart-summary">
-                                    <small>2 db termék kiválasztva</small>
+                                    <small>{cartCounter} db termék kiválasztva</small>
                                     <h5>Összesen: 287.990 Ft</h5>
                                 </div>
                                 <div className="cart-btns">
@@ -142,7 +160,7 @@ export default function Header() {
                         <div className="search">
                             <div className="row height d-flex justify-content-center align-items-center">
                                 <div className="col-lg-9 col-md-9 col-xs-3">
-                                    <div className="search"> <i className="fa fa-search"></i> <input type="search" className="form-control" placeholder="Mit szeretnél megkeresni?" /><button>Keresés</button> </div>
+                                    <div className="search"> <i className="fa fa-search"></i> <input type="search" className="form-control" placeholder="Mit szeretnél megkeresni?" onChange={e=>setTerm(e.target.value)}/><button >Keresés</button> </div>
                                 </div>
                             </div>
                         </div>

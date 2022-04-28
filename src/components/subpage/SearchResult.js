@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import axios from 'axios';
 
-export default function SearchResult(props) {
+export default function SearchResult(term) {
 
     const [data, setData] = useState([]);
     const fetchdata = async () => {
-		const result = await axios.get(`http://localhost:5555/search/${props.term}`);
+		const result = await axios.get(`http://localhost:5555/search/${term}`);
 		setData(result.data)
 	}
     

@@ -27,7 +27,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./css/style.css";
 
 function App(){
-  const isadmin = true; 
+  
   return(
     <>
     <BrowserRouter>
@@ -35,14 +35,13 @@ function App(){
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route index element={<Cimlap />} />
-          {isadmin && (
+          {localStorage.getItem('isAdmin') == 1 && (
             <>
               <Route path="adminproducts" element={<AdminProducts />} />
               <Route path="admin" element={<Admin />} />
               <Route path="adminusers" element={<AdminUsers />} />
             </>
           )}
-
           <Route path="newusers" element={<NewUsers />} />
           <Route path="rolunk" element={<Rolunk />} />
           <Route path="kiszall" element={<Kiszall />} />
@@ -52,7 +51,7 @@ function App(){
           <Route path="pc" element={<Pc />} />
           <Route path="routers" element={<Routers />} />
           <Route path="perifer" element={<Perifer />} />
-          <Route path="search" element={<SearchResult />} />
+          <Route path="search" element={<SearchResult  />} />
           <Route path="cable" element={<Cable />} />
           <Route path="garancia" element={<Garancia />} />
           <Route path="forum" element={<Forum />} />

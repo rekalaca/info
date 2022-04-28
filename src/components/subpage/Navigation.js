@@ -1,8 +1,11 @@
+import React, { useState, useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { Nav } from 'reactstrap';
 
 
 export default function Navigation() {
+
+ 
     return (
      
         <div className='container'>
@@ -38,7 +41,11 @@ export default function Navigation() {
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/cable">Kábel</a>
                             </li>
-                            {}
+                            {localStorage.getItem('isAdmin')==1 && 
+                             <li className="nav-item">
+                                <a className="nav-link active" aria-current="page" href="/admin">Admin felület</a>
+                            </li> 
+                            }
                         </ul>
 
                     </div>
