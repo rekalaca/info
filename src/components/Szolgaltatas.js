@@ -27,7 +27,7 @@ export default function Szolgaltatas() {
                 <tbody>
                     {data.map(elem=>(
                         <tr key={elem.serviceID}>
-                            <th>{elem.description}</th><th>{elem.net_value} Ft</th><th>{elem.net_value} Ft</th>
+                            <th>{elem.description}</th><th>{elem.net_value} Ft</th><th>+ 27 % ÁFA</th><th><button type="button" class="btn btn-success btn-sm">Megrendelem</button></th>
                         </tr>
                     ))}
                 </tbody>

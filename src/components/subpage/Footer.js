@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 export default function Footer() {
     return(
         
@@ -39,7 +41,7 @@ export default function Footer() {
 									<li><a href="/szolgaltatas">Szolgáltatási díjak</a></li>
 									<li><a href="/kiszall">Kiszállítás</a></li>
 									<li><a href="/garancia">Garancia</a></li>
-									<li><a href="#">Adatvédelmi irányelvek</a></li>
+									<li><a href="/adatvedelmi">Adatvédelmi irányelvek</a></li>
 									<li><a href="/aszf">Általános Szerződési Feltételek (ÁSZF)</a></li>
 								</ul>
 							</div>
@@ -73,7 +75,7 @@ export default function Footer() {
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>	
 		</footer>
     )
 }

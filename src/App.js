@@ -17,6 +17,7 @@ import Error from './components/Error';
 import Admin from './components/Admin';
 import AdminProducts from './components/subpage/AdminProducts.js';
 import AdminUsers from './components/subpage/AdminUsers';
+import Adatvedelmi from './components/subpage/Adatvedelmi';
 import NewUsers from './components/subpage/NewUsers';
 import Garancia from './components/subpage/Garancia';
 import GoodRegist from './components/subpage/GoodRegist';
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="kiszall" element={<Kiszall/>} />       
           <Route path="regist" element={<Regist/>} />
           <Route path="aszf" element={<Aszf/>} />
+          <Route path="adatvedelmi" element={<Adatvedelmi/>} />
           <Route path="pc" element={<Pc/>} />
           <Route path="routers" element={<Routers/>} />
           <Route path="perifer" element={<Perifer/>} />

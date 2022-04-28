@@ -2453,3 +2453,16 @@ body {
   background-color: #a7aaa7;
 }
 
+.garlist{
+  width: 50%;
+  margin: 0 auto 0 auto;
+  text-align: center;
+}
+.garis{
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.adatkez{
+  text-align: justify;
+}
