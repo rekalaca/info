@@ -1876,6 +1876,7 @@ textarea.input {
   background: #094714;
   color: #B9BABC;
   margin-top: 40px;
+  text-align: center;
 }
 
 #bottom-footer {
@@ -2466,4 +2467,13 @@ body {
 
 .adatkez{
   text-align: justify;
+}
+.adatcim{
+  margin-top: 60px;
+  text-align: center;
+}
+.vastag{
+  font-size: large;
+  text-align: center;
+  color: #DF1C44;
 }

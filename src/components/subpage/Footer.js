@@ -9,7 +9,7 @@ export default function Footer() {
 			<div className="section">
 				<div className="container">
 					<div className="row">
-						<div className="col-md-3 col-xs-6">
+						<div className="col-md-4 col-xs-6">
 							<div className="footer">
 								<h3 className="footer-title">Kapcsolat</h3>
 								<p>Bármilyen további kérdés esetén szívesen állunk rendelkezésére az alábbi elérhetőségeken:</p>
@@ -21,7 +21,7 @@ export default function Footer() {
 							</div>
 						</div>
 
-						<div className="col-md-3 col-xs-6">
+						<div className="col-md-4 col-xs-6">
 							<div className="footer">
 								<h3 className="footer-title">Kategóriák</h3>
 								<ul className="footer-links">
@@ -34,7 +34,7 @@ export default function Footer() {
 							</div>
 						</div>
 
-						<div className="col-md-3 col-xs-6">
+						<div className="col-md-4 col-xs-6">
 							<div className="footer">
 								<h3 className="footer-title">Információk</h3>
 								<ul className="footer-links">
@@ -47,18 +47,7 @@ export default function Footer() {
 							</div>
 						</div>
 
-						<div className="col-md-3 col-xs-6">
-							<div className="footer">
-								<h3 className="footer-title">Segítünk!</h3>
-								<ul className="footer-links">
-									<li><a href="#">Fórum</a></li>
-									<li><a href="#">Gyakran ismételt kérdések</a></li>
-									<li><a href="#">Chat</a></li>
-									<li><a href="mailto: rekalaca@rekalaca.com">E-m@il</a></li>
-									<li><a href="tel:+36304442569">Telefon</a></li>
-								</ul>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</div>

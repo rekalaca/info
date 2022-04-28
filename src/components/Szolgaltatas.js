@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
 import axios from 'axios';
+import Modal from 'react-bootstrap/Modal'
+
 export default function Szolgaltatas() {
+
+    //modal - kosárba rakom
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     const path = 'http://localhost:5555';
     const [data, setData] = useState([]);
     const fetchdata = async () => {
@@ -16,7 +25,24 @@ export default function Szolgaltatas() {
 
     return (
 
+
         <div id='szolgi'>
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Kosár tartalma:</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Ide jöhetne  kiválasztott termék...</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Bezárás
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                        Tovább a fizetéshez
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+
+
             <h3>A helyszíni szolgáltatási díjak</h3>
             <table className='table table-striped'>
                 <thead>
@@ -25,9 +51,9 @@ export default function Szolgaltatas() {
                     </tr>
                 </thead>
                 <tbody>
-                    {data.map(elem=>(
+                    {data.map(elem => (
                         <tr key={elem.serviceID}>
-                            <th>{elem.description}</th><th>{elem.net_value} Ft</th><th>+ 27 % ÁFA</th><th><button type="button" class="btn btn-success btn-sm">Megrendelem</button></th>
+                            <th>{elem.description}</th><th>{elem.net_value} Ft</th><th>+ 27 % ÁFA</th><th><Button class="btn btn-success btn-sm" variant="primary" onClick={handleShow}>Kosárba rakom!</Button></th>
                         </tr>
                     ))}
                 </tbody>

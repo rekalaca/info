@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import axios from 'axios';
+import Modal from 'react-bootstrap/Modal'
+
+
 export default function Pc() {
     const path = 'http://localhost:5555';
     const [data, setData] = useState([]);
     const [vat, setVat] = useState([]);
 
+    //modal - kosárba rakom
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     const fetchdata = async () => {
         const result = await axios.get(`${path}/products/pc`)
-       // const vat = await axios.get("http://localhost:5555/vat")
+        // const vat = await axios.get("http://localhost:5555/vat")
         setData(result.data)
         setVat(vat.data);
     }
@@ -41,8 +49,23 @@ export default function Pc() {
                                 }}>
                                     {elem.net_value} Ft + 27% ÁFA
                                 </Card.Text>
-                                <Button className='gomb' variant="primary">Részletek</Button>
+                                <Button class="btn btn-success" variant="primary" onClick={handleShow}>Kosárba rakom!</Button>
                             </Card>
+
+                            <Modal show={show} onHide={handleClose}>
+                                <Modal.Header closeButton>
+                                    <Modal.Title>Kosár tartalma:</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>Ide jöhetne  kiválasztott termék...</Modal.Body>
+                                <Modal.Footer>
+                                    <Button variant="secondary" onClick={handleClose}>
+                                        Bezárás
+                                    </Button>
+                                    <Button variant="primary" onClick={handleClose}>
+                                        Tovább a fizetéshez
+                                    </Button>
+                                </Modal.Footer>
+                            </Modal>
 
                         </div>
                     ))}
