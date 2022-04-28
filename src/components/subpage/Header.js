@@ -28,6 +28,7 @@ export default function Header() {
             if(res.data.id){
                 console.log(res.data.id)
                 localStorage.setItem('id', res.data.id)
+                localStorage.setItem('login',login);
                 setStatus(true);
                 navi('/')
             }
@@ -38,6 +39,7 @@ export default function Header() {
         
     }
     const userID = localStorage.getItem('id')
+    const loginName = localStorage.getItem('login')
     function removeLocals(){
         localStorage.removeItem('id')
         setStatus(false)
@@ -67,7 +69,7 @@ export default function Header() {
                             <div className="modal-dialog">
                                 <div className="modal-content">
                                     <div className="wrapper">
-                                        <div className="logo"> <img src={bl} alt="" /> </div>
+                                        <div className="logo"> <img src={bl} alt="logo" /> </div>
                                         <div className="text-center mt-4 name"> Info - Tech </div>
                                         <form className="p-3 mt-3" onSubmit={loginRequest}>
                                             <div className="form-field d-flex align-items-center"> <span className="far fa-user"></span> <input type="text" name="userName" id="userName" placeholder="felhasználónév" onChange={e=>setLogin(e.target.value)} /> </div>
@@ -79,12 +81,12 @@ export default function Header() {
                                 </div>
                             </div>
                         </div>
-                        
+                        {status ? <h3>{loginName}</h3> : ''}
                         {status ? <button type="button" className="btn btn-primary btn-sm gomb"  onClick={removeLocals}>Kijelentkezés</button> : <button type="button" className="btn btn-primary btn-sm gomb" data-bs-toggle="modal" data-bs-target="#exampleModal">Fiókom / Bejelentkezés</button>  }
                         
 
                         <button type="button" className="btn btn-primary btn-sm gomb" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Kosár</button>
-
+                        
                         <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                             <div className="offcanvas-header">
                                 <h5 className='kh'>A kosár tartalma:</h5>
