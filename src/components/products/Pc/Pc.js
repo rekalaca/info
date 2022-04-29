@@ -13,6 +13,7 @@ export default function Pc() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
     const [afa,setAfa] = useState(0);
     const fetchdata = async () => {
         const result = await axios.get(`${path}/products/pc`)
@@ -42,30 +43,35 @@ export default function Pc() {
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Text style={{
+                                    backgroundColor: "#FFDC00",
+                                    borderStyle: "none",
+                                    textAlign: "center",
+                                    fontSize: 13,
+                                    fontWeight: "bold",
+                                }}>
+                                    {'Nettó ár: ' + Math.round(elem.net_value) + ' Ft'}
+                                </Card.Text>
+                                <Card.Text style={{
                                     backgroundColor: "#01FF70",
                                     borderStyle: "none",
                                     textAlign: "center",
                                     fontSize: 18,
                                     fontWeight: "bold",
                                 }}>
-                                    {Math.round(elem.net_value)+' ft nettó'}
-                                    <br></br>
-                                    {(Math.round(elem.net_value*afa)*10)/10+' ft bruttó'}
+
+                                    {'Bruttó ár: ' + (Math.round(elem.net_value * afa) * 10) / 10 + ' Ft'}
                                 </Card.Text>
-                                <Button class="btn btn-success" variant="primary" onClick={handleShow}>Kosárba rakom!</Button>
+                                <Button class="btn btn-success" variant="success" onClick={handleShow}>Kosárba rakom!</Button>
                             </Card>
 
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>
-                                    <Modal.Title>Kosár tartalma:</Modal.Title>
+                                    <Modal.Title>üzenet:</Modal.Title>
                                 </Modal.Header>
-                                <Modal.Body>Ide jöhetne  kiválasztott termék...</Modal.Body>
+                                <Modal.Body>A termék a kosárba került!</Modal.Body>
                                 <Modal.Footer>
-                                    <Button variant="secondary" onClick={handleClose}>
-                                        Bezárás
-                                    </Button>
                                     <Button variant="primary" onClick={handleClose}>
-                                        Tovább a fizetéshez
+                                        Bezár
                                     </Button>
                                 </Modal.Footer>
                             </Modal>
