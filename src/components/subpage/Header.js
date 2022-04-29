@@ -51,7 +51,7 @@ export default function Header() {
             }
         })
         let sum = 0;
-        for(let i=0;i<kosar.length;i++){
+        for (let i = 0; i < kosar.length; i++) {
             sum += kosar[i].net_value;
         }
         setOsszeg(sum)
@@ -70,7 +70,7 @@ export default function Header() {
     }
 
 
-    
+
 
     const userID = localStorage.getItem('id')
     const loginName = localStorage.getItem('login')
@@ -91,7 +91,7 @@ export default function Header() {
             setStatus(false)
         }
         cartRequest();
-    }, [userID, delStatus,cartCounter])
+    }, [userID, delStatus, cartCounter])
     return (
         <div id='top-header'>
             <Container>
@@ -121,41 +121,41 @@ export default function Header() {
                                 </div>
                             </div>
                         </div>
-                        {status ? <h3>{loginName}</h3> : ''}
+                        {status ? <h6 className='loginname'>belépve: {loginName}</h6> : ''}
                         {status ? <button type="button" className="btn btn-primary btn-sm gomb" onClick={removeLocals}>Kijelentkezés</button> : <button type="button" className="btn btn-primary btn-sm gomb" data-bs-toggle="modal" data-bs-target="#exampleModal">Fiókom / Bejelentkezés</button>}
 
 
                         <button type="button" className="btn btn-primary btn-sm gomb" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Kosár</button>
 
                         <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                            <div className="offcanvas-header">
+                            <div className="offcanvas-header kh">
                                 <h5 className='kh'>A kosár tartalma:</h5>
                                 <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
-                        {status ?                             <div className="offcanvas-body">
+                            {status ? <div className="offcanvas-body">
 
-<div className="cart-list">
-    {kosar.map((elem,index)=>(
-    <div className="product-widget" key={index}>
-        <div className="product-img">
-            <img src={`${path}/${elem.picture}`} alt="" />
-        </div>
-        <div className="product-body">
-            <h3 className="product-name"><a href="#">{elem.name}</a></h3>
-            <h4 className="product-price"><span className="qty">1x</span>{elem.net_value}</h4>
-        </div>
-        <button className="delete" onClick={()=>handleDelete(elem.productID)}><i className="fa fa-close"></i></button>
-    </div>
-))}
-</div>
-<div className="cart-summary">
-    <small>{cartCounter} db termék kiválasztva</small>
-    <h5>{osszeg} Ft</h5>
-</div>
-<div className="cart-btns">
-    <a href="#"><button type="button" className="btn btn-success gomb">Megrendelem!</button></a>
-</div>
-</div> : <h1>Jelentkezz be a kosár használatához!</h1> }
+                                <div className="cart-list kh">
+                                    {kosar.map((elem, index) => (
+                                        <div className="product-widget" key={index}>
+                                            <div className="product-img">
+                                                <img src={`${path}/${elem.picture}`} alt="" />
+                                            </div>
+                                            <div className="product-body">
+                                                <h3 className="product-name"><a href="#">{elem.name}</a></h3>
+                                                <h4 className="product-price"><span className="qty">1x</span>{elem.net_value}</h4>
+                                            </div>
+                                            <button className="delete" onClick={() => handleDelete(elem.productID)}><i className="fa fa-close"></i></button>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="cart-summary kh">
+                                    <small>{cartCounter} db termék kiválasztva</small>
+                                    <h5 className='sum'>{osszeg} Ft</h5>
+                                </div>
+                                <div className="cart-btns">
+                                    <a href="#"><button type="button" className="btn btn-success gomb">Megrendelem!</button></a>
+                                </div>
+                            </div> : <h1 className='nologin'>Jelentkezz be a kosár használatához!</h1>}
                         </div>
                     </Col>
                 </Row>
@@ -172,7 +172,7 @@ export default function Header() {
                         <div className="search">
                             <div className="row height d-flex justify-content-center align-items-center">
                                 <div className="col-lg-9 col-md-9 col-xs-3">
-                                    <div className="search"> <i className="fa fa-search"></i> <input type="search" className="form-control" placeholder="Mit szeretnél megkeresni?" defaultValue={searchTerm} onChange={(e)=>localStorage.setItem('term',e.target.value)}/><button onClick={()=>navi('/search')} >Keresés</button> </div>
+                                    <div className="search"> <i className="fa fa-search"></i> <input type="search" className="form-control" placeholder="Mit szeretnél megkeresni?" defaultValue={searchTerm} onChange={(e) => localStorage.setItem('term', e.target.value)} /><button onClick={() => navi('/search')} >Keresés</button> </div>
                                 </div>
                             </div>
                         </div>

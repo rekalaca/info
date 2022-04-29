@@ -2392,9 +2392,13 @@ body {
   padding-bottom: 50px;
 }
 .adminbackg{
-  background-color: #094714;
+  background-color: #FF652F;
   border-radius: 20px;
   color: white;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  font-family: 'Encode Sans', sans-serif;
+  width: 70%;
 }
 .upload{
   font-size: 14px;
@@ -2478,4 +2482,27 @@ body {
   font-size: large;
   text-align: center;
   color: #DF1C44;
+}
+.loginname{
+  color:white;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+}
+.nologin{
+  text-align: center;
+  font-size: 24px;
+  background-color: red;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-family: 'Encode Sans', sans-serif;
+
+}
+
+.sum{
+  color: #FFDC00;
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 26px;
 }
