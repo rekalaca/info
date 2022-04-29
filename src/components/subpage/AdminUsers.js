@@ -5,6 +5,8 @@ import axios from 'axios';
 export default function AdminUsers() {
     const path = 'http://localhost:5555';
     const [data, setData] = useState([]);
+    const [updateData,setUpdateData] = useState({});
+
     const [delStatus,setDelStatus] = useState(false);
     const [changeStatus,setChangeStatus] = useState(false);
     
@@ -25,13 +27,31 @@ export default function AdminUsers() {
         setData(result.data)
         setDelStatus(false)
     }    
-    console.log(data)
+
     useEffect(() => {
         fetchdata();
         
     }, [delStatus,changeStatus]);
-  
     
+
+/*     useEffect(() => {
+        setUpdateData()
+    }) */
+
+    const handleUpdate = async (id) =>{
+        const result = await axios.patch(`${path}/user`,{id,updateData}).then(res=>{
+            console.log(res)
+        })
+    }
+
+    const handleChange = async (e) => {
+        const {name,value} = e.target;
+        setUpdateData({
+            ...updateData,
+            [name] : value
+        })
+
+    }
 
     return (
 
@@ -59,15 +79,15 @@ export default function AdminUsers() {
                         <tr key={index} className='table-active'>
                             <td>{elem.userID}</td>
                             <td>{elem.login}</td>
-                            <td>{elem.name}</td>
-                            <td>{elem.phone}</td>
-                            <td>{elem.birth}</td>
-                            <td>{elem.email}</td>
-                            <td>{elem.billing_address}</td>
-                            <td>{elem.shipping_address}</td>
-                            <td>{elem.tax_reg}</td>
+                            <td><input type="text" name="name" defaultValue={elem.name}  onChange={handleChange}/></td>
+                            <td><input type="text" name="phone" defaultValue={elem.phone} onChange={handleChange}/></td>
+                            <td><input type="text" name="birth" defaultValue={elem.birth} onChange={handleChange}/></td>
+                            <td><input type="text" name="email" defaultValue={elem.email} onChange={handleChange}/></td>
+                            <td><input type="text" name="billing_address" defaultValue={elem.billing_address} onChange={handleChange}/></td>
+                            <td><input type="text" name="shipping_address" defaultValue={elem.shipping_address} onChange={handleChange}/></td>
+                            <td><input type="text"name="tax_reg" defaultValue={elem.tax_reg} onChange={handleChange}/></td>
                             <td><button type="button" className="btn btn-danger btn-sm" onClick={()=>deleteUser(elem.login)}>Törlés</button></td>
-                            <td><button type="button" className="btn btn-warning btn-sm" >Módosítás</button></td>
+                            <td><button type="button" className="btn btn-warning btn-sm" onClick={()=>handleUpdate(elem.userID)}>Módosítás</button></td>
                         </tr>
                     ))}
                 </tbody>
