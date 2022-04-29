@@ -17,6 +17,13 @@ export default function Cable() {
         setData(result.data)
     }
 
+    console.log(data)
+
+    const handleAddition = async (productID) => {
+        const result = await axios.put(`${path}/cart`,{userID: localStorage.getItem('id'), })
+    }
+
+
     useEffect(() => {
         fetchdata();
 
@@ -46,7 +53,7 @@ export default function Cable() {
                                 }}>
                                     {elem.net_value} Ft + 27% ÁFA
                                 </Card.Text>
-                                <Button variant="primary" onClick={handleShow}>Kosárba rakom!</Button>
+                                <Button variant="primary" onClick={()=>handleAddition(elem.productID)}>Kosárba rakom!</Button>
                             </Card>
                             <Modal show={show} onHide={handleClose}>
                                 <Modal.Header closeButton>

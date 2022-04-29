@@ -28,6 +28,7 @@ export default function AdminProducts() {
     formData.append("net_value", price)
 
     const result = await axios.put(`${path}/product`,formData)
+    fetchdata();
     console.log(result)
   }
 
@@ -117,6 +118,29 @@ export default function AdminProducts() {
           </button>
           </form>
           
+        </div>
+        <div className="col-6">
+        <table className="table table-striped">
+                <thead>
+                    <tr className="align-bottom">
+                        <th scope="col">ID</th>
+                        <th scope="col">Termék név</th>
+                        <th scope="col">Nettó ár</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map((elem, index) => (
+                        <tr key={index} className='table-active'>
+                            <td>{elem.productID}</td>
+                            <td>{elem.name}</td>
+                            <td>{elem.net_value} Ft</td>
+                            <td><button type="button" className="btn btn-danger btn-sm" >Törlés</button></td>
+                            <td><button type="button" className="btn btn-warning btn-sm" >Módosítás</button></td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
       </div>
     </>

@@ -28,6 +28,8 @@ import "./css/style.css";
 
 function App(){
   
+
+
   return(
     <>
     <BrowserRouter>
@@ -37,9 +39,9 @@ function App(){
           <Route index element={<Cimlap />} />
           {localStorage.getItem('isAdmin') == 1 && (
             <>
-              <Route path="adminproducts" element={<AdminProducts />} />
+              <Route path="admin/products" element={<AdminProducts />} />
               <Route path="admin" element={<Admin />} />
-              <Route path="adminusers" element={<AdminUsers />} />
+              <Route path="admin/users" element={<AdminUsers />} />
             </>
           )}
           <Route path="newusers" element={<NewUsers />} />
