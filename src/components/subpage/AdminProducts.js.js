@@ -10,11 +10,12 @@ export default function AdminProducts() {
   const [price,setPrice] = useState('');
   const [vat, setVat] = useState([]);
   const [image,setImage] = useState({})
-
+  const [delStatus,setDelStatus] = useState(false)
   const fetchdata = async () => {
     const result = await axios.get(`${path}/products`);
     setData(result.data);
     setVat(vat.data);
+    setDelStatus(false)
   };
 
   const handleSubmit = async (e) => {
@@ -42,9 +43,17 @@ export default function AdminProducts() {
   }
   useEffect(() => {
     fetchdata();
-  }, []);
-  console.log(data);
-  console.log(vat);
+  }, [delStatus]);
+
+  const deleteProduct = async (name) => {
+
+    const result = await axios.delete(`${path}/product`,{data: {name}},{headers: {
+            "Content-Type": "application/json"}
+        })
+        if(result.data.status === "ok"){
+          setDelStatus(true)
+      }
+  }
 
   return (
     <>
@@ -134,8 +143,8 @@ export default function AdminProducts() {
                         <tr key={index} className='table-active'>
                             <td>{elem.productID}</td>
                             <td>{elem.name}</td>
-                            <td>{elem.net_value} Ft</td>
-                            <td><button type="button" className="btn btn-danger btn-sm" >Törlés</button></td>
+                            <td>{Math.round(elem.net_value)} Ft</td>
+                            <td><button type="button" className="btn btn-danger btn-sm" onClick={()=>deleteProduct(elem.name)}>Törlés</button></td>
                             <td><button type="button" className="btn btn-warning btn-sm" >Módosítás</button></td>
                         </tr>
                     ))}

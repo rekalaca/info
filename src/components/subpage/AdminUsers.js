@@ -34,10 +34,6 @@ export default function AdminUsers() {
     }, [delStatus,changeStatus]);
     
 
-/*     useEffect(() => {
-        setUpdateData()
-    }) */
-
     const handleUpdate = async (id) =>{
         const result = await axios.patch(`${path}/user`,{id,updateData}).then(res=>{
             console.log(res)

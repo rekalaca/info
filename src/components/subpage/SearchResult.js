@@ -13,7 +13,7 @@ export default function SearchResult() {
     
     useEffect(() => {
 		fetchdata();
-		
+        localStorage.setItem('term','');
 	},[]);
     console.log(data)
 

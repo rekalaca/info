@@ -69,6 +69,13 @@ export default function Header() {
 
     }
 
+    const handleSearch = () =>{
+        if(window.location.pathname==='/search'){
+            navi(0)
+        }
+         navi('/search')
+         
+    }
 
 
 
@@ -121,7 +128,7 @@ export default function Header() {
                                 </div>
                             </div>
                         </div>
-                        {status ? <h6 className='loginname'>belépve: {loginName}</h6> : ''}
+                        {status ? <h6 className='loginname'>Bejelentkezve: {loginName}</h6> : ''}
                         {status ? <button type="button" className="btn btn-primary btn-sm gomb" onClick={removeLocals}>Kijelentkezés</button> : <button type="button" className="btn btn-primary btn-sm gomb" data-bs-toggle="modal" data-bs-target="#exampleModal">Fiókom / Bejelentkezés</button>}
 
 
@@ -172,7 +179,7 @@ export default function Header() {
                         <div className="search">
                             <div className="row height d-flex justify-content-center align-items-center">
                                 <div className="col-lg-9 col-md-9 col-xs-3">
-                                    <div className="search"> <i className="fa fa-search"></i> <input type="search" className="form-control" placeholder="Mit szeretnél megkeresni?" defaultValue={searchTerm} onChange={(e) => localStorage.setItem('term', e.target.value)} /><button onClick={() => navi('/search')} >Keresés</button> </div>
+                                    <div className="search"> <i className="fa fa-search"></i> <input type="search" className="form-control" placeholder="Mit szeretnél megkeresni?" defaultValue={searchTerm} onChange={(e) => localStorage.setItem('term', e.target.value)} /><button onClick={handleSearch} >Keresés</button> </div>
                                 </div>
                             </div>
                         </div>
