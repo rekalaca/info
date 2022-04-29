@@ -45,12 +45,13 @@ export default function AdminUsers() {
     }
 
     const handleChange = async (e) => {
-        const {name,value} = e.target;
+        const {name,value,defaultValue} = e.target;
+        
         setUpdateData({
             ...updateData,
-            [name] : value
+            [name] : defaultValue
         })
-
+        console.log(updateData)
     }
 
     return (

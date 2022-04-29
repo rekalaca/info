@@ -13,12 +13,13 @@ export default function Pc() {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
+    const [afa,setAfa] = useState(0);
     const fetchdata = async () => {
         const result = await axios.get(`${path}/products/pc`)
-        // const vat = await axios.get("http://localhost:5555/vat")
+        const vat = await axios.get(`${path}/vat`);
+        setAfa(vat.data.vat);
         setData(result.data)
-        setVat(vat.data);
+
     }
     useEffect(() => {
         fetchdata();
@@ -47,7 +48,9 @@ export default function Pc() {
                                     fontSize: 18,
                                     fontWeight: "bold",
                                 }}>
-                                    {elem.net_value} Ft + 27% ÁFA
+                                    {Math.round(elem.net_value)+' ft nettó'}
+                                    <br></br>
+                                    {(Math.round(elem.net_value*afa)*10)/10+' ft bruttó'}
                                 </Card.Text>
                                 <Button class="btn btn-success" variant="primary" onClick={handleShow}>Kosárba rakom!</Button>
                             </Card>

@@ -50,6 +50,11 @@ export default function Header() {
                 console.log()
             }
         })
+        let sum = 0;
+        for(let i=0;i<kosar.length;i++){
+            sum += kosar[i].net_value;
+        }
+        setOsszeg(sum)
     }
 
     const handleDelete = async (productID) => {
@@ -65,25 +70,21 @@ export default function Header() {
     }
 
 
-
+    
 
     const userID = localStorage.getItem('id')
     const loginName = localStorage.getItem('login')
-
+    const searchTerm = localStorage.getItem('term')
 
     function removeLocals() {
         localStorage.removeItem('id')
         localStorage.removeItem('login')
         localStorage.removeItem('isAdmin')
         setStatus(false)
+        window.location.reload();
     }
     useEffect(() => {
-        let sum = 0;
-        for(let i=0;i<kosar.length;i++){
-            sum += kosar[i].net_value;
-            
-        }
-        setOsszeg(sum)
+
         if (userID) {
             setStatus(true)
         } else {
@@ -131,31 +132,30 @@ export default function Header() {
                                 <h5 className='kh'>A kosár tartalma:</h5>
                                 <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
-                            <div className="offcanvas-body">
+                        {status ?                             <div className="offcanvas-body">
 
-                                <div className="cart-list">
-                                    {kosar.map((elem,index)=>(
-                                    <div className="product-widget" key={index}>
-                                        <div className="product-img">
-                                            <img src={`${path}/${elem.picture}`} alt="" />
-                                        </div>
-                                        <div className="product-body">
-                                            <h3 className="product-name"><a href="#">{elem.name}</a></h3>
-                                            <h4 className="product-price"><span className="qty">1x</span>{elem.net_value}</h4>
-                                        </div>
-                                        <button className="delete" onClick={()=>handleDelete(elem.productID)}><i className="fa fa-close"></i></button>
-                                    </div>
-                                ))}
-                                </div>
-                                <div className="cart-summary">
-                                    <small>{cartCounter} db termék kiválasztva</small>
-                                    <h5>{osszeg} Ft</h5>
-                                </div>
-                                <div className="cart-btns">
-                                    <a href="#"><button type="button" className="btn btn-success gomb">Megrendelem!</button></a>
-                                </div>
-
-                            </div>
+<div className="cart-list">
+    {kosar.map((elem,index)=>(
+    <div className="product-widget" key={index}>
+        <div className="product-img">
+            <img src={`${path}/${elem.picture}`} alt="" />
+        </div>
+        <div className="product-body">
+            <h3 className="product-name"><a href="#">{elem.name}</a></h3>
+            <h4 className="product-price"><span className="qty">1x</span>{elem.net_value}</h4>
+        </div>
+        <button className="delete" onClick={()=>handleDelete(elem.productID)}><i className="fa fa-close"></i></button>
+    </div>
+))}
+</div>
+<div className="cart-summary">
+    <small>{cartCounter} db termék kiválasztva</small>
+    <h5>{osszeg} Ft</h5>
+</div>
+<div className="cart-btns">
+    <a href="#"><button type="button" className="btn btn-success gomb">Megrendelem!</button></a>
+</div>
+</div> : <h1>Jelentkezz be a kosár használatához!</h1> }
                         </div>
                     </Col>
                 </Row>
@@ -172,7 +172,7 @@ export default function Header() {
                         <div className="search">
                             <div className="row height d-flex justify-content-center align-items-center">
                                 <div className="col-lg-9 col-md-9 col-xs-3">
-                                    <div className="search"> <i className="fa fa-search"></i> <input type="search" className="form-control" placeholder="Mit szeretnél megkeresni?" defaultValue={()=>localStorage.getItem('term')} onChange={(e)=>localStorage.setItem('term',e.target.value)}/><button onClick={()=>navi('/search')} >Keresés</button> </div>
+                                    <div className="search"> <i className="fa fa-search"></i> <input type="search" className="form-control" placeholder="Mit szeretnél megkeresni?" defaultValue={searchTerm} onChange={(e)=>localStorage.setItem('term',e.target.value)}/><button onClick={()=>navi('/search')} >Keresés</button> </div>
                                 </div>
                             </div>
                         </div>
