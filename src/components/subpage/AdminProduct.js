@@ -6,7 +6,7 @@ import axios from "axios";
 export default function AdminProduct(){
     const {id: productID} = useParams(); 
     const [data,setData] = useState({});
-        
+    const [vat, setVat] = useState([]);
     const path = "http://localhost:5555";    
     const fetchdata = async () => {
         const result = await axios.get(`${path}/product/${productID}`);

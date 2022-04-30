@@ -22,6 +22,7 @@ export default function Header() {
     const [delStatus, setDelStatus] = useState(false)
     const [cartCounter, setCartCounter] = useState(0);
     const [osszeg, setOsszeg] = useState(0);
+    const [vat, setVat] = useState([]);
     const path = 'http://localhost:5555';
     const loginRequest = async (e) => {
         e.preventDefault();
@@ -38,7 +39,16 @@ export default function Header() {
             else {
                 setStatus(false);
             }
+
         })
+
+    }
+
+    const getVat = async ()=>{
+        const vatResult = await axios.get(`${path}/vat`)
+        const {vat} = vatResult.data;
+        console.log(vat)
+        setVat(vat);
     }
 
     const cartRequest = async () => {
@@ -51,10 +61,12 @@ export default function Header() {
             }
         })
         let sum = 0;
+
         for (let i = 0; i < kosar.length; i++) {
-            sum += kosar[i].net_value;
+            sum += (kosar[i].net_value*kosar[i].prod_amount);
         }
-        setOsszeg(sum)
+        
+        setOsszeg(Math.round(sum*vat))
     }
 
     const handleDelete = async (productID) => {
@@ -98,6 +110,7 @@ export default function Header() {
             setStatus(false)
         }
         cartRequest();
+        getVat();
     }, [userID, delStatus, cartCounter])
     return (
         <div id='top-header'>
@@ -149,7 +162,7 @@ export default function Header() {
                                             </div>
                                             <div className="product-body">
                                                 <h3 className="product-name"><a href="#">{elem.name}</a></h3>
-                                                <h4 className="product-price"><span className="qty">1x</span>{elem.net_value}</h4>
+                                                <h4 className="product-price"><span className="qty">{elem.prod_amount}</span>{Math.round(elem.net_value*vat)}</h4>
                                             </div>
                                             <button className="delete" onClick={() => handleDelete(elem.productID)}><i className="fa fa-close"></i></button>
                                         </div>

@@ -15,10 +15,13 @@ export default function SearchResult() {
 		fetchdata();
         localStorage.setItem('term','');
 	},[]);
-    console.log(data)
+
 
     return (
+        
+
         <div className='section'>
+            <h1 >Keresési találatok: </h1>
             <div className='container'>
                 <div className="row">
                 {data.map((elem, index) => (

@@ -15,8 +15,9 @@ export default function AdminProducts() {
   const [delStatus,setDelStatus] = useState(false)
   const fetchdata = async () => {
     const result = await axios.get(`${path}/products`);
+    const vatResult = await axios.get(`${path}/vat`)
     setData(result.data);
-    setVat(vat.data);
+    setVat(vatResult.data.vat);
     setDelStatus(false)
   };
 
@@ -145,7 +146,7 @@ export default function AdminProducts() {
                         <tr key={index} className='table-active'>
                             <td>{elem.productID}</td>
                             <td>{elem.name}</td>
-                            <td>{Math.round(elem.net_value)} Ft</td>
+                            <td>{Math.round(elem.net_value*vat)} Ft</td>
                             <td><button type="button" className="btn btn-danger btn-sm" onClick={()=>deleteProduct(elem.name)}>Törlés</button></td>
                             <td><button type="button" className="btn btn-warning btn-sm" onClick={() => navi(`/product/${elem.productID}`)}>Módosítás</button></td>
                         </tr>

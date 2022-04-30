@@ -46,10 +46,17 @@ function App(){
               <Route path="admin/users" element={<AdminUsers />} />
             </>
           )}
+          
           <Route path="newusers" element={<NewUsers />} />
           <Route path="rolunk" element={<Rolunk />} />
           <Route path="kiszall" element={<Kiszall />} />
-          <Route path="regist" element={<Regist />} />
+          {localStorage.getItem('id') == null && 
+            <>
+              <Route path="regist" element={<Regist />} />
+              
+            </>
+          }
+          <Route path="goodregist" element={<GoodRegist />} />
           <Route path="aszf" element={<Aszf />} />
           <Route path="adatvedelmi" element={<Adatvedelmi />} />
           <Route path="pc" element={<Pc />} />
@@ -60,7 +67,7 @@ function App(){
           <Route path="garancia" element={<Garancia />} />
           <Route path="forum" element={<Forum />} />
           <Route path="szolgaltatas" element={<Szolgaltatas />} />
-          <Route path="goodregist" element={<GoodRegist />} />
+
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

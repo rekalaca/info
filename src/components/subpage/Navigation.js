@@ -23,9 +23,12 @@ export default function Navigation() {
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/rolunk">Rólunk</a>
                             </li>
+                            {localStorage.getItem('id') == null &&
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/regist">Regisztráció</a>
+                            <a className="nav-link active" aria-current="page" href="/regist">Regisztráció</a>
                             </li>
+                            }
+
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/szolgaltatas">Szolgáltatásaink</a>
                             </li>
