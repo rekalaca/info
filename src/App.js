@@ -25,6 +25,7 @@ import Rolunk from "./components/Rolunk";
 import Kiszall from "./components/subpage/Kiszall";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./css/style.css";
+import AdminProduct from "./components/subpage/AdminProduct";
 
 function App(){
   
@@ -40,6 +41,7 @@ function App(){
           {localStorage.getItem('isAdmin') == 1 && (
             <>
               <Route path="admin/products" element={<AdminProducts />} />
+              <Route path="admin/product/:id" element={<AdminProduct />} />
               <Route path="admin" element={<Admin />} />
               <Route path="admin/users" element={<AdminUsers />} />
             </>

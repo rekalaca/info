@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate} from "react-router-dom";
 
 export default function AdminProducts() {
+  const navi = useNavigate();
   const path = "http://localhost:5555";
   const [data, setData] = useState([]);
   const [cat,setCat] = useState(0);
@@ -145,7 +147,7 @@ export default function AdminProducts() {
                             <td>{elem.name}</td>
                             <td>{Math.round(elem.net_value)} Ft</td>
                             <td><button type="button" className="btn btn-danger btn-sm" onClick={()=>deleteProduct(elem.name)}>Törlés</button></td>
-                            <td><button type="button" className="btn btn-warning btn-sm" >Módosítás</button></td>
+                            <td><button type="button" className="btn btn-warning btn-sm" onClick={() => navi(`/product/${elem.productID}`)}>Módosítás</button></td>
                         </tr>
                     ))}
                 </tbody>
