@@ -8,7 +8,7 @@ function GoodRegist() {
     const [password, setPassword] = useState('');
 
     return (
-        <div className="kozep back">
+        <div className="kozep back garis">
             <p className='display-6 kozep infogreen'>SIKERES REGISZTRÁCIÓ !</p>
             <img className='' src={reg} alt="" />
             <p className='h1 infogreen'>Jelentkezz be!</p>

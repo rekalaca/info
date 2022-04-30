@@ -73,6 +73,11 @@ ol {
   color: #FFF;
 }
 
+.product-ar{
+  color: #F9E79F;
+
+}
+
 /*----------------------------*\
 	Inputs
 \*----------------------------*/
@@ -2354,7 +2359,8 @@ body {
   text-align: center;
   background-color: #12a72b;
   color: white;
-  font-family: 'Encode Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
 }
 
 .offcanvas-body {
@@ -2384,12 +2390,20 @@ body {
   margin: 2px 2px 2px 2px;
 }
 
+.adminszel{
+  width: 100%;
+  text-align: center;
+  margin-left: -130px;
+}
+
 .adminbutton{
   margin-top: 20px;
 }
 .adminhead{
   padding-top: 40px;
   padding-bottom: 50px;
+  font-family: 'Montserrat', sans-serif;
+  color: lightgoldenrodyellow;
 }
 .adminbackg{
   background-color: #FF652F;
@@ -2398,7 +2412,7 @@ body {
   padding-top: 20px;
   padding-bottom: 80px;
   font-family: 'Encode Sans', sans-serif;
-  width: 50%;
+  width: 80%;
 }
 .upload{
   font-size: 14px;
@@ -2420,6 +2434,9 @@ body {
   color: white;
   text-align: center;
 }
+.adminp{
+  border-radius: 20px;
+}
 #adatotkiir{
   margin-top: 30px;
   margin-bottom: 30px;
@@ -2434,14 +2451,14 @@ body {
 }
 
 .caropc{
-  color: #FF4136;
+  color: #FFFFFF;
   text-align: left;
 }
 .print{
   color: white;
 }
 .cabl{
-  color: #0074D9;
+  color: #FFFFFF;
   text-align: right;
 }
 
@@ -2450,7 +2467,7 @@ body {
   margin: 0 auto 0 auto;
 }
 .carousel{
-  border: #0074D9;
+  border-radius: 30px;
 }
 
 .h1users{
@@ -2467,7 +2484,7 @@ body {
   text-align: center;
 }
 .garis{
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   margin-top: 50px;
 }
 
@@ -2485,8 +2502,8 @@ body {
 }
 .loginname{
   float:right;
-  background-color: #12a72b;
-  color:black;
+  background-color: #F4D03F;
+  color:#922B21;
   border: 1px solid white;
   border-radius: 10px;
   padding: 10px;
@@ -2508,4 +2525,24 @@ body {
   color: #FFDC00;
   font-family: 'Encode Sans', sans-serif;
   font-size: 26px;
+}
+.zgomb{
+  background-color: #12a72b;
+}
+
+.kereksarok{
+  border-radius: 20px;
+}
+.hossz{
+  height:fit-content;
+}
+.keresh{
+  color: #D35400;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  margin-bottom: 60px;
+  background-color: #F9E79F;
+  width:fit-content;
+  border-radius: 10px;
+  padding: 10px;
 }

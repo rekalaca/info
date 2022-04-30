@@ -147,31 +147,32 @@ export default function Header() {
 
                         <button type="button" className="btn btn-primary btn-sm gomb" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Kosár</button>
 
-                        <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <div className="offcanvas offcanvas-end hossz" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                             <div className="offcanvas-header kh">
                                 <h5 className='kh'>A kosár tartalma:</h5>
                                 <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
                             {status ? <div className="offcanvas-body">
 
-                                <div className="cart-list kh">
+                                <div className="cart-list kh kereksarok">
                                     {kosar.map((elem, index) => (
-                                        <div className="product-widget" key={index}>
+                                        <div className="product-widget kereksarok" key={index}>
                                             <div className="product-img">
                                                 <img src={`${path}/${elem.picture}`} alt="" />
                                             </div>
                                             <div className="product-body">
-                                                <h3 className="product-name"><a href="#">{elem.name}</a></h3>
-                                                <h4 className="product-price"><span className="qty">{elem.prod_amount}</span>{Math.round(elem.net_value*vat)}</h4>
+                                                <h3 className="product-name kh">{elem.name}</h3>
+                                                <h4 className="product-ar"><span className="product-ar kh">{elem.prod_amount}db x </span>{Math.round(elem.net_value*vat)} Ft</h4>
                                             </div>
                                             <button className="delete" onClick={() => handleDelete(elem.productID)}><i className="fa fa-close"></i></button>
                                         </div>
                                     ))}
                                 </div>
-                                <div className="cart-summary kh">
+                                <div className="cart-summary kh kereksarok">
                                     <small>{cartCounter} db termék kiválasztva</small>
                                     <h5 className='sum'>{osszeg} Ft</h5>
                                 </div>
+                                <br></br>
                                 <div className="cart-btns">
                                     <a href="#"><button type="button" className="btn btn-success gomb">Megrendelem!</button></a>
                                 </div>

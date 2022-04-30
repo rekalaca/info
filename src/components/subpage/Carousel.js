@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import pcs1 from './img/pcs1.jpg';
+import pcs2 from './img/pcs2.jpg';
 import routers from './img/routers.jpg';
-import printers from './img/printers.jpg';
+import printers2 from './img/printers2.jpg';
 import cables from './img/cables.jpg';
 
 export default function ControlledCarousel() {
@@ -19,8 +19,8 @@ export default function ControlledCarousel() {
         <Carousel activeIndex={index} onSelect={handleSelect}>
             <Carousel.Item>
                 <a href="/pc"><img
-                    className="d-block w-100"
-                    src={pcs1}
+                    className="d-block w-100 carousel"
+                    src={pcs2}
                     alt="PC/Laptop"
                 /></a>
                 <Carousel.Caption>
@@ -30,7 +30,7 @@ export default function ControlledCarousel() {
             </Carousel.Item>
             <Carousel.Item>
             <a href="/routers"><img
-                    className="d-block w-100"
+                    className="d-block w-100 carousel"
                     src={routers}
                     alt="Routers"
                 /></a>
@@ -41,8 +41,8 @@ export default function ControlledCarousel() {
             </Carousel.Item>
             <Carousel.Item>
             <a href="/perifer"><img
-                    className="d-block w-100"
-                    src={printers}
+                    className="d-block w-100 carousel"
+                    src={printers2}
                     alt="Perifériák"
                 /></a>
                 <Carousel.Caption>
@@ -54,7 +54,7 @@ export default function ControlledCarousel() {
             </Carousel.Item>
             <Carousel.Item>
             <a href="/cable"><img
-                    className="d-block w-100"
+                    className="d-block w-100 carousel"
                     src={cables}
                     alt="Kábelek"
                 /></a>

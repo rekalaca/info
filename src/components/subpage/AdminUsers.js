@@ -74,11 +74,11 @@ export default function AdminUsers() {
     console.log(updateData)
     return (
         <>
-        <div className="table-responsive kartya">
+        <div className="table-responsive-sm kartya">
             <a href="/admin"><button type="button" class="btn btn-success szunet">Vissza az Admin felületre</button></a>
             <br></br>
             <h1 className='h1users'>Felhasználói lista</h1>
-
+            <div className='adminszel'>
             <table className="table table-striped">
                 <thead>
                     <tr className="align-bottom">
@@ -93,7 +93,7 @@ export default function AdminUsers() {
                         <th scope="col">Adószám</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className=''>
                     {data.map((elem, index) => (
                         <tr key={index} className='table-active'>
                             <td>{elem.userID}</td>
@@ -111,6 +111,7 @@ export default function AdminUsers() {
                     ))}
                 </tbody>
             </table>
+            </div>
 
 
         </div>

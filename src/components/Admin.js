@@ -9,22 +9,22 @@ function Admin() {
     return (
 
         <div className="kozep menusk adminbackg">
-            <h1 className="h1error adminhead">Adminisztrátori felület</h1>
+            <h1 className="adminhead">Adminisztrátori felület</h1>
             <div className='container'>
                 <div className="row">
                     <div className="col-6">
-                        <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src={prod} />
+                        <Card style={{ width: '100%', borderRadius: '20px' }}>
+                            <Card.Img variant="top" className='adminp' src={prod} />
                             <Card.Body>
-                                <Button class="btn btn-success" onClick={() => navi('/admin/products')}>Termékek kezelése</Button>
+                                <Button className="btn btn-success" onClick={() => navi('/admin/products')}>Termékek kezelése</Button>
                             </Card.Body>
                         </Card>
                     </div>
                     <div className="col-6">
-                        <Card style={{ width: '100%' }}>
-                            <Card.Img variant="top" src={users} />
+                        <Card style={{ width: '100%', borderRadius: '20px' }}>
+                            <Card.Img variant="top" className='adminp' src={users} />
                             <Card.Body>
-                                <Button class="btn btn-success" onClick={() => navi('/admin/users')}>Felhasználók kezelése</Button>
+                                <Button className="btn btn-success" onClick={() => navi('/admin/users')}>Felhasználók kezelése</Button>
                             </Card.Body>
                         </Card>
                     </div>
