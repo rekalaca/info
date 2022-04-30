@@ -41,7 +41,7 @@ function App(){
           {localStorage.getItem('isAdmin') == 1 && (
             <>
               <Route path="admin/products" element={<AdminProducts />} />
-              <Route path="admin/product/:id" element={<AdminProduct />} />
+              <Route path="admin/products/:id" element={<AdminProduct />} />
               <Route path="admin" element={<Admin />} />
               <Route path="admin/users" element={<AdminUsers />} />
             </>
@@ -68,7 +68,7 @@ function App(){
           <Route path="forum" element={<Forum />} />
           <Route path="szolgaltatas" element={<Szolgaltatas />} />
 
-          <Route path="*" element={<Error />} />
+          //<Route path="*" element={<Error />} />
         </Route>
       </Routes>
       <Footer />

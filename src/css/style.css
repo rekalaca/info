@@ -52,7 +52,43 @@ ol {
   margin: 0 1rem;
   background-color: #12a72b;
 }
+.productimage{
+  margin: 20px;
+  width: 80%;
 
+}
+.productform {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px;
+  background: #b3e9bc;
+  text-align: center;
+}
+.productform > button{
+  float: right;
+  font-size: 1rem;
+  margin: 30px;
+}
+.productform > label{
+  font-size: 2rem;
+  padding: 5px;
+  float: left;
+}
+.productform > input{
+  
+  width: 80%;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+.desc{
+  padding: 5px;
+}
+.desc > textarea{
+  width: 80%;
+  height:200px;
+  font-size:14pt;
+  resize: none;
+}
 .primary-btn {
   display: inline-block;
   padding: 10px 20px;

@@ -39,10 +39,9 @@ export default function AdminUsers() {
     }
 
     useEffect(() => {
-        console.log('a')
         setChangeStatus(false)
         fetchdata();
-    }, [delStatus, changeStatus]);
+    }, []);
 
 
     const handleUpdate = async (id, index) => {
@@ -116,7 +115,7 @@ export default function AdminUsers() {
 
         </div>
         <ToastContainer className="p-3" position='top-end'>
-          <Toast show={show} onClose={toggleShow} delay={3000} autohide>
+          <Toast bg="light" show={show} onClose={toggleShow} delay={3000} autohide>
           <Toast.Header>
             <img
               src="holder.js/20x20?text=%20"

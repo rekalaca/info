@@ -28,7 +28,7 @@ export default function Header() {
         e.preventDefault();
         await axios.post(`${path}/login`, { login: login, password: password }).then(res => {
             if (res.data.id) {
-                console.log(res.data)
+       
                 localStorage.setItem('id', res.data.id)
                 localStorage.setItem('login', login);
                 localStorage.setItem('isAdmin', res.data.isAdmin)
@@ -47,7 +47,7 @@ export default function Header() {
     const getVat = async ()=>{
         const vatResult = await axios.get(`${path}/vat`)
         const {vat} = vatResult.data;
-        console.log(vat)
+
         setVat(vat);
     }
 
@@ -55,9 +55,7 @@ export default function Header() {
         await axios.post(`${path}/cart`, { id: localStorage.getItem('id') }).then(res => {
             if (res.data) {
                 setKosar(res.data)
-                console.log(kosar.length)
                 setCartCounter(kosar.length)
-                console.log()
             }
         })
         let sum = 0;
