@@ -1,11 +1,25 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import cc from './img/cc-sticker-2007.png';
+import nc from './img/by-nc.png';
 
 
 
 export default function Footer() {
-    return(
-        
-        <footer id="footer">
+
+	const fetchdata = async () => {
+		const result = await axios.get("http://localhost:5555/admin")
+		setData(result.data)
+	}
+	const [data, setData] = useState([]);
+	useEffect(() => {
+		fetchdata();
+
+	}, []);
+	return (
+
+		<footer id="footer">
 			<div className="section">
 				<div className="container">
 					<div className="row">
@@ -46,25 +60,26 @@ export default function Footer() {
 								</ul>
 							</div>
 						</div>
-
-						
 					</div>
 				</div>
 			</div>
-
-			<div id="bottom-footer" className="section">
-				<div className="container">
-					<div className="row">
-						<div className="col-md-12 text-center">
-							
-							<span className="copyright">
-								Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">InfoTeam & Colorlib(a végére már csak nyomokban...)</a>
-							
-							</span>
-						</div>
+			<hr></hr>
+			<div className="container ccfoot">
+				<div className="row">
+					<div className="col">
+						<img src={cc} className="img-thumbnail creativ" alt="..." />
+						<img src={nc} className="img-thumbnail" alt="..." />
+					</div>
+					<div className="col szerzok">
+						<p>Az alkalmazást készítették:</p>
+						<p>
+							{data.map((elem, key) => (
+								<p key={key}>{elem.name}</p>
+							))}
+						</p>
 					</div>
 				</div>
-			</div>	
+			</div>
 		</footer>
-    )
+	)
 }

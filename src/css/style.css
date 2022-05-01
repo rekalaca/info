@@ -1654,3 +1654,14 @@ body {
   border-radius: 10px;
   padding: 10px;
 }
+.creativ{
+  border-radius: 50%;
+}
+.szerzok{
+  color: #F4D03F;
+  width: 100%;
+  font-size: 14px;
+}
+.ccfoot{
+  width: 50%;
+}
