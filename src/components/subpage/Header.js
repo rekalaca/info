@@ -270,7 +270,7 @@ export default function Header() {
                           <img src={`${path}/${elem.picture}`} alt="" />
                         </div>
                         <div className="product-body">
-                          <h3 className="product-name kh">{elem.name}</h3>
+                          <h3 className="product-name kh">{elem.name ? elem.name : elem.description}</h3>
                           <h4 className="product-ar">
                             <span className="product-ar kh">
                               {elem.quantity}db x{" "}

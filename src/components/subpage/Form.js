@@ -86,7 +86,7 @@ export default function App() {
         if (phone.length == 9) setgoodPhone(true)
         else setgoodPhone(false);
 
-        var taxformat = (/^[0-9]{8}[-]{1}[0-9]{1}[-]{1}[0-9]{2}$/); /* EZT JAVÍTANI KELL!*/
+        var taxformat = (/^[0-9]{8}[-]{1}[0-9]{1}[-]{1}[0-9]{2}$/); 
         if (tax_reg.length == 0 || tax_reg.match(taxformat)) setgoodTax_reg(true)
         else setgoodTax_reg(false);
 
