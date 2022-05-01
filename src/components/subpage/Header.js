@@ -181,8 +181,8 @@ export default function Header() {
             </Container>
 
             <Container>
-                <Row>
-                    <Col sm={3}>
+                <Row className='menusk'>
+                    <Col sm={2}>
                         <div className="col-lg-3 col-md-3 col-xs-1 fejlogo">
                             <img src={logo} alt="" />
                         </div>

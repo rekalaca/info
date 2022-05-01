@@ -1,19 +1,7 @@
-import React, { useState, useEffect } from 'react';
+
 import bl from '../img/biglogo.png';
-import axios from 'axios';
 const Rolunk= () =>{
 
-	const fetchdata = async () => {
-		const result = await axios.get("http://localhost:5555/admin")
-		setData(result.data)
-	}
-	const [data, setData] = useState([]);
-	useEffect(() => {
-		fetchdata();
-		
-	},[]);
-
-	console.log(data);
     return(
         <div id="bemutatkozas">
 			<h1>Rövid információ rólunk...</h1>
@@ -30,11 +18,6 @@ const Rolunk= () =>{
 				</p>
 				<hr></hr>
 			
-			<ul className='kozep'><h6>Az oldalért felelősek:</h6>
- 				{data.map((elem,key)=>(
-					<li key={key}>{elem.name}</li>
-	))} 
-			</ul>
 		</div>
     )
 }

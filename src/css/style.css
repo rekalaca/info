@@ -1493,7 +1493,6 @@ body {
 .adminszel{
   width: 100%;
   text-align: center;
-  margin-left: -130px;
 }
 
 /*----------------------------*\
@@ -1549,9 +1548,14 @@ body {
  padding-bottom: 30px;
 }
 .kartya{
-  width: 100%;
-  height: 100%;
-  font-size: small;
+  width: 110%;
+  font-size: small;  
+}
+.tablavar{
+  table-layout:fixed;
+}
+.oldalas{
+  margin: 3px;
 }
 
 /*----------------------------*\
