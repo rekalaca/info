@@ -26,6 +26,7 @@ import Kiszall from "./components/subpage/Kiszall";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./css/style.css";
 import AdminProduct from "./components/subpage/AdminProduct";
+import State from "./context/state";
 
 function App(){
   
@@ -33,6 +34,9 @@ function App(){
 
   return(
     <>
+    <State>
+
+
     <BrowserRouter>
       <Header />
       <Routes>
@@ -73,6 +77,7 @@ function App(){
       </Routes>
       <Footer />
     </BrowserRouter>
+    </State>
   </>
   )
 

@@ -38,6 +38,7 @@ export default function AdminProducts() {
 
     const result = await axios.put(`${path}/product`, formData);
     fetchdata();
+    console.log(result.data)
     if (result.data.status === "ok") {
       setMessage({ headerTitle: "Művelet", body: "Sikeres hozzáadás!" });
       setShow(true);
@@ -70,6 +71,7 @@ export default function AdminProducts() {
     );
     if (result.data.status === "ok") {
         setMessage({ headerTitle: "Művelet", body: "Sikeres törlés!" });
+        fetchdata();
         setShow(true);
         setDelStatus(true);
     }

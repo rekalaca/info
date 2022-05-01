@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import axios from 'axios';
 import Modal from 'react-bootstrap/Modal'
-
+import ShopContext from "../context/context";
 export default function Szolgaltatas() {
 
     //modal - kosárba rakom
@@ -28,7 +28,8 @@ export default function Szolgaltatas() {
     console.log(data)
 
     return (
-
+<ShopContext.Consumer>
+      {(context) => (
 
         <div id='szolgi'>
             <Modal show={show} onHide={handleClose}>
@@ -54,7 +55,7 @@ export default function Szolgaltatas() {
                 <tbody>
                     {data.map(elem => (
                         <tr key={elem.serviceID}>
-                            <th>{elem.description}</th><th>{elem.net_value} Ft</th><th>{(Math.round(elem.net_value * afa) * 10) / 10 + ' Ft'}</th><th><Button className="btn btn-primary btn-sm zgomb" variant="primary" onClick={handleShow}>Kosárba rakom!</Button></th>
+                            <th>{elem.description}</th><th>{elem.net_value} Ft</th><th>{(Math.round(elem.net_value * afa) * 10) / 10 + ' Ft'}</th><th><Button className="btn btn-primary btn-sm zgomb" variant="primary" onClick={context.addProductToCart.bind(this, {...elem,productID: elem.serviceID, service: true})}>Kosárba rakom!</Button></th>
                         </tr>
                     ))}
                 </tbody>
@@ -86,5 +87,5 @@ export default function Szolgaltatas() {
             </table>
 
         </div>
-    )
+    )}</ShopContext.Consumer>)
 }

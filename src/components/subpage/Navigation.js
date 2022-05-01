@@ -18,35 +18,35 @@ export default function Navigation() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 section-tab-nav tab-nav menusk">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Főoldal</a>
+                                <Link className="nav-link active" to='/'>Főoldal</Link>
+                                
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/rolunk">Rólunk</a>
+                            <Link className="nav-link active" to='/rolunk'>Rólunk</Link>
                             </li>
                             {localStorage.getItem('id') == null &&
                             <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/regist">Regisztráció</a>
+                                <Link className="nav-link active" to='/regist'>Regisztráció</Link>
                             </li>
                             }
-
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/szolgaltatas">Szolgáltatásaink</a>
+                            <Link className="nav-link active" to='/szolgaltatas'>Szolgáltatásaink</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/pc">PC/Laptop</a>
+                            <Link className="nav-link active" to='/pc'>PC/Laptop</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/routers">WiFi Router</a>
+                            <Link className="nav-link active" to='/routers'>WiFi Router</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/perifer">Periféria</a>
+                            <Link className="nav-link active" to='/perifer'>Periféria</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/cable">Kábel</a>
+                            <Link className="nav-link active" to='/cable'>Kábel</Link>
                             </li>
                             {localStorage.getItem('isAdmin')==1 && 
                              <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/admin">Admin felület</a>
+                                 <Link className="nav-link active" to='/admin'>Admin felület</Link>
                             </li> 
                             }
                         </ul>
