@@ -327,7 +327,6 @@ export default function Header() {
         </Row>
       </Container>
 
-<<<<<<< HEAD
       <Container>
         <Row>
           <Col sm={3}>
@@ -362,26 +361,3 @@ export default function Header() {
     </div>
   );
 }
-=======
-            <Container>
-                <Row className='menusk'>
-                    <Col sm={2}>
-                        <div className="col-lg-3 col-md-3 col-xs-1 fejlogo">
-                            <img src={logo} alt="" />
-                        </div>
-                    </Col>
-                    <Col sm={9}>
-                        <div className="search">
-                            <div className="row height d-flex justify-content-center align-items-center">
-                                <div className="col-lg-9 col-md-9 col-xs-3">
-                                    <div className="search"> <i className="fa fa-search"></i> <input type="search" className="form-control" placeholder="Mit szeretnél megkeresni?" defaultValue={searchTerm} onChange={(e) => localStorage.setItem('term', e.target.value)} /><button onClick={handleSearch} >Keresés</button> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
-    )
-}
->>>>>>> 028c9014e4ec3211e9013d92c3817c2b6c342a9a
