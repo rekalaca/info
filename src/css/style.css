@@ -1669,4 +1669,7 @@ body {
 }
 .ccfoot{
   width: 50%;
+}.felhasznalt{
+  color: #6de685;
+  font-size: 12px;
 }

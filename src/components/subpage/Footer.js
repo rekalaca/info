@@ -80,6 +80,9 @@ export default function Footer() {
 					</div>
 				</div>
 			</div>
+			<div>
+				<p className='felhasznalt'>[ A szabadon felhasználható képeken kívül az alkalmazásban megjelennek a notebook.hu/lenovo.com/dell.com/asus.com/hp.com/epson.com oldalakról is. ]</p>
+			</div>
 		</footer>
 	)
 }
