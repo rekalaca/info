@@ -83,7 +83,7 @@ export default function App() {
         if (email.match(mailformat)) setgoodEmail(true)
         else setgoodEmail(false);
 
-        if (phone.length > 7 && phone.length < 10) setgoodPhone(true)
+        if (phone.length == 9) setgoodPhone(true)
         else setgoodPhone(false);
 
         var taxformat = (/^[0-9]{8}[-]{1}[0-9]{1}[-]{1}[0-9]{2}$/); /* EZT JAVÍTANI KELL!*/
