@@ -10,7 +10,6 @@ import Pc from "./components/products/Pc/Pc";
 import Routers from "./components/products/Routers/Routers";
 import Perifer from "./components/products/Perifer/Perifer";
 import Cable from "./components/products/Cable/Cable";
-import Forum from "./components/Forum";
 import Szolgaltatas from "./components/Szolgaltatas";
 import SearchResult from "./components/subpage/SearchResult";
 import Error from "./components/Error";
@@ -69,7 +68,6 @@ function App(){
           <Route path="search" element={<SearchResult  />} />
           <Route path="cable" element={<Cable />} />
           <Route path="garancia" element={<Garancia />} />
-          <Route path="forum" element={<Forum />} />
           <Route path="szolgaltatas" element={<Szolgaltatas />} />
 
           //<Route path="*" element={<Error />} />

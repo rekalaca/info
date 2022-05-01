@@ -1663,9 +1663,13 @@ body {
   border-radius: 50%;
 }
 .szerzok{
+
   color: #F4D03F;
   width: 100%;
   font-size: 14px;
+}
+.szerzok > p > label{
+  width: 100%;
 }
 .ccfoot{
   width: 50%;

@@ -3,7 +3,7 @@ export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 export const EMPTY_CART = "EMPTY_CART";
 const addProductToCart = (product,state) =>{
     const updatedCart = [...state.cart]
-    console.log(product)
+    
     const updatedItemIndex = updatedCart.findIndex(item=>item.productID === product.productID)
     if(updatedItemIndex<0){
         updatedCart.push({...product, quantity: 1})
@@ -18,9 +18,9 @@ const addProductToCart = (product,state) =>{
 
 const removeProductFromCart = (productID,state) =>{
     const updatedCart = [...state.cart]
-    console.log(updatedCart)
+    
     const updatedItemIndex = updatedCart.findIndex(item=>item.productID === productID)
-    console.log(updatedItemIndex)
+    
     const updatedItem = {...updatedCart[updatedItemIndex]};
     updatedItem.quantity--;
     if(updatedItem.quantity<=0){
@@ -32,7 +32,7 @@ const removeProductFromCart = (productID,state) =>{
 }
 
 export const emptyCart = (state) => {
-    console.log('törlés')
+    
     return{...state,cart: []}
 }
 

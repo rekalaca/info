@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import cc from './img/cc-sticker-2007.png';
 import nc from './img/by-nc.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -28,9 +29,9 @@ export default function Footer() {
 								<h3 className="footer-title">Kapcsolat</h3>
 								<p>Bármilyen további kérdés esetén szívesen állunk rendelkezésére az alábbi elérhetőségeken:</p>
 								<ul className="footer-links">
-									<li><a href="https://goo.gl/maps/mKw8JtNMFGFzbWFV7" target="_blank"><i className="fa fa-map-marker"></i>4400 Nyíregyháza Info utca 1.</a></li>
-									<li><a href="tel:+36304442569"><i className="fa fa-phone"></i>+36-30-123-45-67</a></li>
-									<li><a href="mailto: rekalaca@rekalaca.com"><i className="fas fa-at"></i>info@infotech.com</a></li>
+									<li><Link to="/" target="_blank"><i className="fa fa-map-marker"></i>4400 Nyíregyháza Info utca 1.</Link></li>
+									<li><Link to="tel:+36304442569"><i className="fa fa-phone"></i>+36-30-123-45-67</Link></li>
+									<li><Link to="mailto: rekalaca@rekalaca.com"><i className="fas fa-at"></i>info@infotech.com</Link></li>
 								</ul>
 							</div>
 						</div>
@@ -39,11 +40,11 @@ export default function Footer() {
 							<div className="footer">
 								<h3 className="footer-title">Kategóriák</h3>
 								<ul className="footer-links">
-									<li><a href="/pc">PC / Laptop</a></li>
-									<li><a href="/routers">Wi-Fi Routerek</a></li>
-									<li><a href="/perifer">Perifériák</a></li>
-									<li><a href="/cable">Kábelek</a></li>
-									<li><a href="/szolgaltatas">Szolgáltatások</a></li>
+									<li><Link to="/pc">PC / Laptop</Link></li>
+									<li><Link to="/routers">Wi-Fi Routerek</Link></li>
+									<li><Link to="/perifer">Perifériák</Link></li>
+									<li><Link to="/cable">Kábelek</Link></li>
+									<li><Link to="/szolgaltatas">Szolgáltatások</Link></li>
 								</ul>
 							</div>
 						</div>
@@ -52,11 +53,11 @@ export default function Footer() {
 							<div className="footer">
 								<h3 className="footer-title">Információk</h3>
 								<ul className="footer-links">
-									<li><a href="/szolgaltatas">Szolgáltatási díjak</a></li>
-									<li><a href="/kiszall">Kiszállítás</a></li>
-									<li><a href="/garancia">Garancia</a></li>
-									<li><a href="/adatvedelmi">Adatvédelmi irányelvek</a></li>
-									<li><a href="/aszf">Általános Szerződési Feltételek (ÁSZF)</a></li>
+									<li><Link to="/szolgaltatas">Szolgáltatási díjak</Link></li>
+									<li><Link to="/kiszall">Kiszállítás</Link></li>
+									<li><Link to="/garancia">Garancia</Link></li>
+									<li><Link to="/adatvedelmi">Adatvédelmi irányelvek</Link></li>
+									<li><Link to="/aszf">Általános Szerződési Feltételek (ÁSZF)</Link></li>
 								</ul>
 							</div>
 						</div>
@@ -74,7 +75,7 @@ export default function Footer() {
 						<p>Az alkalmazást készítették:</p>
 						<p>
 							{data.map((elem, key) => (
-								<p key={key}>{elem.name}</p>
+								<label key={key}>{elem.name}</label>
 							))}
 						</p>
 					</div>

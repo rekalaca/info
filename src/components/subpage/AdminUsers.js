@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Toast, ToastContainer } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 export default function AdminUsers() {
@@ -16,14 +17,14 @@ export default function AdminUsers() {
     const toggleShow = () => setShow(!show);
 
     const deleteUser = async (login) => {
-        console.log(login)
+        
         const result = await axios.delete(`${path}/user`, { data: { login } }, {
             headers: {
                 "Content-Type": "application/json"
             }
         })
 
-        console.log(result.data.status)
+        
         if (result.data.status === "ok") {
             setMessage({ headerTitle: "Művelet", body: "Sikeres törlés!" })
             setShow(true)
@@ -35,7 +36,7 @@ export default function AdminUsers() {
         const result = await axios.get(`${path}/users`)
         setData(result.data)
         setDelStatus(false)
-        console.log(result.data)
+        
     }
 
     useEffect(() => {
@@ -70,11 +71,11 @@ export default function AdminUsers() {
         })
 
     }
-    console.log(updateData)
+    
     return (
         <>
             <div className="table-responsive kartya">
-                <a href="/admin"><button type="button" class="btn btn-success szunet">Vissza az Admin felületre</button></a>
+                <Link to="/admin"><button type="button" className="btn btn-success szunet">Vissza az Admin felületre</button></Link>
                 <br></br>
                 <h1 className='h1users'>Felhasználói lista</h1>
                 <div className=''>

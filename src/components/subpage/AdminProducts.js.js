@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Toast, ToastContainer } from "react-bootstrap";
 export default function AdminProducts() {
   const navi = useNavigate();
@@ -38,7 +38,7 @@ export default function AdminProducts() {
 
     const result = await axios.put(`${path}/product`, formData);
     fetchdata();
-    console.log(result.data)
+    
     if (result.data.status === "ok") {
       setMessage({ headerTitle: "Művelet", body: "Sikeres hozzáadás!" });
       setShow(true);
@@ -79,11 +79,11 @@ export default function AdminProducts() {
 
   return (
     <>
-      <a href="/admin">
-        <button type="button" class="btn btn-success szunet">
+      <Link to='/admin'>
+        <button type="button" className="btn btn-success szunet">
           Vissza az Admin felületre
         </button>
-      </a>
+      </Link>
       <br></br>
       <h1 className="h1users">Termékek kezelése</h1>
       <div className="row">
@@ -91,7 +91,7 @@ export default function AdminProducts() {
           <h5 className="adminh5">Új termék rögzítése:</h5>
           <form onSubmit={handleSubmit}>
             <select
-              class="form-select form-select-sm"
+              className="form-select form-select-sm"
               aria-label=".form-select-sm example"
               onChange={(e) => setCat(e.target.value)}
             >
@@ -108,12 +108,12 @@ export default function AdminProducts() {
               <option value="10">SSD meghajtó</option>
             </select>
             <br></br>
-            <div class="mb-3">
-              <label for="formFileSm" class="form-label">
+            <div className="mb-3">
+              <label for="formFileSm" className="form-label">
                 Termék képe:
               </label>
               <input
-                class="form-control form-control-sm"
+                className="form-control form-control-sm"
                 id="formFileSm"
                 type="file"
                 name="uploaded_file"
@@ -121,19 +121,19 @@ export default function AdminProducts() {
               />
             </div>
             <input
-              class="form-control form-control-sm"
+              className="form-control form-control-sm"
               type="text"
               placeholder="A termék neve:"
               aria-label=".form-control-sm example"
               onChange={(e) => setNev(e.target.value)}
             ></input>
-            <div class="mb-3">
+            <div className="mb-3">
               <label
                 for="exampleFormControlTextarea1"
-                class="form-label"
+                className="form-label"
               ></label>
               <textarea
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlTextarea1"
                 placeholder="A termék leírás:"
                 rows="3"
@@ -141,13 +141,13 @@ export default function AdminProducts() {
               ></textarea>
             </div>
             <input
-              class="form-control form-control-sm bev"
+              className="form-control form-control-sm bev"
               type="number"
               placeholder="A termék nettó ára:"
               aria-label=".form-control-sm example"
               onChange={(e) => setPrice(e.target.valueAsNumber)}
             ></input>
-            <button type="submit" class="btn btn-success adminbutton">
+            <button type="submit" className="btn btn-success adminbutton">
               Feltöltöm !
             </button>
           </form>

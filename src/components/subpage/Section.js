@@ -4,6 +4,7 @@ import peri from './img/peripherals.jpg'
 import router from './img/router.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { Link } from 'react-router-dom';
 import {
     Container, Row, Col, Form, Input, Button, Navbar, Nav,
     NavbarBrand, NavLink, NavItem, UncontrolledDropdown,
@@ -25,7 +26,7 @@ export default function Section(){
                         </div>
                         <div className="shop-body">
                             <h3>PC és <br></br>Laptop</h3>
-                            <a href="/pc" className="cta-btn">Vedd meg most! <i className="fa fa-arrow-circle-right"></i></a>
+                            <Link to="/pc" className="cta-btn">Vedd meg most! <i className="fa fa-arrow-circle-right"></i></Link>
                         </div>
                     </div>
                 </div>
@@ -37,7 +38,7 @@ export default function Section(){
                         </div>
                         <div className="shop-body">
                             <h3>WiFi<br></br>Router</h3>
-                            <a href="/routers" className="cta-btn">Vedd meg most! <i className="fa fa-arrow-circle-right"></i></a>
+                            <Link to="/routers" className="cta-btn">Vedd meg most! <i className="fa fa-arrow-circle-right"></i></Link>
                         </div>
                     </div>
                 </div>
@@ -49,7 +50,7 @@ export default function Section(){
                         </div>
                         <div className="shop-body">
                             <h3>Periféria és<br></br>Kábel</h3>
-                            <a href="/perifer" className="cta-btn">Vedd meg most! <i className="fa fa-arrow-circle-right"></i></a>
+                            <Link to="/perifer" className="cta-btn">Vedd meg most! <i className="fa fa-arrow-circle-right"></i></Link>
                         </div>
                     </div>
                 </div>

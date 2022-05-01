@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import logo from "./img/logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -36,7 +36,7 @@ export default function Header() {
   const [osszeg, setOsszeg] = useState(0);
   const [vat, setVat] = useState([]);
   const context = useContext(ShopContext);
-  console.log(context);
+  
   const path = "http://localhost:5555";
   const loginRequest = async (e) => {
     e.preventDefault();
@@ -48,8 +48,8 @@ export default function Header() {
           localStorage.setItem("login", login);
           localStorage.setItem("isAdmin", res.data.isAdmin);
           setStatus(true);
-          //window.location.reload();
-          //navi('/')
+          window.location.reload();
+          
         } else {
           setStatus(false);
         }
@@ -58,7 +58,7 @@ export default function Header() {
 
   const handleClick = () =>{
       axios.put(`${path}/cart`, {userID,cart: context.cart}).then(res=>{
-          console.log(res)
+          
           if(res.data.status === "ok"){
               context.emptyCart();
           }
@@ -92,20 +92,6 @@ export default function Header() {
     setOsszeg(Math.round(sum * vat));
   };
 
-  const handleDelete = async (productID) => {
-    const result = await axios.delete(
-      `${path}/cart`,
-      { data: { userID, productID } },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    if (result.data.status === "ok") {
-      setDelStatus(true);
-    }
-  };
 
   const handleSearch = () => {
     if (window.location.pathname === "/search") {
@@ -123,7 +109,7 @@ export default function Header() {
     localStorage.removeItem("login");
     localStorage.removeItem("isAdmin");
     setStatus(false);
-    //window.location.reload();
+    window.location.reload();
   }
   useEffect(() => {
     if (userID) {
@@ -141,20 +127,20 @@ export default function Header() {
           <Col sm={8}>
             <ul className="header-links pull-left">
               <li>
-                <a href="tel:+36304442569">
+                <Link to="tel:+36304442569">
                   <i className="fa fa-phone"></i> +36-30-123-45-67
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="mailto: rekalaca@rekalaca.com">
+                <Link to="mailto: rekalaca@rekalaca.com">
                   <i className="fas fa-at"></i>info@infotech.com
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link to="#">
                   <i className="fa fa-map-marker"></i> 4400 Nyíregyháza Info
                   utca 1.
-                </a>
+                </Link>
               </li>
             </ul>
           </Col>
@@ -206,7 +192,7 @@ export default function Header() {
                       </button>
                     </form>
                     <div className="text-center fs-6">
-                      <a href="/regist">Regisztráljon!</a>
+                      <Link to="/regist">Regisztráljon!</Link>
                     </div>
                   </div>
                 </div>

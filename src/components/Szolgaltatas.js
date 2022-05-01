@@ -25,7 +25,7 @@ export default function Szolgaltatas() {
         fetchdata();
 
     }, []);
-    console.log(data)
+    
 
     return (
 <ShopContext.Consumer>

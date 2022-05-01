@@ -6,6 +6,7 @@ import pcs2 from './img/pcs2.jpg';
 import routers from './img/routers.jpg';
 import printers2 from './img/printers2.jpg';
 import cables from './img/cables.jpg';
+import { Link } from 'react-router-dom';
 
 export default function ControlledCarousel() {
 
@@ -18,33 +19,33 @@ export default function ControlledCarousel() {
     return (
         <Carousel activeIndex={index} onSelect={handleSelect}>
             <Carousel.Item>
-                <a href="/pc"><img
+                <Link to="/pc"><img
                     className="d-block w-100 carousel"
                     src={pcs2}
                     alt="PC/Laptop"
-                /></a>
+                /></Link>
                 <Carousel.Caption>
                     <h3 className='caropc'>Asztali<br></br> számítógépek <br></br> Laptopok</h3>
                     <p className="caropc">Lenovo / Dell / Asus</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-            <a href="/routers"><img
+            <Link to="/routers"><img
                     className="d-block w-100 carousel"
                     src={routers}
                     alt="Routers"
-                /></a>
+                /></Link>
                 <Carousel.Caption>
                     <h3 className='caropc'>WiFi routerek</h3>
                     <p className='caropc'>Internetmegosztás<br></br> vezetéken vagy <br></br>vezeték nélkül…</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-            <a href="/perifer"><img
+            <Link to="/perifer"><img
                     className="d-block w-100 carousel"
                     src={printers2}
                     alt="Perifériák"
-                /></a>
+                /></Link>
                 <Carousel.Caption>
                     <h3 className='print'>Nyomtatók</h3>
                     <p>
@@ -53,11 +54,11 @@ export default function ControlledCarousel() {
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
-            <a href="/cable"><img
+            <Link to="/cable"><img
                     className="d-block w-100 carousel"
                     src={cables}
                     alt="Kábelek"
-                /></a>
+                /></Link>
                 <Carousel.Caption>
                     <h3 className='cabl'>Kábelek</h3>
                     <p className='cabl'>

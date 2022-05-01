@@ -25,7 +25,7 @@ export default function Perifer() {
         fetchdata();
 
     }, []);
-    console.log(data)
+    
     return (
         <ShopContext.Consumer>
         {(context) => (
@@ -62,7 +62,7 @@ export default function Perifer() {
                                 {'Bruttó ár: ' + (Math.round(elem.net_value * afa) * 10) / 10 + ' Ft'}
                             </Card.Text>
                             <Button
-                      class="btn btn-success"
+                      className="btn btn-success"
                       variant="success"
                       onClick={context.addProductToCart.bind(this, elem)}
                     >

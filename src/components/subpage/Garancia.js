@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 
@@ -12,10 +13,10 @@ export default function Garancia() {
                 Internetes vásárlás esetén fogyasztónak 14 nap áll rendelkezésre jelezni a kereskedőnek az elállási szándékot. 
                 Amennyiben a kapott készülék hibás vagy csak nem felel meg az elvárásoknak úgy lehetőséged van a sérülés mentes terméket:
                 <br></br><br></br>
-                <ul class="list-group list-group-flush garlist">
-                <li class="list-group-item list-group-item-success">cserélni egy másik ugyan olyan készülékre</li>
-                <li class="list-group-item list-group-item-success">cserélni egy másik modellre, az árkülönbözet rendezése mellett</li>
-                <li class="list-group-item list-group-item-success">visszakérni a vételárat</li>
+                <ul className="list-group list-group-flush garlist">
+                <li className="list-group-item list-group-item-success">cserélni egy másik ugyan olyan készülékre</li>
+                <li className="list-group-item list-group-item-success">cserélni egy másik modellre, az árkülönbözet rendezése mellett</li>
+                <li className="list-group-item list-group-item-success">visszakérni a vételárat</li>
                 </ul>
                 <br></br>
                 A megreklamált készüléket sérülésmentesen kell leadni a nyíregyházi irodánkban, vagy átadni  
@@ -106,7 +107,7 @@ export default function Garancia() {
                 tartalmazó oldalát és/vagy a termékéhez mellékelt HP Korlátozott Jótállási nyilatkozatot.
                 Amennyiben az Ön terméke a következő csoportba tartozik: DeskJet; OfficeJet Pro; LaserJet 1xx, 2xx; Pavilion; Omen; Envy; HP 1x;
                 Slate; Spectre, kérjük, látogasson el a HP Ügyféltámogatási csapat weboldalára, amely az alábbi linken érhető el:
-                <br></br><a href="https://support.hp.com/hu-hu/contact-hp" target="_blank">HP support</a>
+                <br></br><Link to="/" target="_blank">HP support</Link>
                 <br></br>tel: +36 1/777-7545
             </p>
             <hr></hr>

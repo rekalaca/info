@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { Toast, ToastContainer } from "react-bootstrap";
 
@@ -13,7 +13,7 @@ export default function AdminProduct() {
   const [changeStatus, setChangeStatus] = useState(false);
   const toggleShow = () => setShow(!show);
   const fetchdata = async () => {
-    console.log(productID);
+    
     const result = await axios.get(`${path}/product/${productID}`);
     setData(...result.data);
   };
@@ -36,11 +36,11 @@ export default function AdminProduct() {
   return (
     <>
       <div className="container">
-        <a href="/admin/products">
-          <button type="button" class="btn btn-success szunet">
+        <Link to="/admin/products">
+          <button type="button" className="btn btn-success szunet">
             Vissza az Admin termékkezelő felületre
           </button>
-        </a>
+        </Link>
         <h1 className="h1users">Termék módosítása</h1>
         <div className="row">
           <div className="col-lg-6 col-12">

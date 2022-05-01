@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Form from '../subpage/Form';
 
 export default function AdminUsers() {
@@ -5,7 +6,7 @@ export default function AdminUsers() {
 
     return(
         <div>
-            <a href="/admin"><button type="button" class="btn btn-success szunet">Vissza az Admin felületre</button></a>
+            <Link to="/admin"><button type="button" className="btn btn-success szunet">Vissza az Admin felületre</button></Link>
             <br></br>
             <Form />
         </div>

@@ -11,7 +11,7 @@ const State = (props) => {
     dispatch({ type: REMOVE_PRODUCT, productID: productID });
   };
   const emptyCart = () => {
-      console.log('asd')
+      
     dispatch({ type: EMPTY_CART });
   };
   return (

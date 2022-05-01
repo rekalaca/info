@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 export default function Adatvedelmi() {
@@ -14,7 +15,7 @@ export default function Adatvedelmi() {
                 A Info-Tech kft (4400 Nyíregyháza Info utca 1., a továbbiakban, szolgáltató, adatkezelő) mint adatkezelő, magára nézve kötelezőnek ismeri el jelen jogi közlemény tartalmát.
                 Kötelezettséget vállal arra, hogy tevékenységével kapcsolatos minden adatkezelés megfelel a jelen szabályzatban és a hatályos nemzeti jogszabályokban, valamint az Európai Unió
                 jogi aktusaiban meghatározott elvárásoknak.
-                Az Adatkezelő adatkezeléseivel kapcsolatosan felmerülő adatvédelmi irányelvek folyamatosan elérhetők a <a href="http://infotech.com">http://infotech.com</a> webcímen.
+                Az Adatkezelő adatkezeléseivel kapcsolatosan felmerülő adatvédelmi irányelvek folyamatosan elérhetők a <Link to='/'>http://infotech.com</Link> webcímen.
                 Az Adatkezelő fenntartja magának a jogot jelen tájékoztató bármikori megváltoztatására. Természetesen az esetleges változásokról kellő időben értesíti közönségét.
                 Amennyiben kérdése lenne jelen közleményünkhöz kapcsolódóan, kérjük, írja meg nekünk, és kollégánk megválaszolja kérdését.
                 Az Adatkezelő elkötelezett ügyfelei és partnerei személyes adatainak védelmében, kiemelten fontosnak tartja ügyfelei információs önrendelkezési jogának tiszteletben tartását.
@@ -80,10 +81,12 @@ export default function Adatvedelmi() {
                 <br></br>
                 Az adatkezelés időtartama 5 év.
                 <br></br>
+
+
                 Az adott cookie adattárolási idötartama, bővebb információ elérhető itt:<br></br>
-                Google általános cookie tájékoztató: <a href="https://www.google.com/policies/technologies/types/">https://www.google.com/policies/technologies/types/</a><br></br>
-                Google Analitycs tájékoztató: <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=hu">https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=hu</a><br></br>
-                Facebook tájékoztató:< a href="https://www.facebook.com/ads/preferences/?entry_product=ad_settings_screen">https://www.facebook.com/ads/preferences/?entry_product=ad_settings_screen</a><br></br>
+                Google általános cookie tájékoztató: <Link to="/">https://www.google.com/policies/technologies/types/</Link><br></br>
+                Google Analitycs tájékoztató: <Link to="/">https://developers.google.com/analytics/devguides/collection/analyticsjs/cookie-usage?hl=hu</Link><br></br>
+                Facebook tájékoztató:<Link to="/">https://www.facebook.com/ads/preferences/?entry_product=ad_settings_screen</Link><br></br>
                 A cookie-k jogszabályi háttere és jogalapja:<br></br>
                 Az adatkezelés jogalapja a Rendelet 6. cikk (1) bekezdés a) pontja alapján az  Ön hozzájárulása.<br></br>
                 A honlap által használt cookie-k főbb jellemzői:<br></br>
@@ -120,25 +123,25 @@ export default function Adatvedelmi() {
                 Facebook pixel (Facebook cookie) A Facebook-képpont olyan kód, amelynek a segítségével a honlapon jelentés készül a konverziókról, 
                 célközönségek állíthatók össze, és az oldal tulajdonosa részletes elemzési adatokat kap a látogatók honlap használatáról. 
                 A Facebook pixel segítségével a weboldal látogatóinak személyre szabott ajánlatokat, hirdetéseket jeleníthet meg a Facebook felületén. 
-                A Facebook adatkezelési szabályzatát itt tanulmányozhatja: <a href="https://www.facebook.com/privacy/explanation">https://www.facebook.com/privacy/explanation</a>
+                A Facebook adatkezelési szabályzatát itt tanulmányozhatja: <Link to="/">https://www.facebook.com/privacy/explanation</Link>
                 <br></br>
                 Amennyiben Ön nem fogadja el a cookie-k használatát, akkor bizonyos funkciók nem lesznek elérhetőek az Ön számára. 
                 A cookie-k törléséről bővebb tájékoztatást az alábbi linkeken találhat:<br></br>
-                Internet Explorer:  <a href="http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11">http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11</a>
+                Internet Explorer:  <Link to="/">http://windows.microsoft.com/en-us/internet-explorer/delete-manage-cookies#ie=ie-11</Link>
                 <br></br>
-                Firefox:  <a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer">https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer</a>
+                Firefox:  <Link to="/">https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer</Link>
                 <br></br>
-                Mozilla: <a href="https://support.mozilla.org/hu/kb/weboldalak-altal-elhelyezett-sutik-torlese-szamito">https://support.mozilla.org/hu/kb/weboldalak-altal-elhelyezett-sutik-torlese-szamito</a>
+                Mozilla: <Link to="/">https://support.mozilla.org/hu/kb/weboldalak-altal-elhelyezett-sutik-torlese-szamito</Link>
                 <br></br>
-                Safari: <a href="https://support.apple.com/kb/ph21411?locale=en_US">https://support.apple.com/kb/ph21411?locale=en_US</a>
+                Safari: <Link to="/">https://support.apple.com/kb/ph21411?locale=en_US</Link>
                 <br></br>
-                Chrome: <a href="https://support.google.com/chrome/answer/95647">https://support.google.com/chrome/answer/95647</a>
+                Chrome: <Link to="/">https://support.google.com/chrome/answer/95647</Link>
                 <br></br>
                 Online rendeléshez kapcsolódó adatok<br></br>
                 Online rendelés során elkért személyes adatok tételes felsorolása ..<br></br>
                 Online ügyintézéshez kapcsolódó adatok<br></br>
                 Online ügyintézés során elkért személyes adatok tételes felsorolása ..<br></br><br></br>
-                Információkat egy elérhető mintából formáltuk át: <a href="https://officina.hu/gazdasag/188-gdpr-adatkezelesi-tajekoztato-minta-2018">Minta későbbi továbbfejlesztéshez...</a>
+                Információkat egy elérhető mintából formáltuk át: <Link to='https://officina.hu/gazdasag/188-gdpr-adatkezelesi-tajekoztato-minta-2018'>Minta későbbi továbbfejlesztéshez...</Link>
             </p>
         </>
     )

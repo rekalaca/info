@@ -67,7 +67,7 @@ export default function SearchResult() {
                                 {'Bruttó ár: ' + (Math.round(elem.net_value * afa) * 10) / 10 + ' Ft'}
                             </Card.Text>
                             <Button
-                      class="btn btn-success"
+                      className="btn btn-success"
                       variant="success"
                       onClick={context.addProductToCart.bind(this, elem)}
                     >

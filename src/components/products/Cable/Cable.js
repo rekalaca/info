@@ -20,12 +20,12 @@ export default function Cable() {
     setData(result.data);
   };
 
-  console.log(data);
+  
 
   useEffect(() => {
     fetchdata();
   }, []);
-  console.log(data);
+  
 
   return (
     <ShopContext.Consumer>
@@ -66,7 +66,7 @@ export default function Cable() {
                         " Ft"}
                     </Card.Text>
                     <Button
-                      class="btn btn-success"
+                      className="btn btn-success"
                       variant="success"
                       onClick={context.addProductToCart.bind(this, elem)}
                     >

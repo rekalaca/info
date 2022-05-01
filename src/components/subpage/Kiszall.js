@@ -40,9 +40,9 @@ export default function Kiszall() {
 
             <h3>Fizetési módok:</h3>
             <p className='kozepes'>
-                <ol class="list-group list-group-numbered">
-                    <li class="list-group-item">Készpénzzel átvételkor: üzletünkben történő áruátvétel, ill. kiszállítás esetén.</li>
-                    <li class="list-group-item">Előre történő átutalással: Telefaxon vagy e-mailben számlamásolatot küldünk, amelynek alapján
+                <ol className="list-group list-group-numbered">
+                    <li className="list-group-item">Készpénzzel átvételkor: üzletünkben történő áruátvétel, ill. kiszállítás esetén.</li>
+                    <li className="list-group-item">Előre történő átutalással: Telefaxon vagy e-mailben számlamásolatot küldünk, amelynek alapján
                         az átutalás megtörténhet. A vételár számlánkra való beérkezését követő munkanapon a megrendelt árut üzletünkben átveheti,
                         vagy kiszállítjuk. A számla eredeti példányát az áruval együtt átadjuk.</li>
                 </ol>
@@ -64,9 +64,9 @@ export default function Kiszall() {
                     <ListGroupItem>mail: rendeles@infotech.com</ListGroupItem>
                 </ListGroup>
                 <Card.Body>
-                    <Card.Link href="#"><i class="fa-brands fa-facebook"></i></Card.Link>
-                    <Card.Link href="#"><i class="fa-brands fa-skype"></i></Card.Link>
-                    <Card.Link href="#"><i class="fa-brands fa-whatsapp"></i></Card.Link>
+                    <Card.Link href="#"><i className="fa-brands fa-facebook"></i></Card.Link>
+                    <Card.Link href="#"><i className="fa-brands fa-skype"></i></Card.Link>
+                    <Card.Link href="#"><i className="fa-brands fa-whatsapp"></i></Card.Link>
                 </Card.Body>
             </Card>              
             

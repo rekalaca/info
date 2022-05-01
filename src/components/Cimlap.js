@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Section from './subpage/Section';
 import Section2b from './subpage/Section2b';
 export default function Cimlap() {
@@ -12,7 +13,7 @@ export default function Cimlap() {
                     hogy szétszerelje és behozza hozzánk személyesen. Emellett, ha nem meghibásodásról van szó, csak fejlesztené, bővítené saját belső hálózatát, abban is
                     partnerek vagyunk! Nálunk megvásárolhatja új nyomtatóját, routerét, laptopját, vagy asztali számítógépét, mi pedig nem csak kiszállítjuk, de kérésére
                     be is üzemeljük Önnek! Sikergaranciával dolgozunk, ami annyit tesz, hogy csak abban az esetben számítjuk fel a munkadíjat, ha valóban sikeresen
-                    megoldottuk az Ön problémáját! Várjuk hívását!...   <a href='/Rolunk'>(további részletek)</a>
+                    megoldottuk az Ön problémáját! Várjuk hívását!...   <Link to='/rolunk'>(további részletek)</Link>
                 </p>
             </div>
             <Section2b />

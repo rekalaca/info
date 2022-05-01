@@ -4,6 +4,6 @@ export default React.createContext({
     cart: [],
     addProductToCart : product => {},
     removeProductFromCart : productID => {},
-    emptyCart : () => { console.log('répa')}
+    emptyCart : () => {}
 
 })
